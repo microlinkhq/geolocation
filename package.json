@@ -1,0 +1,63 @@
+{
+  "name": "@microlink/geolocation",
+  "homepage": "https://geolocation.microlink.io",
+  "version": "1.0.0",
+  "author": {
+    "email": "hello@microlink.io",
+    "name": "microlink.io",
+    "url": "https://microlink.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microlinkhq/geolocation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/microlinkhq/geolocation/issues"
+  },
+  "keywords": [
+    "api",
+    "geolocation",
+    "microlink"
+  ],
+  "dependencies": {
+    "is-european": "~1.0.3",
+    "iso-3166": "~3.1.0",
+    "next": "~12.2.3",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "world-countries": "~4.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "finepack": "latest",
+    "git-authors-cli": "latest",
+    "got": "11",
+    "nano-staged": "latest",
+    "npm-check-updates": "latest",
+    "prettier-standard": "latest",
+    "simple-git-hooks": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest"
+  },
+  "scripts": {
+    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "dev": "next dev",
+    "postinstall": "node scripts/postinstall",
+    "prerelease": "npm run update:check && npm run contributors",
+    "test": "exit 0",
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
+  },
+  "private": true,
+  "license": "MIT",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx nano-staged"
+  }
+}
