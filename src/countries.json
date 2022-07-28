@@ -1,0 +1,5865 @@
+[
+  {
+    "flag": "🇦🇼",
+    "alpha2": "AW",
+    "callingCodes": [
+      "+297"
+    ],
+    "languages": {
+      "nld": "Dutch",
+      "pap": "Papiamento"
+    },
+    "currencies": {
+      "AWG": {
+        "name": "Aruban florin",
+        "symbol": "ƒ"
+      }
+    },
+    "tld": [
+      ".aw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇫",
+    "alpha2": "AF",
+    "callingCodes": [
+      "+93"
+    ],
+    "languages": {
+      "prs": "Dari",
+      "pus": "Pashto",
+      "tuk": "Turkmen"
+    },
+    "currencies": {
+      "AFN": {
+        "name": "Afghan afghani",
+        "symbol": "؋"
+      }
+    },
+    "tld": [
+      ".af"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇴",
+    "alpha2": "AO",
+    "callingCodes": [
+      "+244"
+    ],
+    "languages": {
+      "por": "Portuguese"
+    },
+    "currencies": {
+      "AOA": {
+        "name": "Angolan kwanza",
+        "symbol": "Kz"
+      }
+    },
+    "tld": [
+      ".ao"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇮",
+    "alpha2": "AI",
+    "callingCodes": [
+      "+1264"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XCD": {
+        "name": "Eastern Caribbean dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ai"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇽",
+    "alpha2": "AX",
+    "callingCodes": [
+      "+35818"
+    ],
+    "languages": {
+      "swe": "Swedish"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".ax"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇱",
+    "alpha2": "AL",
+    "callingCodes": [
+      "+355"
+    ],
+    "languages": {
+      "sqi": "Albanian"
+    },
+    "currencies": {
+      "ALL": {
+        "name": "Albanian lek",
+        "symbol": "L"
+      }
+    },
+    "tld": [
+      ".al"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇩",
+    "alpha2": "AD",
+    "callingCodes": [
+      "+376"
+    ],
+    "languages": {
+      "cat": "Catalan"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".ad"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇪",
+    "alpha2": "AE",
+    "callingCodes": [
+      "+971"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "AED": {
+        "name": "United Arab Emirates dirham",
+        "symbol": "د.إ"
+      }
+    },
+    "tld": [
+      ".ae",
+      "امارات."
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇷",
+    "alpha2": "AR",
+    "callingCodes": [
+      "+54"
+    ],
+    "languages": {
+      "grn": "Guaraní",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "ARS": {
+        "name": "Argentine peso",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ar"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇲",
+    "alpha2": "AM",
+    "callingCodes": [
+      "+374"
+    ],
+    "languages": {
+      "hye": "Armenian"
+    },
+    "currencies": {
+      "AMD": {
+        "name": "Armenian dram",
+        "symbol": "֏"
+      }
+    },
+    "tld": [
+      ".am"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇸",
+    "alpha2": "AS",
+    "callingCodes": [
+      "+1684"
+    ],
+    "languages": {
+      "eng": "English",
+      "smo": "Samoan"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".as"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇶",
+    "alpha2": "AQ",
+    "callingCodes": [],
+    "languages": {},
+    "currencies": [],
+    "tld": [
+      ".aq"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇫",
+    "alpha2": "TF",
+    "callingCodes": [
+      "+262"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".tf"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇬",
+    "alpha2": "AG",
+    "callingCodes": [
+      "+1268"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XCD": {
+        "name": "Eastern Caribbean dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ag"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇺",
+    "alpha2": "AU",
+    "callingCodes": [
+      "+61"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".au"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇦🇹",
+    "alpha2": "AT",
+    "callingCodes": [
+      "+43"
+    ],
+    "languages": {
+      "bar": "Austro-Bavarian German"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".at"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇦🇿",
+    "alpha2": "AZ",
+    "callingCodes": [
+      "+994"
+    ],
+    "languages": {
+      "aze": "Azerbaijani",
+      "rus": "Russian"
+    },
+    "currencies": {
+      "AZN": {
+        "name": "Azerbaijani manat",
+        "symbol": "₼"
+      }
+    },
+    "tld": [
+      ".az"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇮",
+    "alpha2": "BI",
+    "callingCodes": [
+      "+257"
+    ],
+    "languages": {
+      "fra": "French",
+      "run": "Kirundi"
+    },
+    "currencies": {
+      "BIF": {
+        "name": "Burundian franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".bi"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇪",
+    "alpha2": "BE",
+    "callingCodes": [
+      "+32"
+    ],
+    "languages": {
+      "deu": "German",
+      "fra": "French",
+      "nld": "Dutch"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".be"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇧🇯",
+    "alpha2": "BJ",
+    "callingCodes": [
+      "+229"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XOF": {
+        "name": "West African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".bj"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇫",
+    "alpha2": "BF",
+    "callingCodes": [
+      "+226"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XOF": {
+        "name": "West African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".bf"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇩",
+    "alpha2": "BD",
+    "callingCodes": [
+      "+880"
+    ],
+    "languages": {
+      "ben": "Bengali"
+    },
+    "currencies": {
+      "BDT": {
+        "name": "Bangladeshi taka",
+        "symbol": "৳"
+      }
+    },
+    "tld": [
+      ".bd"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇬",
+    "alpha2": "BG",
+    "callingCodes": [
+      "+359"
+    ],
+    "languages": {
+      "bul": "Bulgarian"
+    },
+    "currencies": {
+      "BGN": {
+        "name": "Bulgarian lev",
+        "symbol": "лв"
+      }
+    },
+    "tld": [
+      ".bg"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇧🇭",
+    "alpha2": "BH",
+    "callingCodes": [
+      "+973"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "BHD": {
+        "name": "Bahraini dinar",
+        "symbol": ".د.ب"
+      }
+    },
+    "tld": [
+      ".bh"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇸",
+    "alpha2": "BS",
+    "callingCodes": [
+      "+1242"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BSD": {
+        "name": "Bahamian dollar",
+        "symbol": "$"
+      },
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".bs"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇦",
+    "alpha2": "BA",
+    "callingCodes": [
+      "+387"
+    ],
+    "languages": {
+      "bos": "Bosnian",
+      "hrv": "Croatian",
+      "srp": "Serbian"
+    },
+    "currencies": {
+      "BAM": {
+        "name": "Bosnia and Herzegovina convertible mark",
+        "symbol": ""
+      }
+    },
+    "tld": [
+      ".ba"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇱",
+    "alpha2": "BL",
+    "callingCodes": [
+      "+590"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".bl"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇭",
+    "alpha2": "SH",
+    "callingCodes": [
+      "+290",
+      "+247"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GBP": {
+        "name": "Pound sterling",
+        "symbol": "£"
+      },
+      "SHP": {
+        "name": "Saint Helena pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".sh",
+      ".ac"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇾",
+    "alpha2": "BY",
+    "callingCodes": [
+      "+375"
+    ],
+    "languages": {
+      "bel": "Belarusian",
+      "rus": "Russian"
+    },
+    "currencies": {
+      "BYN": {
+        "name": "Belarusian ruble",
+        "symbol": "Br"
+      }
+    },
+    "tld": [
+      ".by"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇿",
+    "alpha2": "BZ",
+    "callingCodes": [
+      "+501"
+    ],
+    "languages": {
+      "bjz": "Belizean Creole",
+      "eng": "English",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "BZD": {
+        "name": "Belize dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".bz"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇲",
+    "alpha2": "BM",
+    "callingCodes": [
+      "+1441"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BMD": {
+        "name": "Bermudian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".bm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇴",
+    "alpha2": "BO",
+    "callingCodes": [
+      "+591"
+    ],
+    "languages": {
+      "aym": "Aymara",
+      "grn": "Guaraní",
+      "que": "Quechua",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "BOB": {
+        "name": "Bolivian boliviano",
+        "symbol": "Bs."
+      }
+    },
+    "tld": [
+      ".bo"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "",
+    "alpha2": "BQ",
+    "callingCodes": [
+      "+599"
+    ],
+    "languages": {
+      "eng": "English",
+      "nld": "Dutch",
+      "pap": "Papiamento"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".bq",
+      ".nl"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇷",
+    "alpha2": "BR",
+    "callingCodes": [
+      "+55"
+    ],
+    "languages": {
+      "por": "Portuguese"
+    },
+    "currencies": {
+      "BRL": {
+        "name": "Brazilian real",
+        "symbol": "R$"
+      }
+    },
+    "tld": [
+      ".br"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇧",
+    "alpha2": "BB",
+    "callingCodes": [
+      "+1246"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BBD": {
+        "name": "Barbadian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".bb"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇳",
+    "alpha2": "BN",
+    "callingCodes": [
+      "+673"
+    ],
+    "languages": {
+      "msa": "Malay"
+    },
+    "currencies": {
+      "BND": {
+        "name": "Brunei dollar",
+        "symbol": "$"
+      },
+      "SGD": {
+        "name": "Singapore dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".bn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇹",
+    "alpha2": "BT",
+    "callingCodes": [
+      "+975"
+    ],
+    "languages": {
+      "dzo": "Dzongkha"
+    },
+    "currencies": {
+      "BTN": {
+        "name": "Bhutanese ngultrum",
+        "symbol": "Nu."
+      },
+      "INR": {
+        "name": "Indian rupee",
+        "symbol": "₹"
+      }
+    },
+    "tld": [
+      ".bt"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇻",
+    "alpha2": "BV",
+    "callingCodes": [
+      "+47"
+    ],
+    "languages": {
+      "nor": "Norwegian"
+    },
+    "currencies": [],
+    "tld": [
+      ".bv"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇧🇼",
+    "alpha2": "BW",
+    "callingCodes": [
+      "+267"
+    ],
+    "languages": {
+      "eng": "English",
+      "tsn": "Tswana"
+    },
+    "currencies": {
+      "BWP": {
+        "name": "Botswana pula",
+        "symbol": "P"
+      }
+    },
+    "tld": [
+      ".bw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇫",
+    "alpha2": "CF",
+    "callingCodes": [
+      "+236"
+    ],
+    "languages": {
+      "fra": "French",
+      "sag": "Sango"
+    },
+    "currencies": {
+      "XAF": {
+        "name": "Central African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".cf"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇦",
+    "alpha2": "CA",
+    "callingCodes": [
+      "+1"
+    ],
+    "languages": {
+      "eng": "English",
+      "fra": "French"
+    },
+    "currencies": {
+      "CAD": {
+        "name": "Canadian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ca"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇨",
+    "alpha2": "CC",
+    "callingCodes": [
+      "+61"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".cc"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇭",
+    "alpha2": "CH",
+    "callingCodes": [
+      "+41"
+    ],
+    "languages": {
+      "fra": "French",
+      "gsw": "Swiss German",
+      "ita": "Italian",
+      "roh": "Romansh"
+    },
+    "currencies": {
+      "CHF": {
+        "name": "Swiss franc",
+        "symbol": "Fr."
+      }
+    },
+    "tld": [
+      ".ch"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇱",
+    "alpha2": "CL",
+    "callingCodes": [
+      "+56"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "CLP": {
+        "name": "Chilean peso",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".cl"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇳",
+    "alpha2": "CN",
+    "callingCodes": [
+      "+86"
+    ],
+    "languages": {
+      "zho": "Chinese"
+    },
+    "currencies": {
+      "CNY": {
+        "name": "Chinese yuan",
+        "symbol": "¥"
+      }
+    },
+    "tld": [
+      ".cn",
+      ".中国",
+      ".中國",
+      ".公司",
+      ".网络"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇮",
+    "alpha2": "CI",
+    "callingCodes": [
+      "+225"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XOF": {
+        "name": "West African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".ci"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇲",
+    "alpha2": "CM",
+    "callingCodes": [
+      "+237"
+    ],
+    "languages": {
+      "eng": "English",
+      "fra": "French"
+    },
+    "currencies": {
+      "XAF": {
+        "name": "Central African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".cm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇩",
+    "alpha2": "CD",
+    "callingCodes": [
+      "+243"
+    ],
+    "languages": {
+      "fra": "French",
+      "kon": "Kikongo",
+      "lin": "Lingala",
+      "lua": "Tshiluba",
+      "swa": "Swahili"
+    },
+    "currencies": {
+      "CDF": {
+        "name": "Congolese franc",
+        "symbol": "FC"
+      }
+    },
+    "tld": [
+      ".cd"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇬",
+    "alpha2": "CG",
+    "callingCodes": [
+      "+242"
+    ],
+    "languages": {
+      "fra": "French",
+      "kon": "Kikongo",
+      "lin": "Lingala"
+    },
+    "currencies": {
+      "XAF": {
+        "name": "Central African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".cg"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇰",
+    "alpha2": "CK",
+    "callingCodes": [
+      "+682"
+    ],
+    "languages": {
+      "eng": "English",
+      "rar": "Cook Islands Māori"
+    },
+    "currencies": {
+      "CKD": {
+        "name": "Cook Islands dollar",
+        "symbol": "$"
+      },
+      "NZD": {
+        "name": "New Zealand dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ck"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇴",
+    "alpha2": "CO",
+    "callingCodes": [
+      "+57"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "COP": {
+        "name": "Colombian peso",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".co"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇲",
+    "alpha2": "KM",
+    "callingCodes": [
+      "+269"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "fra": "French",
+      "zdj": "Comorian"
+    },
+    "currencies": {
+      "KMF": {
+        "name": "Comorian franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".km"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇻",
+    "alpha2": "CV",
+    "callingCodes": [
+      "+238"
+    ],
+    "languages": {
+      "por": "Portuguese"
+    },
+    "currencies": {
+      "CVE": {
+        "name": "Cape Verdean escudo",
+        "symbol": "Esc"
+      }
+    },
+    "tld": [
+      ".cv"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇷",
+    "alpha2": "CR",
+    "callingCodes": [
+      "+506"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "CRC": {
+        "name": "Costa Rican colón",
+        "symbol": "₡"
+      }
+    },
+    "tld": [
+      ".cr"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇺",
+    "alpha2": "CU",
+    "callingCodes": [
+      "+53"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "CUC": {
+        "name": "Cuban convertible peso",
+        "symbol": "$"
+      },
+      "CUP": {
+        "name": "Cuban peso",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".cu"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇼",
+    "alpha2": "CW",
+    "callingCodes": [
+      "+599"
+    ],
+    "languages": {
+      "eng": "English",
+      "nld": "Dutch",
+      "pap": "Papiamento"
+    },
+    "currencies": {
+      "ANG": {
+        "name": "Netherlands Antillean guilder",
+        "symbol": "ƒ"
+      }
+    },
+    "tld": [
+      ".cw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇽",
+    "alpha2": "CX",
+    "callingCodes": [
+      "+61"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".cx"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇾",
+    "alpha2": "KY",
+    "callingCodes": [
+      "+1345"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "KYD": {
+        "name": "Cayman Islands dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ky"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇨🇾",
+    "alpha2": "CY",
+    "callingCodes": [
+      "+357"
+    ],
+    "languages": {
+      "ell": "Greek",
+      "tur": "Turkish"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".cy"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇨🇿",
+    "alpha2": "CZ",
+    "callingCodes": [
+      "+420"
+    ],
+    "languages": {
+      "ces": "Czech",
+      "slk": "Slovak"
+    },
+    "currencies": {
+      "CZK": {
+        "name": "Czech koruna",
+        "symbol": "Kč"
+      }
+    },
+    "tld": [
+      ".cz"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇩🇪",
+    "alpha2": "DE",
+    "callingCodes": [
+      "+49"
+    ],
+    "languages": {
+      "deu": "German"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".de"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇩🇯",
+    "alpha2": "DJ",
+    "callingCodes": [
+      "+253"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "fra": "French"
+    },
+    "currencies": {
+      "DJF": {
+        "name": "Djiboutian franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".dj"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇩🇲",
+    "alpha2": "DM",
+    "callingCodes": [
+      "+1767"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XCD": {
+        "name": "Eastern Caribbean dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".dm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇩🇰",
+    "alpha2": "DK",
+    "callingCodes": [
+      "+45"
+    ],
+    "languages": {
+      "dan": "Danish"
+    },
+    "currencies": {
+      "DKK": {
+        "name": "Danish krone",
+        "symbol": "kr"
+      }
+    },
+    "tld": [
+      ".dk"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇩🇴",
+    "alpha2": "DO",
+    "callingCodes": [
+      "+1809",
+      "+1829",
+      "+1849"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "DOP": {
+        "name": "Dominican peso",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".do"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇩🇿",
+    "alpha2": "DZ",
+    "callingCodes": [
+      "+213"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "DZD": {
+        "name": "Algerian dinar",
+        "symbol": "د.ج"
+      }
+    },
+    "tld": [
+      ".dz",
+      "الجزائر."
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇪🇨",
+    "alpha2": "EC",
+    "callingCodes": [
+      "+593"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ec"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇪🇬",
+    "alpha2": "EG",
+    "callingCodes": [
+      "+20"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "EGP": {
+        "name": "Egyptian pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".eg",
+      ".مصر"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇪🇷",
+    "alpha2": "ER",
+    "callingCodes": [
+      "+291"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "eng": "English",
+      "tir": "Tigrinya"
+    },
+    "currencies": {
+      "ERN": {
+        "name": "Eritrean nakfa",
+        "symbol": "Nfk"
+      }
+    },
+    "tld": [
+      ".er"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇪🇭",
+    "alpha2": "EH",
+    "callingCodes": [
+      "+2125288",
+      "+2125289"
+    ],
+    "languages": {
+      "ber": "Berber",
+      "mey": "Hassaniya",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "DZD": {
+        "name": "Algerian dinar",
+        "symbol": "دج"
+      },
+      "MAD": {
+        "name": "Moroccan dirham",
+        "symbol": "DH"
+      },
+      "MRU": {
+        "name": "Mauritanian ouguiya",
+        "symbol": "UM"
+      }
+    },
+    "tld": [
+      ".eh"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇪🇸",
+    "alpha2": "ES",
+    "callingCodes": [
+      "+34"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".es"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇪🇪",
+    "alpha2": "EE",
+    "callingCodes": [
+      "+372"
+    ],
+    "languages": {
+      "est": "Estonian"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".ee"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇪🇹",
+    "alpha2": "ET",
+    "callingCodes": [
+      "+251"
+    ],
+    "languages": {
+      "amh": "Amharic"
+    },
+    "currencies": {
+      "ETB": {
+        "name": "Ethiopian birr",
+        "symbol": "Br"
+      }
+    },
+    "tld": [
+      ".et"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇫🇮",
+    "alpha2": "FI",
+    "callingCodes": [
+      "+358"
+    ],
+    "languages": {
+      "fin": "Finnish",
+      "swe": "Swedish"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".fi"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇫🇯",
+    "alpha2": "FJ",
+    "callingCodes": [
+      "+679"
+    ],
+    "languages": {
+      "eng": "English",
+      "fij": "Fijian",
+      "hif": "Fiji Hindi"
+    },
+    "currencies": {
+      "FJD": {
+        "name": "Fijian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".fj"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇫🇰",
+    "alpha2": "FK",
+    "callingCodes": [
+      "+500"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "FKP": {
+        "name": "Falkland Islands pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".fk"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇫🇷",
+    "alpha2": "FR",
+    "callingCodes": [
+      "+33"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".fr"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇫🇴",
+    "alpha2": "FO",
+    "callingCodes": [
+      "+298"
+    ],
+    "languages": {
+      "dan": "Danish",
+      "fao": "Faroese"
+    },
+    "currencies": {
+      "DKK": {
+        "name": "Danish krone",
+        "symbol": "kr"
+      },
+      "FOK": {
+        "name": "Faroese króna",
+        "symbol": "kr"
+      }
+    },
+    "tld": [
+      ".fo"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇫🇲",
+    "alpha2": "FM",
+    "callingCodes": [
+      "+691"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": [],
+    "tld": [
+      ".fm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇦",
+    "alpha2": "GA",
+    "callingCodes": [
+      "+241"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XAF": {
+        "name": "Central African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".ga"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇧",
+    "alpha2": "GB",
+    "callingCodes": [
+      "+44"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GBP": {
+        "name": "British pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".uk"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇪",
+    "alpha2": "GE",
+    "callingCodes": [
+      "+995"
+    ],
+    "languages": {
+      "kat": "Georgian"
+    },
+    "currencies": {
+      "GEL": {
+        "name": "lari",
+        "symbol": "₾"
+      }
+    },
+    "tld": [
+      ".ge"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇬",
+    "alpha2": "GG",
+    "callingCodes": [
+      "+44"
+    ],
+    "languages": {
+      "eng": "English",
+      "fra": "French",
+      "nfr": "Guernésiais"
+    },
+    "currencies": {
+      "GBP": {
+        "name": "British pound",
+        "symbol": "£"
+      },
+      "GGP": {
+        "name": "Guernsey pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".gg"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇭",
+    "alpha2": "GH",
+    "callingCodes": [
+      "+233"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GHS": {
+        "name": "Ghanaian cedi",
+        "symbol": "₵"
+      }
+    },
+    "tld": [
+      ".gh"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇮",
+    "alpha2": "GI",
+    "callingCodes": [
+      "+350"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GIP": {
+        "name": "Gibraltar pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".gi"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇳",
+    "alpha2": "GN",
+    "callingCodes": [
+      "+224"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "GNF": {
+        "name": "Guinean franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".gn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇵",
+    "alpha2": "GP",
+    "callingCodes": [
+      "+590"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".gp"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇲",
+    "alpha2": "GM",
+    "callingCodes": [
+      "+220"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GMD": {
+        "name": "dalasi",
+        "symbol": "D"
+      }
+    },
+    "tld": [
+      ".gm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇼",
+    "alpha2": "GW",
+    "callingCodes": [
+      "+245"
+    ],
+    "languages": {
+      "por": "Portuguese",
+      "pov": "Upper Guinea Creole"
+    },
+    "currencies": {
+      "XOF": {
+        "name": "West African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".gw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇶",
+    "alpha2": "GQ",
+    "callingCodes": [
+      "+240"
+    ],
+    "languages": {
+      "fra": "French",
+      "por": "Portuguese",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "XAF": {
+        "name": "Central African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".gq"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇷",
+    "alpha2": "GR",
+    "callingCodes": [
+      "+30"
+    ],
+    "languages": {
+      "ell": "Greek"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".gr"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇬🇩",
+    "alpha2": "GD",
+    "callingCodes": [
+      "+1473"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XCD": {
+        "name": "Eastern Caribbean dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".gd"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇱",
+    "alpha2": "GL",
+    "callingCodes": [
+      "+299"
+    ],
+    "languages": {
+      "kal": "Greenlandic"
+    },
+    "currencies": {
+      "DKK": {
+        "name": "krone",
+        "symbol": "kr."
+      }
+    },
+    "tld": [
+      ".gl"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇹",
+    "alpha2": "GT",
+    "callingCodes": [
+      "+502"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "GTQ": {
+        "name": "Guatemalan quetzal",
+        "symbol": "Q"
+      }
+    },
+    "tld": [
+      ".gt"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇫",
+    "alpha2": "GF",
+    "callingCodes": [
+      "+594"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".gf"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇺",
+    "alpha2": "GU",
+    "callingCodes": [
+      "+1671"
+    ],
+    "languages": {
+      "cha": "Chamorro",
+      "eng": "English",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".gu"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇾",
+    "alpha2": "GY",
+    "callingCodes": [
+      "+592"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GYD": {
+        "name": "Guyanese dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".gy"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇭🇰",
+    "alpha2": "HK",
+    "callingCodes": [
+      "+852"
+    ],
+    "languages": {
+      "eng": "English",
+      "zho": "Chinese"
+    },
+    "currencies": {
+      "HKD": {
+        "name": "Hong Kong dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".hk",
+      ".香港"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇭🇲",
+    "alpha2": "HM",
+    "callingCodes": [
+      ""
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": [],
+    "tld": [
+      ".hm",
+      ".aq"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇭🇳",
+    "alpha2": "HN",
+    "callingCodes": [
+      "+504"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "HNL": {
+        "name": "Honduran lempira",
+        "symbol": "L"
+      }
+    },
+    "tld": [
+      ".hn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇭🇷",
+    "alpha2": "HR",
+    "callingCodes": [
+      "+385"
+    ],
+    "languages": {
+      "hrv": "Croatian"
+    },
+    "currencies": {
+      "HRK": {
+        "name": "Croatian kuna",
+        "symbol": "kn"
+      }
+    },
+    "tld": [
+      ".hr"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇭🇹",
+    "alpha2": "HT",
+    "callingCodes": [
+      "+509"
+    ],
+    "languages": {
+      "fra": "French",
+      "hat": "Haitian Creole"
+    },
+    "currencies": {
+      "HTG": {
+        "name": "Haitian gourde",
+        "symbol": "G"
+      }
+    },
+    "tld": [
+      ".ht"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇭🇺",
+    "alpha2": "HU",
+    "callingCodes": [
+      "+36"
+    ],
+    "languages": {
+      "hun": "Hungarian"
+    },
+    "currencies": {
+      "HUF": {
+        "name": "Hungarian forint",
+        "symbol": "Ft"
+      }
+    },
+    "tld": [
+      ".hu"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇮🇩",
+    "alpha2": "ID",
+    "callingCodes": [
+      "+62"
+    ],
+    "languages": {
+      "ind": "Indonesian"
+    },
+    "currencies": {
+      "IDR": {
+        "name": "Indonesian rupiah",
+        "symbol": "Rp"
+      }
+    },
+    "tld": [
+      ".id"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇮🇲",
+    "alpha2": "IM",
+    "callingCodes": [
+      "+44"
+    ],
+    "languages": {
+      "eng": "English",
+      "glv": "Manx"
+    },
+    "currencies": {
+      "GBP": {
+        "name": "British pound",
+        "symbol": "£"
+      },
+      "IMP": {
+        "name": "Manx pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".im"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇮🇳",
+    "alpha2": "IN",
+    "callingCodes": [
+      "+91"
+    ],
+    "languages": {
+      "eng": "English",
+      "hin": "Hindi",
+      "tam": "Tamil"
+    },
+    "currencies": {
+      "INR": {
+        "name": "Indian rupee",
+        "symbol": "₹"
+      }
+    },
+    "tld": [
+      ".in"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇮🇴",
+    "alpha2": "IO",
+    "callingCodes": [
+      "+246"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".io"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇮🇪",
+    "alpha2": "IE",
+    "callingCodes": [
+      "+353"
+    ],
+    "languages": {
+      "eng": "English",
+      "gle": "Irish"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".ie"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇮🇷",
+    "alpha2": "IR",
+    "callingCodes": [
+      "+98"
+    ],
+    "languages": {
+      "fas": "Persian (Farsi)"
+    },
+    "currencies": {
+      "IRR": {
+        "name": "Iranian rial",
+        "symbol": "﷼"
+      }
+    },
+    "tld": [
+      ".ir",
+      "ایران."
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇮🇶",
+    "alpha2": "IQ",
+    "callingCodes": [
+      "+964"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "arc": "Aramaic",
+      "ckb": "Sorani"
+    },
+    "currencies": {
+      "IQD": {
+        "name": "Iraqi dinar",
+        "symbol": "ع.د"
+      }
+    },
+    "tld": [
+      ".iq"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇮🇸",
+    "alpha2": "IS",
+    "callingCodes": [
+      "+354"
+    ],
+    "languages": {
+      "isl": "Icelandic"
+    },
+    "currencies": {
+      "ISK": {
+        "name": "Icelandic króna",
+        "symbol": "kr"
+      }
+    },
+    "tld": [
+      ".is"
+    ],
+    "eeaMember": true,
+    "euMember": false
+  },
+  {
+    "flag": "🇮🇱",
+    "alpha2": "IL",
+    "callingCodes": [
+      "+972"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "heb": "Hebrew"
+    },
+    "currencies": {
+      "ILS": {
+        "name": "Israeli new shekel",
+        "symbol": "₪"
+      }
+    },
+    "tld": [
+      ".il"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇮🇹",
+    "alpha2": "IT",
+    "callingCodes": [
+      "+39"
+    ],
+    "languages": {
+      "ita": "Italian"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".it"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇯🇲",
+    "alpha2": "JM",
+    "callingCodes": [
+      "+1876"
+    ],
+    "languages": {
+      "eng": "English",
+      "jam": "Jamaican Patois"
+    },
+    "currencies": {
+      "JMD": {
+        "name": "Jamaican dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".jm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇯🇪",
+    "alpha2": "JE",
+    "callingCodes": [
+      "+44"
+    ],
+    "languages": {
+      "eng": "English",
+      "fra": "French",
+      "nrf": "Jèrriais"
+    },
+    "currencies": {
+      "GBP": {
+        "name": "British pound",
+        "symbol": "£"
+      },
+      "JEP": {
+        "name": "Jersey pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".je"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇯🇴",
+    "alpha2": "JO",
+    "callingCodes": [
+      "+962"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "JOD": {
+        "name": "Jordanian dinar",
+        "symbol": "د.ا"
+      }
+    },
+    "tld": [
+      ".jo",
+      "الاردن."
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇯🇵",
+    "alpha2": "JP",
+    "callingCodes": [
+      "+81"
+    ],
+    "languages": {
+      "jpn": "Japanese"
+    },
+    "currencies": {
+      "JPY": {
+        "name": "Japanese yen",
+        "symbol": "¥"
+      }
+    },
+    "tld": [
+      ".jp",
+      ".みんな"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇿",
+    "alpha2": "KZ",
+    "callingCodes": [
+      "+76",
+      "+77"
+    ],
+    "languages": {
+      "kaz": "Kazakh",
+      "rus": "Russian"
+    },
+    "currencies": {
+      "KZT": {
+        "name": "Kazakhstani tenge",
+        "symbol": "₸"
+      }
+    },
+    "tld": [
+      ".kz",
+      ".қаз"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇪",
+    "alpha2": "KE",
+    "callingCodes": [
+      "+254"
+    ],
+    "languages": {
+      "eng": "English",
+      "swa": "Swahili"
+    },
+    "currencies": {
+      "KES": {
+        "name": "Kenyan shilling",
+        "symbol": "Sh"
+      }
+    },
+    "tld": [
+      ".ke"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇬",
+    "alpha2": "KG",
+    "callingCodes": [
+      "+996"
+    ],
+    "languages": {
+      "kir": "Kyrgyz",
+      "rus": "Russian"
+    },
+    "currencies": {
+      "KGS": {
+        "name": "Kyrgyzstani som",
+        "symbol": "с"
+      }
+    },
+    "tld": [
+      ".kg"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇭",
+    "alpha2": "KH",
+    "callingCodes": [
+      "+855"
+    ],
+    "languages": {
+      "khm": "Khmer"
+    },
+    "currencies": {
+      "KHR": {
+        "name": "Cambodian riel",
+        "symbol": "៛"
+      },
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".kh"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇮",
+    "alpha2": "KI",
+    "callingCodes": [
+      "+686"
+    ],
+    "languages": {
+      "eng": "English",
+      "gil": "Gilbertese"
+    },
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      },
+      "KID": {
+        "name": "Kiribati dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ki"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇳",
+    "alpha2": "KN",
+    "callingCodes": [
+      "+1869"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XCD": {
+        "name": "Eastern Caribbean dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".kn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇷",
+    "alpha2": "KR",
+    "callingCodes": [
+      "+82"
+    ],
+    "languages": {
+      "kor": "Korean"
+    },
+    "currencies": {
+      "KRW": {
+        "name": "South Korean won",
+        "symbol": "₩"
+      }
+    },
+    "tld": [
+      ".kr",
+      ".한국"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇽🇰",
+    "alpha2": "XK",
+    "callingCodes": [
+      "+383"
+    ],
+    "languages": {
+      "sqi": "Albanian",
+      "srp": "Serbian"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇼",
+    "alpha2": "KW",
+    "callingCodes": [
+      "+965"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "KWD": {
+        "name": "Kuwaiti dinar",
+        "symbol": "د.ك"
+      }
+    },
+    "tld": [
+      ".kw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇦",
+    "alpha2": "LA",
+    "callingCodes": [
+      "+856"
+    ],
+    "languages": {
+      "lao": "Lao"
+    },
+    "currencies": {
+      "LAK": {
+        "name": "Lao kip",
+        "symbol": "₭"
+      }
+    },
+    "tld": [
+      ".la"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇧",
+    "alpha2": "LB",
+    "callingCodes": [
+      "+961"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "fra": "French"
+    },
+    "currencies": {
+      "LBP": {
+        "name": "Lebanese pound",
+        "symbol": "ل.ل"
+      }
+    },
+    "tld": [
+      ".lb"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇷",
+    "alpha2": "LR",
+    "callingCodes": [
+      "+231"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "LRD": {
+        "name": "Liberian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".lr"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇾",
+    "alpha2": "LY",
+    "callingCodes": [
+      "+218"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "LYD": {
+        "name": "Libyan dinar",
+        "symbol": "ل.د"
+      }
+    },
+    "tld": [
+      ".ly"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇨",
+    "alpha2": "LC",
+    "callingCodes": [
+      "+1758"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XCD": {
+        "name": "Eastern Caribbean dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".lc"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇮",
+    "alpha2": "LI",
+    "callingCodes": [
+      "+423"
+    ],
+    "languages": {
+      "deu": "German"
+    },
+    "currencies": {
+      "CHF": {
+        "name": "Swiss franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".li"
+    ],
+    "eeaMember": true,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇰",
+    "alpha2": "LK",
+    "callingCodes": [
+      "+94"
+    ],
+    "languages": {
+      "sin": "Sinhala",
+      "tam": "Tamil"
+    },
+    "currencies": {
+      "LKR": {
+        "name": "Sri Lankan rupee",
+        "symbol": "Rs  රු"
+      }
+    },
+    "tld": [
+      ".lk",
+      ".இலங்கை",
+      ".ලංකා"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇸",
+    "alpha2": "LS",
+    "callingCodes": [
+      "+266"
+    ],
+    "languages": {
+      "eng": "English",
+      "sot": "Sotho"
+    },
+    "currencies": {
+      "LSL": {
+        "name": "Lesotho loti",
+        "symbol": "L"
+      },
+      "ZAR": {
+        "name": "South African rand",
+        "symbol": "R"
+      }
+    },
+    "tld": [
+      ".ls"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇱🇹",
+    "alpha2": "LT",
+    "callingCodes": [
+      "+370"
+    ],
+    "languages": {
+      "lit": "Lithuanian"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".lt"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇱🇺",
+    "alpha2": "LU",
+    "callingCodes": [
+      "+352"
+    ],
+    "languages": {
+      "deu": "German",
+      "fra": "French",
+      "ltz": "Luxembourgish"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".lu"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇱🇻",
+    "alpha2": "LV",
+    "callingCodes": [
+      "+371"
+    ],
+    "languages": {
+      "lav": "Latvian"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".lv"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇲🇴",
+    "alpha2": "MO",
+    "callingCodes": [
+      "+853"
+    ],
+    "languages": {
+      "por": "Portuguese",
+      "zho": "Chinese"
+    },
+    "currencies": {
+      "MOP": {
+        "name": "Macanese pataca",
+        "symbol": "P"
+      }
+    },
+    "tld": [
+      ".mo"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇫",
+    "alpha2": "MF",
+    "callingCodes": [
+      "+590"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".fr",
+      ".gp"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇦",
+    "alpha2": "MA",
+    "callingCodes": [
+      "+212"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "ber": "Berber"
+    },
+    "currencies": {
+      "MAD": {
+        "name": "Moroccan dirham",
+        "symbol": "د.م."
+      }
+    },
+    "tld": [
+      ".ma",
+      "المغرب."
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇨",
+    "alpha2": "MC",
+    "callingCodes": [
+      "+377"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".mc"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇩",
+    "alpha2": "MD",
+    "callingCodes": [
+      "+373"
+    ],
+    "languages": {
+      "ron": "Moldavian"
+    },
+    "currencies": {
+      "MDL": {
+        "name": "Moldovan leu",
+        "symbol": "L"
+      }
+    },
+    "tld": [
+      ".md"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇬",
+    "alpha2": "MG",
+    "callingCodes": [
+      "+261"
+    ],
+    "languages": {
+      "fra": "French",
+      "mlg": "Malagasy"
+    },
+    "currencies": {
+      "MGA": {
+        "name": "Malagasy ariary",
+        "symbol": "Ar"
+      }
+    },
+    "tld": [
+      ".mg"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇻",
+    "alpha2": "MV",
+    "callingCodes": [
+      "+960"
+    ],
+    "languages": {
+      "div": "Maldivian"
+    },
+    "currencies": {
+      "MVR": {
+        "name": "Maldivian rufiyaa",
+        "symbol": ".ރ"
+      }
+    },
+    "tld": [
+      ".mv"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇽",
+    "alpha2": "MX",
+    "callingCodes": [
+      "+52"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "MXN": {
+        "name": "Mexican peso",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".mx"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇭",
+    "alpha2": "MH",
+    "callingCodes": [
+      "+692"
+    ],
+    "languages": {
+      "eng": "English",
+      "mah": "Marshallese"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".mh"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇰",
+    "alpha2": "MK",
+    "callingCodes": [
+      "+389"
+    ],
+    "languages": {
+      "mkd": "Macedonian"
+    },
+    "currencies": {
+      "MKD": {
+        "name": "denar",
+        "symbol": "den"
+      }
+    },
+    "tld": [
+      ".mk"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇱",
+    "alpha2": "ML",
+    "callingCodes": [
+      "+223"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XOF": {
+        "name": "West African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".ml"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇹",
+    "alpha2": "MT",
+    "callingCodes": [
+      "+356"
+    ],
+    "languages": {
+      "eng": "English",
+      "mlt": "Maltese"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".mt"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇲🇲",
+    "alpha2": "MM",
+    "callingCodes": [
+      "+95"
+    ],
+    "languages": {
+      "mya": "Burmese"
+    },
+    "currencies": {
+      "MMK": {
+        "name": "Burmese kyat",
+        "symbol": "Ks"
+      }
+    },
+    "tld": [
+      ".mm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇪",
+    "alpha2": "ME",
+    "callingCodes": [
+      "+382"
+    ],
+    "languages": {
+      "cnr": "Montenegrin"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".me"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇳",
+    "alpha2": "MN",
+    "callingCodes": [
+      "+976"
+    ],
+    "languages": {
+      "mon": "Mongolian"
+    },
+    "currencies": {
+      "MNT": {
+        "name": "Mongolian tögrög",
+        "symbol": "₮"
+      }
+    },
+    "tld": [
+      ".mn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇵",
+    "alpha2": "MP",
+    "callingCodes": [
+      "+1670"
+    ],
+    "languages": {
+      "cal": "Carolinian",
+      "cha": "Chamorro",
+      "eng": "English"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".mp"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇿",
+    "alpha2": "MZ",
+    "callingCodes": [
+      "+258"
+    ],
+    "languages": {
+      "por": "Portuguese"
+    },
+    "currencies": {
+      "MZN": {
+        "name": "Mozambican metical",
+        "symbol": "MT"
+      }
+    },
+    "tld": [
+      ".mz"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇷",
+    "alpha2": "MR",
+    "callingCodes": [
+      "+222"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "MRU": {
+        "name": "Mauritanian ouguiya",
+        "symbol": "UM"
+      }
+    },
+    "tld": [
+      ".mr"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇸",
+    "alpha2": "MS",
+    "callingCodes": [
+      "+1664"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XCD": {
+        "name": "Eastern Caribbean dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".ms"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇶",
+    "alpha2": "MQ",
+    "callingCodes": [
+      "+596"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".mq"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇺",
+    "alpha2": "MU",
+    "callingCodes": [
+      "+230"
+    ],
+    "languages": {
+      "eng": "English",
+      "fra": "French",
+      "mfe": "Mauritian Creole"
+    },
+    "currencies": {
+      "MUR": {
+        "name": "Mauritian rupee",
+        "symbol": "₨"
+      }
+    },
+    "tld": [
+      ".mu"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇼",
+    "alpha2": "MW",
+    "callingCodes": [
+      "+265"
+    ],
+    "languages": {
+      "eng": "English",
+      "nya": "Chewa"
+    },
+    "currencies": {
+      "MWK": {
+        "name": "Malawian kwacha",
+        "symbol": "MK"
+      }
+    },
+    "tld": [
+      ".mw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇲🇾",
+    "alpha2": "MY",
+    "callingCodes": [
+      "+60"
+    ],
+    "languages": {
+      "eng": "English",
+      "msa": "Malay"
+    },
+    "currencies": {
+      "MYR": {
+        "name": "Malaysian ringgit",
+        "symbol": "RM"
+      }
+    },
+    "tld": [
+      ".my"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇾🇹",
+    "alpha2": "YT",
+    "callingCodes": [
+      "+262"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".yt"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇦",
+    "alpha2": "NA",
+    "callingCodes": [
+      "+264"
+    ],
+    "languages": {
+      "afr": "Afrikaans",
+      "deu": "German",
+      "eng": "English",
+      "her": "Herero",
+      "hgm": "Khoekhoe",
+      "kwn": "Kwangali",
+      "loz": "Lozi",
+      "ndo": "Ndonga",
+      "tsn": "Tswana"
+    },
+    "currencies": {
+      "NAD": {
+        "name": "Namibian dollar",
+        "symbol": "$"
+      },
+      "ZAR": {
+        "name": "South African rand",
+        "symbol": "R"
+      }
+    },
+    "tld": [
+      ".na"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇨",
+    "alpha2": "NC",
+    "callingCodes": [
+      "+687"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XPF": {
+        "name": "CFP franc",
+        "symbol": "₣"
+      }
+    },
+    "tld": [
+      ".nc"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇪",
+    "alpha2": "NE",
+    "callingCodes": [
+      "+227"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XOF": {
+        "name": "West African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".ne"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇫",
+    "alpha2": "NF",
+    "callingCodes": [
+      "+672"
+    ],
+    "languages": {
+      "eng": "English",
+      "pih": "Norfuk"
+    },
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".nf"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇬",
+    "alpha2": "NG",
+    "callingCodes": [
+      "+234"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NGN": {
+        "name": "Nigerian naira",
+        "symbol": "₦"
+      }
+    },
+    "tld": [
+      ".ng"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇮",
+    "alpha2": "NI",
+    "callingCodes": [
+      "+505"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "NIO": {
+        "name": "Nicaraguan córdoba",
+        "symbol": "C$"
+      }
+    },
+    "tld": [
+      ".ni"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇺",
+    "alpha2": "NU",
+    "callingCodes": [
+      "+683"
+    ],
+    "languages": {
+      "eng": "English",
+      "niu": "Niuean"
+    },
+    "currencies": {
+      "NZD": {
+        "name": "New Zealand dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".nu"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇱",
+    "alpha2": "NL",
+    "callingCodes": [
+      "+31"
+    ],
+    "languages": {
+      "nld": "Dutch"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".nl"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇳🇴",
+    "alpha2": "NO",
+    "callingCodes": [
+      "+47"
+    ],
+    "languages": {
+      "nno": "Norwegian Nynorsk",
+      "nob": "Norwegian Bokmål",
+      "smi": "Sami"
+    },
+    "currencies": {
+      "NOK": {
+        "name": "Norwegian krone",
+        "symbol": "kr"
+      }
+    },
+    "tld": [
+      ".no"
+    ],
+    "eeaMember": true,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇵",
+    "alpha2": "NP",
+    "callingCodes": [
+      "+977"
+    ],
+    "languages": {
+      "nep": "Nepali"
+    },
+    "currencies": {
+      "NPR": {
+        "name": "Nepalese rupee",
+        "symbol": "₨"
+      }
+    },
+    "tld": [
+      ".np"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇷",
+    "alpha2": "NR",
+    "callingCodes": [
+      "+674"
+    ],
+    "languages": {
+      "eng": "English",
+      "nau": "Nauru"
+    },
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".nr"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇳🇿",
+    "alpha2": "NZ",
+    "callingCodes": [
+      "+64"
+    ],
+    "languages": {
+      "eng": "English",
+      "mri": "Māori",
+      "nzs": "New Zealand Sign Language"
+    },
+    "currencies": {
+      "NZD": {
+        "name": "New Zealand dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".nz"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇴🇲",
+    "alpha2": "OM",
+    "callingCodes": [
+      "+968"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "OMR": {
+        "name": "Omani rial",
+        "symbol": "ر.ع."
+      }
+    },
+    "tld": [
+      ".om"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇰",
+    "alpha2": "PK",
+    "callingCodes": [
+      "+92"
+    ],
+    "languages": {
+      "eng": "English",
+      "urd": "Urdu"
+    },
+    "currencies": {
+      "PKR": {
+        "name": "Pakistani rupee",
+        "symbol": "₨"
+      }
+    },
+    "tld": [
+      ".pk"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇦",
+    "alpha2": "PA",
+    "callingCodes": [
+      "+507"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "PAB": {
+        "name": "Panamanian balboa",
+        "symbol": "B/."
+      },
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".pa"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇳",
+    "alpha2": "PN",
+    "callingCodes": [
+      "+64"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NZD": {
+        "name": "New Zealand dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".pn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇪",
+    "alpha2": "PE",
+    "callingCodes": [
+      "+51"
+    ],
+    "languages": {
+      "aym": "Aymara",
+      "que": "Quechua",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "PEN": {
+        "name": "Peruvian sol",
+        "symbol": "S/."
+      }
+    },
+    "tld": [
+      ".pe"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇭",
+    "alpha2": "PH",
+    "callingCodes": [
+      "+63"
+    ],
+    "languages": {
+      "eng": "English",
+      "fil": "Filipino"
+    },
+    "currencies": {
+      "PHP": {
+        "name": "Philippine peso",
+        "symbol": "₱"
+      }
+    },
+    "tld": [
+      ".ph"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇼",
+    "alpha2": "PW",
+    "callingCodes": [
+      "+680"
+    ],
+    "languages": {
+      "eng": "English",
+      "pau": "Palauan"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".pw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇬",
+    "alpha2": "PG",
+    "callingCodes": [
+      "+675"
+    ],
+    "languages": {
+      "eng": "English",
+      "hmo": "Hiri Motu",
+      "tpi": "Tok Pisin"
+    },
+    "currencies": {
+      "PGK": {
+        "name": "Papua New Guinean kina",
+        "symbol": "K"
+      }
+    },
+    "tld": [
+      ".pg"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇱",
+    "alpha2": "PL",
+    "callingCodes": [
+      "+48"
+    ],
+    "languages": {
+      "pol": "Polish"
+    },
+    "currencies": {
+      "PLN": {
+        "name": "Polish złoty",
+        "symbol": "zł"
+      }
+    },
+    "tld": [
+      ".pl"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇵🇷",
+    "alpha2": "PR",
+    "callingCodes": [
+      "+1787",
+      "+1939"
+    ],
+    "languages": {
+      "eng": "English",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".pr"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇰🇵",
+    "alpha2": "KP",
+    "callingCodes": [
+      "+850"
+    ],
+    "languages": {
+      "kor": "Korean"
+    },
+    "currencies": {
+      "KPW": {
+        "name": "North Korean won",
+        "symbol": "₩"
+      }
+    },
+    "tld": [
+      ".kp"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇹",
+    "alpha2": "PT",
+    "callingCodes": [
+      "+351"
+    ],
+    "languages": {
+      "por": "Portuguese"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".pt"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇵🇾",
+    "alpha2": "PY",
+    "callingCodes": [
+      "+595"
+    ],
+    "languages": {
+      "grn": "Guaraní",
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "PYG": {
+        "name": "Paraguayan guaraní",
+        "symbol": "₲"
+      }
+    },
+    "tld": [
+      ".py"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇸",
+    "alpha2": "PS",
+    "callingCodes": [
+      "+970"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "EGP": {
+        "name": "Egyptian pound",
+        "symbol": "E£"
+      },
+      "ILS": {
+        "name": "Israeli new shekel",
+        "symbol": "₪"
+      },
+      "JOD": {
+        "name": "Jordanian dinar",
+        "symbol": "JD"
+      }
+    },
+    "tld": [
+      ".ps",
+      "فلسطين."
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇫",
+    "alpha2": "PF",
+    "callingCodes": [
+      "+689"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XPF": {
+        "name": "CFP franc",
+        "symbol": "₣"
+      }
+    },
+    "tld": [
+      ".pf"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇶🇦",
+    "alpha2": "QA",
+    "callingCodes": [
+      "+974"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "QAR": {
+        "name": "Qatari riyal",
+        "symbol": "ر.ق"
+      }
+    },
+    "tld": [
+      ".qa",
+      "قطر."
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇷🇪",
+    "alpha2": "RE",
+    "callingCodes": [
+      "+262"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".re"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇷🇴",
+    "alpha2": "RO",
+    "callingCodes": [
+      "+40"
+    ],
+    "languages": {
+      "ron": "Romanian"
+    },
+    "currencies": {
+      "RON": {
+        "name": "Romanian leu",
+        "symbol": "lei"
+      }
+    },
+    "tld": [
+      ".ro"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇷🇺",
+    "alpha2": "RU",
+    "callingCodes": [
+      "+73",
+      "+74",
+      "+75",
+      "+78",
+      "+79"
+    ],
+    "languages": {
+      "rus": "Russian"
+    },
+    "currencies": {
+      "RUB": {
+        "name": "Russian ruble",
+        "symbol": "₽"
+      }
+    },
+    "tld": [
+      ".ru",
+      ".su",
+      ".рф"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇷🇼",
+    "alpha2": "RW",
+    "callingCodes": [
+      "+250"
+    ],
+    "languages": {
+      "eng": "English",
+      "fra": "French",
+      "kin": "Kinyarwanda"
+    },
+    "currencies": {
+      "RWF": {
+        "name": "Rwandan franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".rw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇦",
+    "alpha2": "SA",
+    "callingCodes": [
+      "+966"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "SAR": {
+        "name": "Saudi riyal",
+        "symbol": "ر.س"
+      }
+    },
+    "tld": [
+      ".sa",
+      ".السعودية"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇩",
+    "alpha2": "SD",
+    "callingCodes": [
+      "+249"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "eng": "English"
+    },
+    "currencies": {
+      "SDG": {
+        "name": "Sudanese pound",
+        "symbol": ""
+      }
+    },
+    "tld": [
+      ".sd"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇳",
+    "alpha2": "SN",
+    "callingCodes": [
+      "+221"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XOF": {
+        "name": "West African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".sn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇬",
+    "alpha2": "SG",
+    "callingCodes": [
+      "+65"
+    ],
+    "languages": {
+      "zho": "Chinese",
+      "eng": "English",
+      "msa": "Malay",
+      "tam": "Tamil"
+    },
+    "currencies": {
+      "SGD": {
+        "name": "Singapore dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".sg",
+      ".新加坡",
+      ".சிங்கப்பூர்"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇬🇸",
+    "alpha2": "GS",
+    "callingCodes": [
+      "+500"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SHP": {
+        "name": "Saint Helena pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".gs"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇯",
+    "alpha2": "SJ",
+    "callingCodes": [
+      "+4779"
+    ],
+    "languages": {
+      "nor": "Norwegian"
+    },
+    "currencies": {
+      "NOK": {
+        "name": "krone",
+        "symbol": "kr"
+      }
+    },
+    "tld": [
+      ".sj"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇧",
+    "alpha2": "SB",
+    "callingCodes": [
+      "+677"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SBD": {
+        "name": "Solomon Islands dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".sb"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇱",
+    "alpha2": "SL",
+    "callingCodes": [
+      "+232"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SLL": {
+        "name": "Sierra Leonean leone",
+        "symbol": "Le"
+      }
+    },
+    "tld": [
+      ".sl"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇻",
+    "alpha2": "SV",
+    "callingCodes": [
+      "+503"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".sv"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇲",
+    "alpha2": "SM",
+    "callingCodes": [
+      "+378"
+    ],
+    "languages": {
+      "ita": "Italian"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".sm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇴",
+    "alpha2": "SO",
+    "callingCodes": [
+      "+252"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "som": "Somali"
+    },
+    "currencies": {
+      "SOS": {
+        "name": "Somali shilling",
+        "symbol": "Sh"
+      }
+    },
+    "tld": [
+      ".so"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇵🇲",
+    "alpha2": "PM",
+    "callingCodes": [
+      "+508"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".pm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇷🇸",
+    "alpha2": "RS",
+    "callingCodes": [
+      "+381"
+    ],
+    "languages": {
+      "srp": "Serbian"
+    },
+    "currencies": {
+      "RSD": {
+        "name": "Serbian dinar",
+        "symbol": "дин."
+      }
+    },
+    "tld": [
+      ".rs",
+      ".срб"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇸",
+    "alpha2": "SS",
+    "callingCodes": [
+      "+211"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SSP": {
+        "name": "South Sudanese pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".ss"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇹",
+    "alpha2": "ST",
+    "callingCodes": [
+      "+239"
+    ],
+    "languages": {
+      "por": "Portuguese"
+    },
+    "currencies": {
+      "STN": {
+        "name": "São Tomé and Príncipe dobra",
+        "symbol": "Db"
+      }
+    },
+    "tld": [
+      ".st"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇷",
+    "alpha2": "SR",
+    "callingCodes": [
+      "+597"
+    ],
+    "languages": {
+      "nld": "Dutch"
+    },
+    "currencies": {
+      "SRD": {
+        "name": "Surinamese dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".sr"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇰",
+    "alpha2": "SK",
+    "callingCodes": [
+      "+421"
+    ],
+    "languages": {
+      "slk": "Slovak"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".sk"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇸🇮",
+    "alpha2": "SI",
+    "callingCodes": [
+      "+386"
+    ],
+    "languages": {
+      "slv": "Slovene"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".si"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇸🇪",
+    "alpha2": "SE",
+    "callingCodes": [
+      "+46"
+    ],
+    "languages": {
+      "swe": "Swedish"
+    },
+    "currencies": {
+      "SEK": {
+        "name": "Swedish krona",
+        "symbol": "kr"
+      }
+    },
+    "tld": [
+      ".se"
+    ],
+    "eeaMember": true,
+    "euMember": true
+  },
+  {
+    "flag": "🇸🇿",
+    "alpha2": "SZ",
+    "callingCodes": [
+      "+268"
+    ],
+    "languages": {
+      "eng": "English",
+      "ssw": "Swazi"
+    },
+    "currencies": {
+      "SZL": {
+        "name": "Swazi lilangeni",
+        "symbol": "L"
+      },
+      "ZAR": {
+        "name": "South African rand",
+        "symbol": "R"
+      }
+    },
+    "tld": [
+      ".sz"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇽",
+    "alpha2": "SX",
+    "callingCodes": [
+      "+1721"
+    ],
+    "languages": {
+      "eng": "English",
+      "fra": "French",
+      "nld": "Dutch"
+    },
+    "currencies": {
+      "ANG": {
+        "name": "Netherlands Antillean guilder",
+        "symbol": "ƒ"
+      }
+    },
+    "tld": [
+      ".sx"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇨",
+    "alpha2": "SC",
+    "callingCodes": [
+      "+248"
+    ],
+    "languages": {
+      "crs": "Seychellois Creole",
+      "eng": "English",
+      "fra": "French"
+    },
+    "currencies": {
+      "SCR": {
+        "name": "Seychellois rupee",
+        "symbol": "₨"
+      }
+    },
+    "tld": [
+      ".sc"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇸🇾",
+    "alpha2": "SY",
+    "callingCodes": [
+      "+963"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "SYP": {
+        "name": "Syrian pound",
+        "symbol": "£"
+      }
+    },
+    "tld": [
+      ".sy",
+      "سوريا."
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇨",
+    "alpha2": "TC",
+    "callingCodes": [
+      "+1649"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".tc"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇩",
+    "alpha2": "TD",
+    "callingCodes": [
+      "+235"
+    ],
+    "languages": {
+      "ara": "Arabic",
+      "fra": "French"
+    },
+    "currencies": {
+      "XAF": {
+        "name": "Central African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".td"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇬",
+    "alpha2": "TG",
+    "callingCodes": [
+      "+228"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XOF": {
+        "name": "West African CFA franc",
+        "symbol": "Fr"
+      }
+    },
+    "tld": [
+      ".tg"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇭",
+    "alpha2": "TH",
+    "callingCodes": [
+      "+66"
+    ],
+    "languages": {
+      "tha": "Thai"
+    },
+    "currencies": {
+      "THB": {
+        "name": "Thai baht",
+        "symbol": "฿"
+      }
+    },
+    "tld": [
+      ".th",
+      ".ไทย"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇯",
+    "alpha2": "TJ",
+    "callingCodes": [
+      "+992"
+    ],
+    "languages": {
+      "rus": "Russian",
+      "tgk": "Tajik"
+    },
+    "currencies": {
+      "TJS": {
+        "name": "Tajikistani somoni",
+        "symbol": "ЅМ"
+      }
+    },
+    "tld": [
+      ".tj"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇰",
+    "alpha2": "TK",
+    "callingCodes": [
+      "+690"
+    ],
+    "languages": {
+      "eng": "English",
+      "smo": "Samoan",
+      "tkl": "Tokelauan"
+    },
+    "currencies": {
+      "NZD": {
+        "name": "New Zealand dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".tk"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇲",
+    "alpha2": "TM",
+    "callingCodes": [
+      "+993"
+    ],
+    "languages": {
+      "rus": "Russian",
+      "tuk": "Turkmen"
+    },
+    "currencies": {
+      "TMT": {
+        "name": "Turkmenistan manat",
+        "symbol": "m"
+      }
+    },
+    "tld": [
+      ".tm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇱",
+    "alpha2": "TL",
+    "callingCodes": [
+      "+670"
+    ],
+    "languages": {
+      "por": "Portuguese",
+      "tet": "Tetum"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".tl"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇴",
+    "alpha2": "TO",
+    "callingCodes": [
+      "+676"
+    ],
+    "languages": {
+      "eng": "English",
+      "ton": "Tongan"
+    },
+    "currencies": {
+      "TOP": {
+        "name": "Tongan paʻanga",
+        "symbol": "T$"
+      }
+    },
+    "tld": [
+      ".to"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇹",
+    "alpha2": "TT",
+    "callingCodes": [
+      "+1868"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "TTD": {
+        "name": "Trinidad and Tobago dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".tt"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇳",
+    "alpha2": "TN",
+    "callingCodes": [
+      "+216"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "TND": {
+        "name": "Tunisian dinar",
+        "symbol": "د.ت"
+      }
+    },
+    "tld": [
+      ".tn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇷",
+    "alpha2": "TR",
+    "callingCodes": [
+      "+90"
+    ],
+    "languages": {
+      "tur": "Turkish"
+    },
+    "currencies": {
+      "TRY": {
+        "name": "Turkish lira",
+        "symbol": "₺"
+      }
+    },
+    "tld": [
+      ".tr"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇻",
+    "alpha2": "TV",
+    "callingCodes": [
+      "+688"
+    ],
+    "languages": {
+      "eng": "English",
+      "tvl": "Tuvaluan"
+    },
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      },
+      "TVD": {
+        "name": "Tuvaluan dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".tv"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇼",
+    "alpha2": "TW",
+    "callingCodes": [
+      "+886"
+    ],
+    "languages": {
+      "zho": "Chinese"
+    },
+    "currencies": {
+      "TWD": {
+        "name": "New Taiwan dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".tw",
+      ".台灣",
+      ".台湾"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇹🇿",
+    "alpha2": "TZ",
+    "callingCodes": [
+      "+255"
+    ],
+    "languages": {
+      "eng": "English",
+      "swa": "Swahili"
+    },
+    "currencies": {
+      "TZS": {
+        "name": "Tanzanian shilling",
+        "symbol": "Sh"
+      }
+    },
+    "tld": [
+      ".tz"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇺🇬",
+    "alpha2": "UG",
+    "callingCodes": [
+      "+256"
+    ],
+    "languages": {
+      "eng": "English",
+      "swa": "Swahili"
+    },
+    "currencies": {
+      "UGX": {
+        "name": "Ugandan shilling",
+        "symbol": "Sh"
+      }
+    },
+    "tld": [
+      ".ug"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇺🇦",
+    "alpha2": "UA",
+    "callingCodes": [
+      "+380"
+    ],
+    "languages": {
+      "ukr": "Ukrainian"
+    },
+    "currencies": {
+      "UAH": {
+        "name": "Ukrainian hryvnia",
+        "symbol": "₴"
+      }
+    },
+    "tld": [
+      ".ua",
+      ".укр"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇺🇲",
+    "alpha2": "UM",
+    "callingCodes": [
+      "+268"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".us"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇺🇾",
+    "alpha2": "UY",
+    "callingCodes": [
+      "+598"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "UYU": {
+        "name": "Uruguayan peso",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".uy"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇺🇸",
+    "alpha2": "US",
+    "callingCodes": [
+      "+1201",
+      "+1202",
+      "+1203",
+      "+1205",
+      "+1206",
+      "+1207",
+      "+1208",
+      "+1209",
+      "+1210",
+      "+1212",
+      "+1213",
+      "+1214",
+      "+1215",
+      "+1216",
+      "+1217",
+      "+1218",
+      "+1219",
+      "+1220",
+      "+1224",
+      "+1225",
+      "+1227",
+      "+1228",
+      "+1229",
+      "+1231",
+      "+1234",
+      "+1239",
+      "+1240",
+      "+1248",
+      "+1251",
+      "+1252",
+      "+1253",
+      "+1254",
+      "+1256",
+      "+1260",
+      "+1262",
+      "+1267",
+      "+1269",
+      "+1270",
+      "+1272",
+      "+1274",
+      "+1276",
+      "+1281",
+      "+1283",
+      "+1301",
+      "+1302",
+      "+1303",
+      "+1304",
+      "+1305",
+      "+1307",
+      "+1308",
+      "+1309",
+      "+1310",
+      "+1312",
+      "+1313",
+      "+1314",
+      "+1315",
+      "+1316",
+      "+1317",
+      "+1318",
+      "+1319",
+      "+1320",
+      "+1321",
+      "+1323",
+      "+1325",
+      "+1327",
+      "+1330",
+      "+1331",
+      "+1334",
+      "+1336",
+      "+1337",
+      "+1339",
+      "+1346",
+      "+1347",
+      "+1351",
+      "+1352",
+      "+1360",
+      "+1361",
+      "+1364",
+      "+1380",
+      "+1385",
+      "+1386",
+      "+1401",
+      "+1402",
+      "+1404",
+      "+1405",
+      "+1406",
+      "+1407",
+      "+1408",
+      "+1409",
+      "+1410",
+      "+1412",
+      "+1413",
+      "+1414",
+      "+1415",
+      "+1417",
+      "+1419",
+      "+1423",
+      "+1424",
+      "+1425",
+      "+1430",
+      "+1432",
+      "+1434",
+      "+1435",
+      "+1440",
+      "+1442",
+      "+1443",
+      "+1447",
+      "+1458",
+      "+1463",
+      "+1464",
+      "+1469",
+      "+1470",
+      "+1475",
+      "+1478",
+      "+1479",
+      "+1480",
+      "+1484",
+      "+1501",
+      "+1502",
+      "+1503",
+      "+1504",
+      "+1505",
+      "+1507",
+      "+1508",
+      "+1509",
+      "+1510",
+      "+1512",
+      "+1513",
+      "+1515",
+      "+1516",
+      "+1517",
+      "+1518",
+      "+1520",
+      "+1530",
+      "+1531",
+      "+1534",
+      "+1539",
+      "+1540",
+      "+1541",
+      "+1551",
+      "+1559",
+      "+1561",
+      "+1562",
+      "+1563",
+      "+1564",
+      "+1567",
+      "+1570",
+      "+1571",
+      "+1573",
+      "+1574",
+      "+1575",
+      "+1580",
+      "+1585",
+      "+1586",
+      "+1601",
+      "+1602",
+      "+1603",
+      "+1605",
+      "+1606",
+      "+1607",
+      "+1608",
+      "+1609",
+      "+1610",
+      "+1612",
+      "+1614",
+      "+1615",
+      "+1616",
+      "+1617",
+      "+1618",
+      "+1619",
+      "+1620",
+      "+1623",
+      "+1626",
+      "+1628",
+      "+1629",
+      "+1630",
+      "+1631",
+      "+1636",
+      "+1641",
+      "+1646",
+      "+1650",
+      "+1651",
+      "+1657",
+      "+1660",
+      "+1661",
+      "+1662",
+      "+1667",
+      "+1669",
+      "+1678",
+      "+1681",
+      "+1682",
+      "+1701",
+      "+1702",
+      "+1703",
+      "+1704",
+      "+1706",
+      "+1707",
+      "+1708",
+      "+1712",
+      "+1713",
+      "+1714",
+      "+1715",
+      "+1716",
+      "+1717",
+      "+1718",
+      "+1719",
+      "+1720",
+      "+1724",
+      "+1725",
+      "+1727",
+      "+1730",
+      "+1731",
+      "+1732",
+      "+1734",
+      "+1737",
+      "+1740",
+      "+1743",
+      "+1747",
+      "+1754",
+      "+1757",
+      "+1760",
+      "+1762",
+      "+1763",
+      "+1765",
+      "+1769",
+      "+1770",
+      "+1772",
+      "+1773",
+      "+1774",
+      "+1775",
+      "+1779",
+      "+1781",
+      "+1785",
+      "+1786",
+      "+1801",
+      "+1802",
+      "+1803",
+      "+1804",
+      "+1805",
+      "+1806",
+      "+1808",
+      "+1810",
+      "+1812",
+      "+1813",
+      "+1814",
+      "+1815",
+      "+1816",
+      "+1817",
+      "+1818",
+      "+1828",
+      "+1830",
+      "+1831",
+      "+1832",
+      "+1843",
+      "+1845",
+      "+1847",
+      "+1848",
+      "+1850",
+      "+1854",
+      "+1856",
+      "+1857",
+      "+1858",
+      "+1859",
+      "+1860",
+      "+1862",
+      "+1863",
+      "+1864",
+      "+1865",
+      "+1870",
+      "+1872",
+      "+1878",
+      "+1901",
+      "+1903",
+      "+1904",
+      "+1906",
+      "+1907",
+      "+1908",
+      "+1909",
+      "+1910",
+      "+1912",
+      "+1913",
+      "+1914",
+      "+1915",
+      "+1916",
+      "+1917",
+      "+1918",
+      "+1919",
+      "+1920",
+      "+1925",
+      "+1928",
+      "+1929",
+      "+1930",
+      "+1931",
+      "+1934",
+      "+1936",
+      "+1937",
+      "+1938",
+      "+1940",
+      "+1941",
+      "+1947",
+      "+1949",
+      "+1951",
+      "+1952",
+      "+1954",
+      "+1956",
+      "+1959",
+      "+1970",
+      "+1971",
+      "+1972",
+      "+1973",
+      "+1975",
+      "+1978",
+      "+1979",
+      "+1980",
+      "+1984",
+      "+1985",
+      "+1989"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".us"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇺🇿",
+    "alpha2": "UZ",
+    "callingCodes": [
+      "+998"
+    ],
+    "languages": {
+      "rus": "Russian",
+      "uzb": "Uzbek"
+    },
+    "currencies": {
+      "UZS": {
+        "name": "Uzbekistani soʻm",
+        "symbol": "so'm"
+      }
+    },
+    "tld": [
+      ".uz"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇻🇦",
+    "alpha2": "VA",
+    "callingCodes": [
+      "+3906698",
+      "+379"
+    ],
+    "languages": {
+      "ita": "Italian",
+      "lat": "Latin"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "tld": [
+      ".va"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇻🇨",
+    "alpha2": "VC",
+    "callingCodes": [
+      "+1784"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XCD": {
+        "name": "Eastern Caribbean dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".vc"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇻🇪",
+    "alpha2": "VE",
+    "callingCodes": [
+      "+58"
+    ],
+    "languages": {
+      "spa": "Spanish"
+    },
+    "currencies": {
+      "VES": {
+        "name": "Venezuelan bolívar soberano",
+        "symbol": "Bs.S."
+      }
+    },
+    "tld": [
+      ".ve"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇻🇬",
+    "alpha2": "VG",
+    "callingCodes": [
+      "+1284"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".vg"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇻🇮",
+    "alpha2": "VI",
+    "callingCodes": [
+      "+1340"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".vi"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇻🇳",
+    "alpha2": "VN",
+    "callingCodes": [
+      "+84"
+    ],
+    "languages": {
+      "vie": "Vietnamese"
+    },
+    "currencies": {
+      "VND": {
+        "name": "Vietnamese đồng",
+        "symbol": "₫"
+      }
+    },
+    "tld": [
+      ".vn"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇻🇺",
+    "alpha2": "VU",
+    "callingCodes": [
+      "+678"
+    ],
+    "languages": {
+      "bis": "Bislama",
+      "eng": "English",
+      "fra": "French"
+    },
+    "currencies": {
+      "VUV": {
+        "name": "Vanuatu vatu",
+        "symbol": "Vt"
+      }
+    },
+    "tld": [
+      ".vu"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇼🇫",
+    "alpha2": "WF",
+    "callingCodes": [
+      "+681"
+    ],
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "XPF": {
+        "name": "CFP franc",
+        "symbol": "₣"
+      }
+    },
+    "tld": [
+      ".wf"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇼🇸",
+    "alpha2": "WS",
+    "callingCodes": [
+      "+685"
+    ],
+    "languages": {
+      "eng": "English",
+      "smo": "Samoan"
+    },
+    "currencies": {
+      "WST": {
+        "name": "Samoan tālā",
+        "symbol": "T"
+      }
+    },
+    "tld": [
+      ".ws"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇾🇪",
+    "alpha2": "YE",
+    "callingCodes": [
+      "+967"
+    ],
+    "languages": {
+      "ara": "Arabic"
+    },
+    "currencies": {
+      "YER": {
+        "name": "Yemeni rial",
+        "symbol": "﷼"
+      }
+    },
+    "tld": [
+      ".ye"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇿🇦",
+    "alpha2": "ZA",
+    "callingCodes": [
+      "+27"
+    ],
+    "languages": {
+      "afr": "Afrikaans",
+      "eng": "English",
+      "nbl": "Southern Ndebele",
+      "nso": "Northern Sotho",
+      "sot": "Southern Sotho",
+      "ssw": "Swazi",
+      "tsn": "Tswana",
+      "tso": "Tsonga",
+      "ven": "Venda",
+      "xho": "Xhosa",
+      "zul": "Zulu"
+    },
+    "currencies": {
+      "ZAR": {
+        "name": "South African rand",
+        "symbol": "R"
+      }
+    },
+    "tld": [
+      ".za"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇿🇲",
+    "alpha2": "ZM",
+    "callingCodes": [
+      "+260"
+    ],
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ZMW": {
+        "name": "Zambian kwacha",
+        "symbol": "ZK"
+      }
+    },
+    "tld": [
+      ".zm"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  },
+  {
+    "flag": "🇿🇼",
+    "alpha2": "ZW",
+    "callingCodes": [
+      "+263"
+    ],
+    "languages": {
+      "bwg": "Chibarwe",
+      "eng": "English",
+      "kck": "Kalanga",
+      "khi": "Khoisan",
+      "ndc": "Ndau",
+      "nde": "Northern Ndebele",
+      "nya": "Chewa",
+      "sna": "Shona",
+      "sot": "Sotho",
+      "toi": "Tonga",
+      "tsn": "Tswana",
+      "tso": "Tsonga",
+      "ven": "Venda",
+      "xho": "Xhosa",
+      "zib": "Zimbabwean Sign Language"
+    },
+    "currencies": {
+      "BWP": {
+        "name": "Botswana pula",
+        "symbol": "P"
+      },
+      "CNY": {
+        "name": "Chinese yuan",
+        "symbol": "¥"
+      },
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      },
+      "GBP": {
+        "name": "British pound",
+        "symbol": "£"
+      },
+      "INR": {
+        "name": "Indian rupee",
+        "symbol": "₹"
+      },
+      "JPY": {
+        "name": "Japanese yen",
+        "symbol": "¥"
+      },
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      },
+      "ZAR": {
+        "name": "South African rand",
+        "symbol": "Rs"
+      },
+      "ZWB": {
+        "name": "Zimbabwean bonds",
+        "symbol": "$"
+      }
+    },
+    "tld": [
+      ".zw"
+    ],
+    "eeaMember": false,
+    "euMember": false
+  }
+]

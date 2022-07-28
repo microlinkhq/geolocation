@@ -1,0 +1,19 @@
+{
+  "sortedMiddleware": [],
+  "middleware": {},
+  "functions": {
+    "/api": {
+      "env": [],
+      "files": [
+        "server/edge-runtime-webpack.js",
+        "server/pages/api.js"
+      ],
+      "name": "pages/api",
+      "page": "/api",
+      "regexp": "^/api$",
+      "wasm": [],
+      "assets": []
+    }
+  },
+  "version": 1
+}
