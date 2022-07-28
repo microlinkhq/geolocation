@@ -18,13 +18,15 @@ export default async req => {
   const countryInfo = countries.find(({ alpha2 }) => alpha2 === country)
 
   return Response.json({
-    ip: getClientIp({ headers: Object.fromEntries(req.headers) }),
+    ip: getClientIp({
+      headers: { 'cf-connecting-ip': headers['cf-connecting-ip'] }
+    }),
     city: getCity(headers['x-vercel-ip-city']),
     ...countryInfo,
-    headers,
     region: headers['x-vercel-ip-country-region'],
     latitude: headers['x-vercel-ip-latitude'],
     longitude: headers['x-vercel-ip-longitude'],
-    timezone: headers['x-vercel-ip-timezone']
+    timezone: headers['x-vercel-ip-timezone'],
+    headers
   })
 }
