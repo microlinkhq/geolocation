@@ -1,3 +1,5 @@
+import { getClientIp } from 'request-ip'
+
 import countries from '@/src/countries.json'
 
 export const config = {
@@ -15,7 +17,7 @@ export default async req => {
   const countryInfo = countries.find(({ alpha2 }) => alpha2 === country)
 
   return Response.json({
-    ip: headers.get('x-real-ip'),
+    ip: getClientIp({ headers: Object.fromEntries(req.headers) }),
     city: getCity(headers.get('x-vercel-ip-city')),
     ...countryInfo,
     region: headers.get('x-vercel-ip-country-region'),
