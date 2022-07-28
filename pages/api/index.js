@@ -20,6 +20,7 @@ export default async req => {
     ip: getClientIp({ headers: Object.fromEntries(req.headers) }),
     city: getCity(headers.get('x-vercel-ip-city')),
     ...countryInfo,
+    headers: Object.fromEntries(req.headers),
     region: headers.get('x-vercel-ip-country-region'),
     latitude: headers.get('x-vercel-ip-latitude'),
     longitude: headers.get('x-vercel-ip-longitude'),
