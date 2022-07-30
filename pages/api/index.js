@@ -1,5 +1,3 @@
-import { getClientIp } from 'request-ip'
-
 import countries from '@/src/countries.json'
 
 export const config = {
@@ -13,14 +11,11 @@ const getCity = input => {
 
 export default async req => {
   const headers = Object.fromEntries(req.headers)
-
   const country = headers['x-vercel-ip-country'] || headers['cf-ipcountry']
   const countryInfo = countries.find(({ alpha2 }) => alpha2 === country)
 
   return Response.json({
-    ip: getClientIp({
-      headers: { 'cf-connecting-ip': headers['cf-connecting-ip'] }
-    }),
+    origin: headers['cf-connecting-ip'],
     city: getCity(headers['x-vercel-ip-city']),
     ...countryInfo,
     region: headers['x-vercel-ip-country-region'],
