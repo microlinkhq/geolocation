@@ -28,7 +28,7 @@ const toData = payload =>
     } = item
 
     const { alpha3, numeric } =
-      iso31661.find(item => item.alpha2 === 'ES') || {}
+      iso31661.find(item => item.alpha2 === alpha2) || {}
 
     return {
       alpha2,
