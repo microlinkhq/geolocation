@@ -31,12 +31,11 @@ const toData = payload =>
       tld: tlds
     } = item
 
-    const { alpha3, numeric } =
+    const { alpha3, numeric, name } =
       iso31661.find(item => item.alpha2 === alpha2) || {}
 
     return {
-      alpha2,
-      alpha3,
+      country: { name, alpha2, alpha3, numeric: Number(numeric) },
       callingCodes,
       currencies: toCurrencies(currencies),
       eeaMember: eeaMember(alpha2),
@@ -44,7 +43,6 @@ const toData = payload =>
       flag,
       region,
       languages,
-      numeric: Number(numeric),
       tlds
     }
   })
