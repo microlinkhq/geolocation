@@ -18,20 +18,42 @@ export default async req => {
   const countryAlpha2 =
     headers['x-vercel-ip-country'] || headers['cf-ipcountry']
 
-  const { country, ...countryInfo } = countries.find(
-    ({ alpha2 }) => alpha2 === countryAlpha2
-  )
+  const {
+    country,
+    continent,
+    capitals,
+    callingCodes,
+    currencies,
+    eeaMember,
+    euMember,
+    languages,
+    tlds
+  } = countries.find(({ country }) => country.alpha2 === countryAlpha2)
 
-  const origin = headers['cf-connecting-ip']
+  const address = headers['cf-connecting-ip'] || headers['x-real-ip']
 
   return Response.json({
-    origin,
-    ipVersion: isIp.version(origin),
-    country,
-    ...countryInfo,
+    ip: {
+      address,
+      version: isIp.version(address)
+    },
     city: getCity(headers['x-vercel-ip-city']),
-    latitude: headers['x-vercel-ip-latitude'],
-    longitude: headers['x-vercel-ip-longitude'],
+    country,
+    region: {
+      alpha2: headers['x-vercel-ip-country-region']
+    },
+    continent,
+    capitals,
+    currencies,
+    callingCodes,
+    eeaMember,
+    euMember,
+    languages,
+    tlds,
+    coordinates: {
+      latitude: Number(headers['x-vercel-ip-latitude']),
+      longitude: Number(headers['x-vercel-ip-longitude'])
+    },
     timezone: headers['x-vercel-ip-timezone'],
     headers
   })
