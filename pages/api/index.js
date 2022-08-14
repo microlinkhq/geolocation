@@ -16,9 +16,8 @@ export default async req => {
 
   return Response.json({
     origin: headers['cf-connecting-ip'],
-    city: getCity(headers['x-vercel-ip-city']),
     ...countryInfo,
-    region: headers['x-vercel-ip-country-region'],
+    city: getCity(headers['x-vercel-ip-city']),
     latitude: headers['x-vercel-ip-latitude'],
     longitude: headers['x-vercel-ip-longitude'],
     timezone: headers['x-vercel-ip-timezone'],

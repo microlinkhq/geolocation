@@ -16,6 +16,9 @@ const URL =
 const DESTINATION_FOLDER = path.resolve(__dirname, '../src')
 const DESTINATION_PATH = path.resolve(DESTINATION_FOLDER, 'countries.json')
 
+const toCurrencies = currencies =>
+  Object.entries(currencies).map(([code, props]) => ({ code, ...props }))
+
 const toData = payload =>
   payload.map(item => {
     const {
@@ -24,7 +27,8 @@ const toData = payload =>
       callingCodes,
       languages,
       currencies,
-      tld
+      region,
+      tld: tlds
     } = item
 
     const { alpha3, numeric } =
@@ -34,13 +38,14 @@ const toData = payload =>
       alpha2,
       alpha3,
       callingCodes,
-      currencies,
+      currencies: toCurrencies(currencies),
       eeaMember: eeaMember(alpha2),
       euMember: euMember(alpha2),
       flag,
+      region,
       languages,
       numeric: Number(numeric),
-      tld
+      tlds
     }
   })
 
