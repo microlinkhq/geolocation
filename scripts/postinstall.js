@@ -1,5 +1,6 @@
 'use strict'
 
+const { data: currencyCodes } = require('currency-codes')
 const { eeaMember, euMember } = require('is-european')
 const { writeFile, mkdir } = require('fs/promises')
 const iso31661 = require('iso-3166')
@@ -17,7 +18,16 @@ const DESTINATION_FOLDER = path.resolve(__dirname, '../src')
 const DESTINATION_PATH = path.resolve(DESTINATION_FOLDER, 'countries.json')
 
 const toCurrencies = currencies =>
-  Object.entries(currencies).map(([code, props]) => ({ code, ...props }))
+  Object.entries(currencies)
+    .map(([code, props]) => {
+      const currencyCode = currencyCodes.find(
+        currency => currency.code === code
+      )
+      if (!currencyCode) return null
+      const { digits, number } = currencyCode
+      return { code, digits, numeric: Number(number), ...props }
+    })
+    .filter(Boolean)
 
 const toData = payload =>
   payload.map(item => {
