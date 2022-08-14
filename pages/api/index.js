@@ -1,4 +1,7 @@
+/* global Response */
+
 import countries from '@/src/countries.json'
+import isIp from 'is-ip'
 
 export const config = {
   runtime: 'experimental-edge'
@@ -11,16 +14,46 @@ const getCity = input => {
 
 export default async req => {
   const headers = Object.fromEntries(req.headers)
-  const country = headers['x-vercel-ip-country'] || headers['cf-ipcountry']
-  const countryInfo = countries.find(({ alpha2 }) => alpha2 === country)
+
+  const countryAlpha2 =
+    headers['x-vercel-ip-country'] || headers['cf-ipcountry']
+
+  const {
+    country,
+    continent,
+    capitals,
+    callingCodes,
+    currencies,
+    eeaMember,
+    euMember,
+    languages,
+    tlds
+  } = countries.find(({ country }) => country.alpha2 === countryAlpha2)
+
+  const address = headers['cf-connecting-ip'] || headers['x-real-ip']
 
   return Response.json({
-    origin: headers['cf-connecting-ip'],
+    ip: {
+      address,
+      version: isIp.version(address)
+    },
     city: getCity(headers['x-vercel-ip-city']),
-    ...countryInfo,
-    region: headers['x-vercel-ip-country-region'],
-    latitude: headers['x-vercel-ip-latitude'],
-    longitude: headers['x-vercel-ip-longitude'],
+    country,
+    region: {
+      alpha2: headers['x-vercel-ip-country-region']
+    },
+    continent,
+    capitals,
+    currencies,
+    callingCodes,
+    eeaMember,
+    euMember,
+    languages,
+    tlds,
+    coordinates: {
+      latitude: Number(headers['x-vercel-ip-latitude']),
+      longitude: Number(headers['x-vercel-ip-longitude'])
+    },
     timezone: headers['x-vercel-ip-timezone'],
     headers
   })
