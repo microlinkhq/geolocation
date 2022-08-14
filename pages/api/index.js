@@ -1,4 +1,7 @@
+/* global Response */
+
 import countries from '@/src/countries.json'
+import isIp from 'is-ip'
 
 export const config = {
   runtime: 'experimental-edge'
@@ -13,9 +16,11 @@ export default async req => {
   const headers = Object.fromEntries(req.headers)
   const country = headers['x-vercel-ip-country'] || headers['cf-ipcountry']
   const countryInfo = countries.find(({ alpha2 }) => alpha2 === country)
+  const origin = headers['cf-connecting-ip']
 
   return Response.json({
-    origin: headers['cf-connecting-ip'],
+    origin,
+    ipVersion: isIp.version(origin),
     ...countryInfo,
     city: getCity(headers['x-vercel-ip-city']),
     latitude: headers['x-vercel-ip-latitude'],
