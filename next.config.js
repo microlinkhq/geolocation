@@ -3,7 +3,7 @@ module.exports = {
     return [
       {
         source: '/favicon.ico',
-        destination: 'https://microlink.io/favicon.ico'
+        destination: 'https://cdn.microlink.io/logo/trim.png'
       },
       {
         source: '/:path*',
