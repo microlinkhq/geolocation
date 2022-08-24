@@ -103,13 +103,13 @@ const toData = payload =>
         phones,
         alpha2,
         alpha3,
-        numeric: Number(numeric)
+        numeric: Number(numeric),
+        currencies: toCurrencies(currencies),
+        eeaMember: eeaMember(alpha2),
+        euMember: euMember(alpha2)
       },
       continent: { name: continentName, alpha2: CONTINENTS[continentName] },
       capitals: toCapitals(capitals, alpha2),
-      currencies: toCurrencies(currencies),
-      eeaMember: eeaMember(alpha2),
-      euMember: euMember(alpha2),
       languages: toLanguages(languages),
       tlds
     }
