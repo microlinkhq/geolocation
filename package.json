@@ -22,10 +22,10 @@
   "dependencies": {
     "countries-list": "~2.6.1",
     "currency-codes": "~2.1.0",
-    "is-european": "~1.0.3",
+    "is-european": "~1.0.4",
     "is-ip": "3",
     "iso-3166": "~3.1.0",
-    "next": "~12.3.0",
+    "next": "~13.0.0",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
     "world-countries": "~4.0.0"
