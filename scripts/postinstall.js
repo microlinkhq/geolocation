@@ -2,9 +2,9 @@
 
 const { data: currencyCodes } = require('currency-codes')
 const { eeaMember, euMember } = require('is-european')
-const { writeFile, mkdir } = require('fs/promises')
 const { countries } = require('countries-list')
 const cityCodes = require('iso-3166/2.json')
+const { writeFile } = require('fs/promises')
 const path = require('path')
 
 const got = require('got').extend({
@@ -28,9 +28,7 @@ const CONTINENTS = Object.fromEntries(
 const COUNTRIES_URL =
   'https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json'
 
-const DIST_DIR = path.resolve(__dirname, '../src')
-
-const DIST_PATH = path.resolve(DIST_DIR, 'countries.json')
+const DIST_PATH = path.resolve(__dirname, '../countries.json')
 
 const words = (str, pat, uc) => {
   pat = pat || /\w+/g
@@ -119,7 +117,6 @@ const toData = payload =>
 
 got(COUNTRIES_URL)
   .then(async data => {
-    await mkdir(DIST_DIR).catch(() => {})
     await writeFile(DIST_PATH, JSON.stringify(toData(data), null, 2))
     console.log(`Added ${data.length} countries ✨`)
   })

@@ -21,6 +21,7 @@ package-lock.json
 .idea
 *sublime*
 nbproject
+countries.json
 
 ############################
 # Tests
@@ -35,4 +36,4 @@ coverage
 .env
 .envrc
 .next
-src/countries.json
+.vercel

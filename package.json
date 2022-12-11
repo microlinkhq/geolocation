@@ -25,7 +25,6 @@
     "is-european": "~1.0.4",
     "is-ip": "3",
     "iso-3166": "~3.1.0",
-    "next": "~13.0.0",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
     "world-countries": "~4.0.0"
@@ -45,7 +44,6 @@
   },
   "scripts": {
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "dev": "next dev",
     "postinstall": "node scripts/postinstall",
     "prerelease": "npm run update:check && npm run contributors",
     "test": "exit 0",
