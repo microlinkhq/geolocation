@@ -3,9 +3,7 @@
 import countries from '../countries.json'
 import isIp from 'is-ip'
 
-export const config = {
-  runtime: 'experimental-edge'
-}
+export const config = { runtime: 'edge' }
 
 const getCity = input => {
   const parsedCity = decodeURIComponent(input)
