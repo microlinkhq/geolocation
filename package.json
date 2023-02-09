@@ -43,7 +43,7 @@
     "standard-markdown": "latest"
   },
   "scripts": {
-    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "contributors": "(npx git-authors-cli && npx finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "postinstall": "node scripts/postinstall",
     "prerelease": "npm run update:check && npm run contributors",
     "test": "exit 0",
