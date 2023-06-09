@@ -14,7 +14,7 @@ export default async req => {
   const headers = Object.fromEntries(req.headers)
 
   const countryAlpha2 =
-    headers['x-vercel-ip-country'] || headers['cf-ipcountry']
+    headers['cf-ipcountry'] || headers['x-vercel-ip-country']
 
   const {
     country,
