@@ -5,16 +5,27 @@ import isIp from 'is-ip'
 
 export const config = { runtime: 'edge' }
 
+const baseUrl = ({ headers }) =>
+  `${headers.get('x-forwarded-proto')}://${headers.get('x-forwarded-host')}`
+
+const cloudflare = path =>
+  fetch(`https://api.cloudflare.com/client/v4/radar/entities/${path}`, {
+    headers: {
+      authorization: process.env.CLOUDFLARE_AUTHORIZATION
+    }
+  }).then(res => res.json())
+
 const getCity = input => {
   const parsedCity = decodeURIComponent(input)
   return parsedCity === 'null' ? null : parsedCity
 }
 
 export default async req => {
-  const headers = Object.fromEntries(req.headers)
+  const { searchParams } = new URL(req.url, baseUrl(req))
 
+  const { headers } = req
   const countryAlpha2 =
-    headers['cf-ipcountry'] || headers['x-vercel-ip-country']
+    req.headers.get('cf-ipcountry') ?? req.headers.get('x-vercel-ip-country')
 
   const {
     country,
@@ -28,38 +39,46 @@ export default async req => {
     tlds
   } = countries.find(({ country }) => country.alpha2 === countryAlpha2)
 
-  const address = headers['cf-connecting-ip'] || headers['x-real-ip']
+  const address = headers.get('cf-connecting-ip') ?? headers.get('x-real-ip')
 
-  return Response.json(
-    {
-      ip: {
-        address,
-        version: isIp.version(address)
-      },
-      city: getCity(headers['x-vercel-ip-city']),
-      country,
-      region: {
-        alpha2: headers['x-vercel-ip-country-region']
-      },
-      continent,
-      capitals,
-      currencies,
-      callingCodes,
-      eeaMember,
-      euMember,
-      languages,
-      tlds,
-      coordinates: {
-        latitude: Number(headers['x-vercel-ip-latitude']),
-        longitude: Number(headers['x-vercel-ip-longitude'])
-      },
-      timezone: headers['x-vercel-ip-timezone'],
-      headers
+  const payload = {
+    ip: { address, version: isIp.version(address) },
+    city: getCity(headers['x-vercel-ip-city']),
+    country,
+    region: { alpha2: headers['x-vercel-ip-country-region'] },
+    continent,
+    capitals,
+    currencies,
+    callingCodes,
+    eeaMember,
+    euMember,
+    languages,
+    tlds,
+    coordinates: {
+      latitude: Number(headers['x-vercel-ip-latitude']),
+      longitude: Number(headers['x-vercel-ip-longitude'])
     },
-    {
-      headers: {
-        'access-control-allow-origin': '*'
-      }
-    }
-  )
+    timezone: headers['x-vercel-ip-timezone']
+  }
+
+  if (searchParams.get('headers') !== null) {
+    payload.headers = Object.fromEntries(req.headers)
+  }
+
+  if (searchParams.get('asn') !== null) {
+    payload.asn = await cloudflare(`asns/ip?ip=${address}`)
+      .then(body => body.result.asn)
+      .then(asn => ({
+        id: asn.asn,
+        name: asn.aka || asn.name,
+        company: asn.nameLong,
+        website: asn.website || null,
+        country: { name: asn.countryName, alpha2: asn.country },
+        users: asn.estimatedUsers.estimatedUsers
+      }))
+  }
+
+  return Response.json(payload, {
+    headers: { 'access-control-allow-origin': '*' }
+  })
 }
