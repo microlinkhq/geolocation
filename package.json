@@ -24,10 +24,7 @@
     "currency-codes": "~2.1.0",
     "is-european": "~1.0.4",
     "is-ip": "3",
-    "iso-3166": "~3.1.0",
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0",
-    "world-countries": "~4.0.0"
+    "iso-3166": "~3.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
