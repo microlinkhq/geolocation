@@ -20,7 +20,7 @@
     "microlink"
   ],
   "dependencies": {
-    "countries-list": "~2.6.1",
+    "countries-list": "~3.0.1",
     "currency-codes": "~2.1.0",
     "is-european": "~1.0.4",
     "is-ip": "3",
