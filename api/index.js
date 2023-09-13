@@ -1,7 +1,25 @@
 /* global Response */
 
 import countries from '../countries.json'
+
 import isIp from 'is-ip'
+
+const toIPv6 = adddress => {
+  const octets = adddress.split('.').map(Number)
+  return ['::', 'ffff'].concat(octets.map(octet => octet.toString(16).padStart(2, '0'))).join(':')
+}
+
+const toIP = address => {
+  const version = isIp.version(address)
+  const data = { address }
+  if (version === 4) {
+    data.v4 = address
+    data.v6 = toIPv6(address)
+  } else {
+    data.v6 = toIPv6(address)
+  }
+  return data
+}
 
 export const config = { runtime: 'edge' }
 
@@ -42,7 +60,7 @@ export default async req => {
   const address = headers.get('cf-connecting-ip') ?? headers.get('x-real-ip')
 
   const payload = {
-    ip: { address, version: isIp.version(address) },
+    ip: toIP(address),
     city: {
       name: getCity(headers.get('x-vercel-ip-city')),
       alpha2: `${countryAlpha2}-${headers.get('x-vercel-ip-country-region')}`
