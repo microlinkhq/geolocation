@@ -43,9 +43,11 @@ export default async req => {
 
   const payload = {
     ip: { address, version: isIp.version(address) },
-    city: getCity(headers.get('x-vercel-ip-city')),
+    city: {
+      name: getCity(headers.get('x-vercel-ip-city')),
+      alpha2: `${countryAlpha2}-${headers.get('x-vercel-ip-country-region')}`
+    },
     country,
-    region: { alpha2: headers.get('x-vercel-ip-country-region') },
     continent,
     capitals,
     currencies,
