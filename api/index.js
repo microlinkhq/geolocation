@@ -95,7 +95,7 @@ export default async req => {
         website: asn.website || null,
         country: { name: asn.countryName, alpha2: asn.country },
         users: asn.estimatedUsers?.estimatedUsers,
-        more: `https://radar.cloudflare.com/quality/${asn.asn}`
+        more: `https://radar.cloudflare.com/quality/as${asn.asn}`
       }))
   }
 
