@@ -62,8 +62,8 @@ export default async req => {
   const payload = {
     ip: toIP(address),
     city: {
-      name: getCity(headers.get('x-vercel-ip-city')),
-      alpha2: `${countryAlpha2}-${headers.get('x-vercel-ip-country-region')}`
+      name: getCity(headers.get('cf-ipcity') ?? headers.get('x-vercel-ip-city')),
+      // alpha2: `${countryAlpha2}-${headers.get('x-vercel-ip-country-region')}`
     },
     country,
     continent,
@@ -75,8 +75,8 @@ export default async req => {
     languages,
     tlds,
     coordinates: {
-      latitude: Number(headers.get('x-vercel-ip-latitude')),
-      longitude: Number(headers.get('x-vercel-ip-longitude'))
+      latitude: Number(headers.get('cf-iplatitude')),
+      longitude: Number(headers.get('cf-iplongitude'))
     },
     timezone: headers.get('x-vercel-ip-timezone')
   }
