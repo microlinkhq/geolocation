@@ -1,10 +1,6 @@
 import { iso31662 as cityCodes, iso31661Alpha2ToAlpha3, iso31661Alpha2ToNumeric } from 'iso-3166'
 
-const words = (str, pat, uc) => {
-  pat = pat || /\w+/g
-  str = uc ? str : str.toLowerCase()
-  return str.match(pat)
-}
+import { words } from './util.mjs'
 
 export const toCapitals = (countryAlpha2, capitals) =>
   capitals.filter(Boolean).map(capitalName => {

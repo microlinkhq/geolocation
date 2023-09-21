@@ -1,41 +1,15 @@
-import { languages, continents, countries } from 'countries-list'
 import { eeaMember, euMember } from 'is-european'
+import { countries } from 'countries-list'
 import { writeFile } from 'fs/promises'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 
 import { toCurrencies } from '../src/currencies.mjs'
+import { toContinent } from '../src/continents.mjs'
+import { toLanguages } from '../src/languages.mjs'
 import { toCapitals } from '../src/capitals.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-
-/**
- * Language to alpha2
- * @example French --> 'fr'
- */
-const LANGUAGES = Object.fromEntries(
-  Object.entries(languages).map(
-    ([alpha2, { name }]) => [name, alpha2]
-  )
-)
-
-/**
- * Continent name to alpha 2
- * @example Africa --> AF
- */
-const CONTINENTS = Object.fromEntries(
-  Object.entries(continents).map(([alpha2, name]) => [
-    name,
-    alpha2
-  ])
-)
-
-const toLanguages = languages =>
-  Object.entries(languages).map(([alpha3, name]) => ({
-    name,
-    alpha3,
-    alpha2: LANGUAGES[name]
-  }))
 
 const toData = payload =>
   payload.map(item => {
@@ -54,13 +28,12 @@ const toData = payload =>
     } = item
 
     const countryName = rest.name.common
-    const phones = countries[alpha2].phone.map(phone => `+${phone}`)
 
     const info = {
       country: {
         name: countryName,
         flag,
-        phones,
+        phones: countries[alpha2].phone.map(phone => `+${phone}`),
         alpha2,
         alpha3,
         numeric,
@@ -68,7 +41,7 @@ const toData = payload =>
         eeaMember: eeaMember(alpha2),
         euMember: euMember(alpha2)
       },
-      continent: { name: continentName, alpha2: CONTINENTS[continentName] },
+      continent: toContinent(continentName),
       capitals: toCapitals(alpha2, capitals),
       languages: toLanguages(languages),
       tlds

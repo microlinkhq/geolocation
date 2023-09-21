@@ -1,25 +1,8 @@
 /* global Response */
 
 import countries from '../countries.json'
-
-import isIp from 'is-ip'
-
-const toIPv6 = adddress => {
-  const octets = adddress.split('.').map(Number)
-  return ['::', 'ffff'].concat(octets.map(octet => octet.toString(16).padStart(2, '0'))).join(':')
-}
-
-const toIP = address => {
-  const version = isIp.version(address)
-  const data = { address }
-  if (version === 4) {
-    data.v4 = address
-    data.v6 = toIPv6(address)
-  } else {
-    data.v6 = toIPv6(address)
-  }
-  return data
-}
+import { toCity } from '../src/city.mjs'
+import { toIP } from '../src/network.mjs'
 
 export const config = { runtime: 'edge' }
 
@@ -32,11 +15,6 @@ const cloudflare = path =>
       authorization: process.env.CLOUDFLARE_AUTHORIZATION
     }
   }).then(res => res.json())
-
-const getCity = input => {
-  const parsedCity = decodeURIComponent(input)
-  return parsedCity === 'null' ? null : parsedCity
-}
 
 export default async req => {
   const { searchParams } = new URL(req.url, baseUrl(req))
@@ -61,10 +39,11 @@ export default async req => {
 
   const payload = {
     ip: toIP(address),
-    city: {
-      name: getCity(headers.get('cf-ipcity') ?? headers.get('x-vercel-ip-city'))
-      // alpha2: `${countryAlpha2}-${headers.get('x-vercel-ip-country-region')}`
-    },
+    city: toCity({
+      name: headers.get('cf-ipcity') ?? headers.get('x-vercel-ip-city'),
+      postalCode: headers.get('cf-postal-code') ?? null,
+      metroCode: headers.get('cf-metro-code') ?? null
+    }),
     country,
     continent,
     capitals,
