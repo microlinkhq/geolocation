@@ -1,21 +1,39 @@
-import { iso31662 as cityCodes } from 'iso-3166'
+import { iso31662 as cityCodes, iso31661Alpha2ToAlpha3, iso31661Alpha2ToNumeric } from 'iso-3166'
 
-import { words } from './util.mjs'
+const words = (str, pat, uc) => {
+  pat = pat || /\w+/g
+  str = uc ? str : str.toLowerCase()
+  return str.match(pat)
+}
 
-export const toCity = (city) => {
+export const toCity = (city, parentAlpha2) => {
   const { name } = city
 
-  const alpha2candidates = cityCodes.filter(cityCode => {
-    const cityCodeName = words(cityCode.name)
-    return cityCodeName.includes(name.toLowerCase())
-  })
+  const nameWords = words(name.toLowerCase())
+
+  const alpha2candidates = cityCodes.filter(({ parent, name }) =>
+    words(name).find(
+      word => {
+        const hasName = nameWords.includes(word.toLowerCase())
+        const hasParent = parentAlpha2 ? parent === parentAlpha2 : true
+        return hasName && hasParent
+      }
+    )
+  )
 
   if (!alpha2candidates.length) return city
 
-  city.alpha2 = alpha2candidates.reduce((acc, item) => {
-    if (!item.parent.includes('-')) acc = item
-    return acc
-  }).code
+  if (alpha2candidates) {
+    city.alpha2 = alpha2candidates.reduce((acc, item) => {
+      if (!item.parent.includes('-')) acc = item
+      return acc
+    }).code
+  }
+
+  const alpha2strip = city.alpha2.split('-')[0]
+
+  city.alpha3 = iso31661Alpha2ToAlpha3[alpha2strip] ?? null
+  city.numeric = iso31661Alpha2ToNumeric[alpha2strip] ?? null
 
   return city
 }

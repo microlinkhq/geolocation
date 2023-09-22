@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'
 import { toCurrencies } from '../src/currencies.mjs'
 import { toContinent } from '../src/continents.mjs'
 import { toLanguages } from '../src/languages.mjs'
-import { toCapitals } from '../src/capitals.mjs'
+import { toCity } from '../src/city.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -42,7 +42,7 @@ const toData = payload =>
         euMember: euMember(alpha2)
       },
       continent: toContinent(continentName),
-      capitals: toCapitals(alpha2, capitals),
+      capitals: capitals.map(name => toCity({ name }, alpha2)),
       languages: toLanguages(languages),
       tlds
     }
