@@ -8,6 +8,6 @@ const LANGUAGES = Object.fromEntries(
 
 export const toLanguages = languages => Object.entries(languages).map(([alpha3, name]) => ({
   name,
-  alpha3,
-  alpha2: LANGUAGES[name]
+  alpha3: alpha3.toUpperCase(),
+  alpha2: LANGUAGES[name]?.toUpperCase() ?? null
 }))

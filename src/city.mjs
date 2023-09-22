@@ -21,19 +21,17 @@ export const toCity = (city, parentAlpha2) => {
     )
   )
 
-  if (!alpha2candidates.length) return city
-
-  if (alpha2candidates) {
-    city.alpha2 = alpha2candidates.reduce((acc, item) => {
+  city.alpha2 = alpha2candidates.length > 0
+    ? alpha2candidates.reduce((acc, item) => {
       if (!item.parent.includes('-')) acc = item
       return acc
     }).code
-  }
+    : null
 
-  const alpha2strip = city.alpha2.split('-')[0]
+  const alpha2strip = city.alpha2?.split('-')[0]
 
-  city.alpha3 = iso31661Alpha2ToAlpha3[alpha2strip] ?? null
-  city.numeric = iso31661Alpha2ToNumeric[alpha2strip] ?? null
+  city.alpha3 = alpha2strip ? iso31661Alpha2ToAlpha3[alpha2strip] : null
+  city.numeric = alpha2strip ? iso31661Alpha2ToNumeric[alpha2strip] : null
 
   return city
 }
