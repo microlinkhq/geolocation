@@ -24,7 +24,8 @@
     "currency-codes": "github:breezehr/currency-codes",
     "is-european": "~1.0.6",
     "is-ip": "3",
-    "iso-3166": "~4.2.0"
+    "iso-3166": "~4.2.0",
+    "sugar-high": "~0.5.2"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",

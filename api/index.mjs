@@ -1,5 +1,7 @@
 /* global Response */
 
+import { highlight } from 'sugar-high'
+
 import countries from '../countries.json'
 import { toCity } from '../src/city.mjs'
 import { toIP } from '../src/network.mjs'
@@ -78,7 +80,55 @@ export default async req => {
       }))
   }
 
-  return Response.json(payload, {
-    headers: { 'access-control-allow-origin': '*' }
+  if (!req.headers.get('accept').includes('text/html')) {
+    return Response.json(payload, { headers: { 'access-control-allow-origin': '*' } })
+  }
+
+  return new Response(`
+    <html>
+        <head>
+          <meta name="color-scheme" content="light dark">
+          <meta charset="utf-8">
+          <style>
+          :root {
+            --background-color: #ffffff;
+            --sh-class: #000000;
+            --sh-identifier: #000000;
+            --sh-sign: rgba(0,0,0,0.5);
+            --sh-string: #000000;
+            --sh-keyword: #000000;
+            --sh-comment: #000000;
+            --sh-jsxliterals: #000000;
+          }
+
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --background-color: #000000;
+              --sh-class: #ffffff;
+              --sh-identifier: #ffffff;
+              --sh-sign: rgba(255,255,255,0.5);
+              --sh-string: #ffffff;
+              --sh-keyword: #ffffff;
+              --sh-comment: #ffffff;
+              --sh-jsxliterals: #ffffff;
+            }
+          }
+          body {
+            background: var(--background-color);
+          }
+          code {
+            font-size: 14px;
+            font-family: "Operator Mono", "Fira Code", "SF Mono", "Roboto Mono", Menlo, monospace;
+            line-height: 1.5;
+          }
+          </style>
+        </head>
+      <body>
+        <pre><code>${highlight(JSON.stringify(payload, null, 2))}</code></pre>
+      </body>
+    </html>`, {
+    headers: {
+      'content-type': 'text/html;charset=UTF-8'
+    }
   })
 }
