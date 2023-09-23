@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { toCurrencies } from '../src/currencies.mjs'
+import { toCurrencies } from '../src/currencies.js'
 
 test('resolve all the currencies', t => {
   const country = 'Palestine'

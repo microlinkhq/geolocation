@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { toLanguages } from '../src/languages.mjs'
+import { toLanguages } from '../src/languages.js'
 
 test('resolve language', t => {
   t.deepEqual(toLanguages({ spa: 'Spanish' }), [{ name: 'Spanish', alpha3: 'spa', alpha2: 'es' }])

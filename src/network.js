@@ -1,4 +1,4 @@
-import { version } from 'is-ip'
+import { ipVersion } from 'is-ip'
 
 const toIPv6 = adddress => {
   const octets = adddress.split('.').map(Number)
@@ -6,10 +6,10 @@ const toIPv6 = adddress => {
 }
 
 export const toIP = address => {
-  const ipVersion = version(address)
+  const version = ipVersion(address)
   return {
     address,
-    v4: ipVersion === 4 ? address : null,
-    v6: ipVersion === 6 ? address : toIPv6(address)
+    v4: version === 4 ? address : null,
+    v6: version === 6 ? address : toIPv6(address)
   }
 }

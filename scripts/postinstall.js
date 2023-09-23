@@ -4,10 +4,10 @@ import { writeFile } from 'fs/promises'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 
-import { toCurrencies } from '../src/currencies.mjs'
-import { toContinent } from '../src/continents.mjs'
-import { toLanguages } from '../src/languages.mjs'
-import { toCity } from '../src/city.mjs'
+import { toCurrencies } from '../src/currencies.js'
+import { toContinent } from '../src/continents.js'
+import { toLanguages } from '../src/languages.js'
+import { toCity } from '../src/city.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 

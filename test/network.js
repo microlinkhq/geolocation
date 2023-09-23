@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { toIP } from '../src/network.mjs'
+import { toIP } from '../src/network.js'
 
 test('resolve ip address', t => {
   const address = '88.20.18.116'

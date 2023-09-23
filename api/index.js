@@ -1,10 +1,8 @@
 /* global Response */
 
-import { highlight } from 'sugar-high'
-
 import countries from '../countries.json'
-import { toCity } from '../src/city.mjs'
-import { toIP } from '../src/network.mjs'
+import { toCity } from '../src/city.js'
+import { toIP } from '../src/network.js'
 
 export const config = { runtime: 'edge' }
 
@@ -124,7 +122,12 @@ export default async req => {
           </style>
         </head>
       <body>
-        <pre><code>${highlight(JSON.stringify(payload, null, 2))}</code></pre>
+        <pre><code>${JSON.stringify(payload, null, 2)}</code></pre>
+      <script type="module">
+        import { highlight } from 'https://esm.sh/sugar-high'
+        const el = document.querySelector('pre > code')
+        el.innerHTML = highlight(el.innerText)
+      </script>
       </body>
     </html>`, {
     headers: {

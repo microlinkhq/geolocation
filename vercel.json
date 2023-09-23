@@ -11,7 +11,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/api/index.mjs"
+      "dest": "/api/index.js"
     }
   ]
 }

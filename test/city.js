@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { toCity } from '../src/city.mjs'
+import { toCity } from '../src/city.js'
 
 test('resolve city without alpha2', t => {
   t.deepEqual(toCity({ name: 'Murcia' }), { name: 'Murcia', alpha2: 'ES-MC', alpha3: 'ESP', numeric: '724' })
