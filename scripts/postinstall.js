@@ -11,7 +11,7 @@ import { toCity } from '../src/city.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const toData = payload =>
+const mapCountries = payload =>
   payload.map(item => {
     const {
       flag,
@@ -50,11 +50,22 @@ const toData = payload =>
     return info
   })
 
-fetch('https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json')
-  .then(res => res.json())
-  .then(async data => {
-    const filepath = resolve(__dirname, '../countries.json')
-    await writeFile(filepath, JSON.stringify(toData(data), null, 2))
-    console.log(`Added ${data.length} countries ✨`)
-  })
-  .catch(error => console.error(error) || process.exit(1))
+const mapAirports = (payload) => Object.keys(payload).map((key) => {
+  const { iata, name, lat, lon } = payload[key]
+  return iata ? { iata, name, latitude: lat, longitude: lon } : null
+}).filter(Boolean)
+
+const withFetch = (url, filename, mapper) =>
+  fetch(url)
+    .then(res => res.json())
+    .then(async data => {
+      const filepath = resolve(__dirname, `../${filename}.json`)
+      const content = mapper(data)
+      await writeFile(filepath, JSON.stringify(content, null, 2))
+      console.log(`Added ${content.length} at ${filename} ✨`)
+    })
+
+Promise.all([
+  withFetch('https://cdn.jsdelivr.net/gh/mledoze/countries/dist/countries.json', 'countries', mapCountries),
+  withFetch('https://cdn.jsdelivr.net/gh/mwgg/Airports/airports.json', 'airports', mapAirports)
+]).catch(error => console.error(error) || process.exit(1))

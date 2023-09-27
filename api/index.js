@@ -1,8 +1,11 @@
 /* global Response */
 
-import countries from '../countries.json'
+import { airport } from '../src/airport.js'
 import { toCity } from '../src/city.js'
 import { toIP } from '../src/network.js'
+
+import countries from '../countries.json'
+import airports from '../airports.json'
 
 export const config = { runtime: 'edge' }
 
@@ -21,7 +24,7 @@ export default async req => {
 
   const { headers } = req
   const countryAlpha2 =
-    req.headers.get('cf-ipcountry') ?? req.headers.get('x-vercel-ip-country')
+    req.headers.get('cf-ipcountry')
 
   const {
     country,
@@ -35,12 +38,17 @@ export default async req => {
     tlds
   } = countries.find(({ country }) => country.alpha2 === countryAlpha2)
 
-  const address = headers.get('cf-connecting-ip') ?? headers.get('x-real-ip')
+  const address = headers.get('cf-connecting-ip')
+
+  const coordinates = {
+    latitude: headers.get('cf-iplatitude'),
+    longitude: headers.get('cf-iplongitude')
+  }
 
   const payload = {
     ip: toIP(address),
     city: toCity({
-      name: headers.get('cf-ipcity') ?? headers.get('x-vercel-ip-city'),
+      name: headers.get('cf-ipcity'),
       postalCode: headers.get('cf-postal-code') ?? null,
       metroCode: headers.get('cf-metro-code') ?? null
     }),
@@ -53,11 +61,9 @@ export default async req => {
     euMember,
     languages,
     tlds,
-    coordinates: {
-      latitude: headers.get('cf-iplatitude') ?? headers.get('x-vercel-ip-latitude'),
-      longitude: headers.get('cf-iplongitude') ?? headers.get('x-vercel-ip-longitude')
-    },
-    timezone: headers.get('cf-timezone') ?? headers.get('x-vercel-ip-timezone')
+    airport: airport(coordinates, airports),
+    coordinates,
+    timezone: headers.get('cf-timezone')
   }
 
   if (searchParams.get('headers') !== null) {
