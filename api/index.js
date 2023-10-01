@@ -9,9 +9,6 @@ import airports from '../airports.json'
 
 export const config = { runtime: 'edge' }
 
-const baseUrl = ({ headers }) =>
-  `${headers.get('x-forwarded-proto')}://${headers.get('x-forwarded-host')}`
-
 const cloudflare = path =>
   fetch(`https://api.cloudflare.com/client/v4/radar/entities/${path}`, {
     headers: {
@@ -20,7 +17,7 @@ const cloudflare = path =>
   }).then(res => res.json())
 
 export default async req => {
-  const { searchParams } = new URL(req.url, baseUrl(req))
+  const searchParams = new URLSearchParams(req.url.split('?')[1])
 
   const { headers } = req
   const countryAlpha2 =
