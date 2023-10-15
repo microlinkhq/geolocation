@@ -9,6 +9,8 @@ import airports from '../airports.json'
 
 export const config = { runtime: 'edge' }
 
+const isDev = process.env.NODE_ENV === 'development'
+
 const cloudflare = path =>
   fetch(`https://api.cloudflare.com/client/v4/radar/entities/${path}`, {
     headers: {
@@ -16,12 +18,23 @@ const cloudflare = path =>
     }
   }).then(res => res.json())
 
+const getAddress = isDev
+  ? () => '127.0.0.1'
+  : headers => headers.get('cf-connecting-ip')
+
+const getIpCountry = isDev ? () => 'ES' : headers => headers.get('cf-ipcountry')
+
+const getIpCity = isDev ? () => 'Murcia' : headers => headers.get('cf-ipcity')
+
 export default async req => {
   const searchParams = new URLSearchParams(req.url.split('?')[1])
 
   const { headers } = req
-  const countryAlpha2 =
-    req.headers.get('cf-ipcountry')
+  const countryAlpha2 = getIpCountry(headers)
+
+  const findCountry = countries.find(({ country }) => {
+    return country.alpha2 === countryAlpha2
+  })
 
   const {
     country,
@@ -33,9 +46,9 @@ export default async req => {
     euMember,
     languages,
     tlds
-  } = countries.find(({ country }) => country.alpha2 === countryAlpha2)
+  } = findCountry
 
-  const address = headers.get('cf-connecting-ip')
+  const address = getAddress(headers)
 
   const coordinates = {
     latitude: headers.get('cf-iplatitude'),
@@ -45,7 +58,7 @@ export default async req => {
   const payload = {
     ip: toIP(address),
     city: toCity({
-      name: headers.get('cf-ipcity'),
+      name: getIpCity(headers),
       postalCode: headers.get('cf-postal-code') ?? null,
       metroCode: headers.get('cf-metro-code') ?? null
     }),
@@ -82,10 +95,13 @@ export default async req => {
   }
 
   if (!req.headers.get('accept').includes('text/html')) {
-    return Response.json(payload, { headers: { 'access-control-allow-origin': '*' } })
+    return Response.json(payload, {
+      headers: { 'access-control-allow-origin': '*' }
+    })
   }
 
-  return new Response(`<!DOCTYPE html><html lang="en">
+  return new Response(
+    `<!DOCTYPE html><html lang="en">
   <head>
     <title>Microlink Geolocation</title>
     <meta property="og:description" content="Get detailed information about the incoming request based on the IP address." >
@@ -177,9 +193,11 @@ export default async req => {
       el.innerHTML = highlight(el.innerText)
     </script>
   </body>
-</html>`, {
-    headers: {
-      'content-type': 'text/html;charset=UTF-8'
+</html>`,
+    {
+      headers: {
+        'content-type': 'text/html;charset=UTF-8'
+      }
     }
-  })
+  )
 }
