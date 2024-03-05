@@ -20,7 +20,7 @@
     "microlink"
   ],
   "dependencies": {
-    "countries-list": "~3.0.1",
+    "countries-list": "~3.1.0",
     "currency-codes": "github:breezehr/currency-codes",
     "is-european": "~1.0.6",
     "iso-3166": "~4.2.0"
