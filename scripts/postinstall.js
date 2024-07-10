@@ -1,6 +1,6 @@
 import { eeaMember, euMember } from 'is-european'
 import { countries } from 'countries-list'
-import { writeFile } from 'fs/promises'
+import { writeFile, mkdir } from 'fs/promises'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -50,22 +50,35 @@ const mapCountries = payload =>
     return info
   })
 
-const mapAirports = (payload) => Object.keys(payload).map((key) => {
-  const { iata, name, lat, lon } = payload[key]
-  return iata ? { iata, name, latitude: lat, longitude: lon } : null
-}).filter(Boolean)
+const mapAirports = payload =>
+  Object.keys(payload)
+    .map(key => {
+      const { iata, name, lat, lon } = payload[key]
+      return iata ? { iata, name, latitude: lat, longitude: lon } : null
+    })
+    .filter(Boolean)
 
 const withFetch = (url, filename, mapper) =>
   fetch(url)
     .then(res => res.json())
     .then(async data => {
-      const filepath = resolve(__dirname, `../${filename}.json`)
+      const filepath = resolve(__dirname, `../data/${filename}.json`)
       const content = mapper(data)
       await writeFile(filepath, JSON.stringify(content, null, 2))
-      console.log(`Added ${content.length} at ${filename} ✨`)
+      console.log(`  Added ${content.length} at data/${filename} ✨`)
     })
 
+await mkdir(resolve(__dirname, '../data')).catch(() => {})
+
 Promise.all([
-  withFetch('https://cdn.jsdelivr.net/gh/mledoze/countries/dist/countries.json', 'countries', mapCountries),
-  withFetch('https://cdn.jsdelivr.net/gh/mwgg/Airports/airports.json', 'airports', mapAirports)
+  withFetch(
+    'https://cdn.jsdelivr.net/gh/mledoze/countries/dist/countries.json',
+    'countries',
+    mapCountries
+  ),
+  withFetch(
+    'https://cdn.jsdelivr.net/gh/mwgg/Airports/airports.json',
+    'airports',
+    mapAirports
+  )
 ]).catch(error => console.error(error) || process.exit(1))

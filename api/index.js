@@ -4,8 +4,8 @@ import { airport } from '../src/airport.js'
 import { toCity } from '../src/city.js'
 import { toIP } from '../src/network.js'
 
-import countries from '../countries.json'
-import airports from '../airports.json'
+import countries from '../data/countries.json'
+import airports from '../data/airports.json'
 
 export const config = { runtime: 'edge' }
 
@@ -13,9 +13,7 @@ const isDev = process.env.NODE_ENV === 'development'
 
 const cloudflare = path =>
   fetch(`https://api.cloudflare.com/client/v4/radar/entities/${path}`, {
-    headers: {
-      authorization: process.env.CLOUDFLARE_AUTHORIZATION
-    }
+    headers: { authorization: process.env.CLOUDFLARE_AUTHORIZATION }
   }).then(res => res.json())
 
 const getAddress = isDev
@@ -26,9 +24,14 @@ const getIpCountry = isDev ? () => 'ES' : headers => headers.get('cf-ipcountry')
 
 const getIpCity = isDev ? () => 'Murcia' : headers => headers.get('cf-ipcity')
 
-export default async req => {
-  const searchParams = new URLSearchParams(req.url.split('?')[1])
+const HEADERS = { 'access-control-allow-origin': '*' }
 
+export default async req => {
+  const { pathname } = new URL(req.url)
+  if (pathname === '/countries') { return Response.json(countries, { headers: HEADERS }) }
+  if (pathname === '/airports') { return Response.json(airports, { headers: HEADERS }) }
+
+  const searchParams = new URLSearchParams(req.url.split('?')[1])
   const { headers } = req
   const countryAlpha2 = getIpCountry(headers)
 
@@ -95,9 +98,7 @@ export default async req => {
   }
 
   if (!req.headers.get('accept').includes('text/html')) {
-    return Response.json(payload, {
-      headers: { 'access-control-allow-origin': '*' }
-    })
+    return Response.json(payload, { headers: HEADERS })
   }
 
   return new Response(
