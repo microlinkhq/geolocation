@@ -27,11 +27,28 @@ const getIpCity = isDev ? () => 'Murcia' : headers => headers.get('cf-ipcity')
 const HEADERS = { 'access-control-allow-origin': '*' }
 
 export default async req => {
-  const { pathname } = new URL(req.url)
-  if (pathname === '/countries') { return Response.json(countries, { headers: HEADERS }) }
-  if (pathname === '/airports') { return Response.json(airports, { headers: HEADERS }) }
-
   const searchParams = new URLSearchParams(req.url.split('?')[1])
+  const { pathname } = new URL(req.url)
+
+  if (pathname === '/countries') {
+    const filter = (() => {
+      let value = searchParams.get('alpha2')
+      if (value) return { key: 'alpha2', value }
+      value = searchParams.get('alpha3')
+      if (value) return { key: 'alpha3', value }
+      return { key: 'numeric', value: searchParams.get('numeric') }
+    })()
+
+    const result = filter
+      ? countries.find(({ country }) => country[filter.key] === filter.value)
+      : countries
+    return Response.json(result, { headers: HEADERS })
+  }
+
+  if (pathname === '/airports') {
+    return Response.json(airports, { headers: HEADERS })
+  }
+
   const { headers } = req
   const countryAlpha2 = getIpCountry(headers)
 
