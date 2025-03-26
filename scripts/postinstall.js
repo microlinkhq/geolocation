@@ -1,15 +1,14 @@
-import { eeaMember, euMember } from 'is-european'
-import { countries } from 'countries-list'
-import { writeFile, mkdir } from 'fs/promises'
-import { dirname, resolve } from 'path'
-import { fileURLToPath } from 'url'
+'use strict'
 
-import { toCurrencies } from '../src/currencies.js'
-import { toContinent } from '../src/continents.js'
-import { toLanguages } from '../src/languages.js'
-import { toCity } from '../src/city.js'
+const { eeaMember, euMember } = require('is-european')
+const { writeFile, mkdir } = require('fs/promises')
+const { countries } = require('countries-list')
+const { resolve } = require('path')
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const { toCurrencies } = require('../src/currencies.js')
+const { toContinent } = require('../src/continents.js')
+const { toLanguages } = require('../src/languages.js')
+const { toCity } = require('../src/city.js')
 
 const mapCountries = payload =>
   payload.map(item => {
@@ -68,17 +67,20 @@ const withFetch = (url, filename, mapper) =>
       console.log(`  Added ${content.length} at data/${filename} ✨`)
     })
 
-await mkdir(resolve(__dirname, '../data')).catch(() => {})
+async function main () {
+  await mkdir(resolve(__dirname, '../data')).catch(() => {})
+  return Promise.all([
+    withFetch(
+      'https://cdn.jsdelivr.net/gh/mledoze/countries/dist/countries.json',
+      'countries',
+      mapCountries
+    ),
+    withFetch(
+      'https://cdn.jsdelivr.net/gh/mwgg/Airports/airports.json',
+      'airports',
+      mapAirports
+    )
+  ])
+}
 
-Promise.all([
-  withFetch(
-    'https://cdn.jsdelivr.net/gh/mledoze/countries/dist/countries.json',
-    'countries',
-    mapCountries
-  ),
-  withFetch(
-    'https://cdn.jsdelivr.net/gh/mwgg/Airports/airports.json',
-    'airports',
-    mapAirports
-  )
-]).catch(error => console.error(error) || process.exit(1))
+main().catch(error => console.error(error) || process.exit(1))

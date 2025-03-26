@@ -12,12 +12,14 @@ The following routes are exposed:
 - [`/`](https://geolocation.microlink.io/) –
   It returns all the data based on the incoming request IP address.
 
-- [`/countries`](https://geolocation.microlink.io/countries?alpha2=ES) –
-  It returns countries data. This endpoint allows to filter by alpha2, alpha3 or numeric.
-
 - [`/airports`](https://geolocation.microlink.io/airports) –
   It returns airports data.
 
+- [`/countries`](https://geolocation.microlink.io/countries?alpha2=ES) –
+  It returns countries data. This endpoint allows to filter by alpha2, alpha3 or numeric.
+
+- [`/headers`](https://geolocation.microlink.io/headers) –
+  It returns incoming headers.
 
 ## License
 
