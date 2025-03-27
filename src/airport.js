@@ -2,10 +2,10 @@
 const EARTH_RADIUS = 6378137
 
 // Calculate square of a number
-const square = (num) => num * num
+const square = num => num * num
 
 // Convert degrees to radians
-const degreesToRadians = (degrees) => degrees * Math.PI / 180.0
+const degreesToRadians = degrees => (degrees * Math.PI) / 180.0
 
 // Calculate Haversine function
 const haversine = (pointA, pointB) => {
@@ -16,8 +16,11 @@ const haversine = (pointA, pointB) => {
   const longitudeB = degreesToRadians(pointB.longitude)
 
   // Haversine formula
-  const haversineTheta = square(Math.sin((latitudeB - latitudeA) / 2)) +
-    Math.cos(latitudeA) * Math.cos(latitudeB) * square((longitudeB - longitudeA) / 2)
+  const haversineTheta =
+    square(Math.sin((latitudeB - latitudeA) / 2)) +
+    Math.cos(latitudeA) *
+      Math.cos(latitudeB) *
+      square((longitudeB - longitudeA) / 2)
 
   // Calculate distance using Haversine formula
   const distance = 2 * EARTH_RADIUS * Math.asin(Math.sqrt(haversineTheta))
@@ -25,7 +28,7 @@ const haversine = (pointA, pointB) => {
   return distance
 }
 
-export const airport = (coordinates, airports) => {
+const airport = (coordinates, airports) => {
   let closestAirport = null
   let minMeters = Infinity
 
@@ -40,3 +43,5 @@ export const airport = (coordinates, airports) => {
 
   return closestAirport
 }
+
+module.exports = { airport }

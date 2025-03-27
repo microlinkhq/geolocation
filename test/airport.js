@@ -1,10 +1,12 @@
-import test from 'ava'
+'use strict'
 
-import { airport } from '../src/airport.js'
+const test = require('ava')
+
+const { airport } = require('../src/airport')
 
 const coordinates = {
-  latitude: 47.56360,
-  longitude: 19.09470
+  latitude: 47.5636,
+  longitude: 19.0947
 }
 
 const airports = [

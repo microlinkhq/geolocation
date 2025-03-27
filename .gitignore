@@ -38,3 +38,7 @@ coverage
 .envrc
 .next
 .vercel
+src/is-ip.js
+src/iso-3166.js
+src/kdbush.js
+src/geokdbush.js

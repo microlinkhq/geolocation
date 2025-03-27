@@ -20,32 +20,54 @@
     "microlink"
   ],
   "dependencies": {
+    "async-listen": "~3.1.0",
+    "cities.json": "~1.1.47",
     "countries-list": "~3.1.0",
     "currency-codes": "github:osdiab/currency-codes",
+    "geokdbush": "~2.0.1",
     "is-european": "~1.0.6",
-    "iso-3166": "~4.2.0"
+    "is-ip": "~5.0.1",
+    "iso-3166": "~4.2.0",
+    "kdbush": "~4.0.2",
+    "send-http": "~1.0.6"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@ksmithut/prettier-standard": "latest",
     "ava": "latest",
+    "esbuild": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
-    "is-ip": "~5.0.1",
     "nano-staged": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
-    "standard-markdown": "latest"
+    "standard-markdown": "latest",
+    "tinyrun": "latest"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "scripts": {
+    "build:data": "node scripts/postinstall.js",
+    "esbuild": "tinyrun 'npm run esbuild:is-ip' 'npm run esbuild:iso-3166' 'npm run esbuild:kdbush' 'npm run esbuild:geokdbush'",
+    "esbuild:is-ip": "echo \"export { ipVersion } from 'is-ip';\" | npx esbuild --bundle --format=cjs > src/is-ip.js",
+    "esbuild:iso-3166": "echo \"export { iso31662, iso31661Alpha2ToAlpha3, iso31661Alpha2ToNumeric } from 'iso-3166';\" | npx esbuild --bundle --format=cjs > src/iso-3166.js",
+    "esbuild:kdbush": "echo \"export { default } from 'kdbush';\" | npx esbuild --bundle --format=cjs > src/kdbush.js",
+    "esbuild:geokdbush": "echo \"export { around } from 'geokdbush';\" | npx esbuild --bundle --format=cjs > src/geokdbush.js",
     "contributors": "(npx git-authors-cli && npx finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "postinstall": "node scripts/postinstall.js",
+    "postinstall": "npm run esbuild && npm run build:data",
     "prerelease": "npm run update:check && npm run contributors",
     "test": "ava"
   },
   "private": true,
   "license": "MIT",
+  "ava": {
+    "files": [
+      "test/**/*.js",
+      "!test/helpers.js"
+    ]
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -71,6 +93,5 @@
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit",
     "pre-commit": "npx nano-staged"
-  },
-  "type": "module"
+  }
 }

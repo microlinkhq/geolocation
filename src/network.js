@@ -1,11 +1,13 @@
-import { ipVersion } from 'is-ip'
+const { ipVersion } = require('./is-ip')
 
-const toIPv6 = adddress => {
-  const octets = adddress.split('.').map(Number)
-  return ['::', 'ffff'].concat(octets.map(octet => octet.toString(16).padStart(2, '0'))).join(':')
+const toIPv6 = address => {
+  const octets = address.split('.').map(Number)
+  return ['::', 'ffff']
+    .concat(octets.map(octet => octet.toString(16).padStart(2, '0')))
+    .join(':')
 }
 
-export const toIP = address => {
+const toIP = address => {
   const version = ipVersion(address)
   return {
     address,
@@ -13,3 +15,5 @@ export const toIP = address => {
     v6: version === 6 ? address : toIPv6(address)
   }
 }
+
+module.exports = { toIP }
