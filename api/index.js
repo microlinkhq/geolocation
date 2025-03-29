@@ -16,9 +16,6 @@ const cloudflare = path =>
 
 const HEADERS = { 'access-control-allow-origin': '*' }
 
-const baseUrl = ({ headers }) =>
-  `${headers['x-forwarded-proto']}://${headers['x-forwarded-host']}`
-
 const createSend = (res, headers) => data => {
   for (const [key, value] of Object.entries(headers)) res.setHeader(key, value)
   return send(res, 200, data)
@@ -26,24 +23,26 @@ const createSend = (res, headers) => data => {
 
 const handler = async (req, res) => {
   const send = createSend(res, HEADERS)
-  const url = baseUrl(req)
-  const searchParams = new URLSearchParams(url.split('?')[1])
-  const { pathname } = new URL(url)
 
-  if (pathname === '/headers') return send(Object.fromEntries(req.headers))
+  const { pathname, searchParams } = (() => {
+    const [pathname, search] = req.url.split('?')
+    return { pathname, searchParams: new URLSearchParams(search) }
+  })()
+
+  if (pathname === '/headers') return send(req.headers)
   if (pathname === '/airports') return send(airports)
 
   if (pathname === '/countries') {
     const filter = (() => {
       let value = searchParams.get('alpha2')
-      if (value) return { key: 'alpha2', value }
+      if (value) return { key: 'alpha2', value: value.toUpperCase() }
       value = searchParams.get('alpha3')
-      if (value) return { key: 'alpha3', value }
+      if (value) return { key: 'alpha3', value: value.toUpperCase() }
       return { key: 'numeric', value: searchParams.get('numeric') }
     })()
 
-    const result = filter
-      ? countries.find(({ country }) => country[filter.key] === filter.value)
+    const result = filter.value
+      ? countries.find(item => item.country[filter.key] === filter.value)
       : countries
 
     return send(result, { headers: HEADERS })

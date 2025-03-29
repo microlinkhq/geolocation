@@ -4,7 +4,76 @@ const test = require('ava')
 const { runServer } = require('./helpers')
 const handler = require('../api')
 
-test('returns html if it is supported', async t => {
+test('/headers', async t => {
+  const url = await runServer(t, handler)
+  const res = await fetch(new URL('/headers?foo', url), {
+    headers: {
+      'x-foo': 'bar'
+    }
+  })
+
+  t.is(res.status, 200)
+  const headers = await res.json()
+  t.is(headers['x-foo'], 'bar')
+})
+
+test('/airports', async t => {
+  const url = await runServer(t, handler)
+  const res = await fetch(new URL('/airports?foo', url))
+
+  t.is(res.status, 200)
+
+  const airports = await res.json()
+  t.not(
+    airports.find(({ iata }) => iata === 'ALC'),
+    undefined
+  )
+})
+
+test('/countries', async t => {
+  const url = await runServer(t, handler)
+  const res = await fetch(new URL('/countries?foo', url))
+
+  t.is(res.status, 200)
+  const countries = await res.json()
+
+  t.not(
+    countries.find(({ country }) => country.name === 'Spain'),
+    undefined
+  )
+})
+
+test('/countries?alpha2=es', async t => {
+  const url = await runServer(t, handler)
+  const res = await fetch(new URL('/countries?alpha2=es', url))
+
+  t.is(res.status, 200)
+  const data = await res.json()
+
+  t.not(data.country.name === 'Spain', undefined)
+})
+
+test('/countries?alpha2=ES', async t => {
+  const url = await runServer(t, handler)
+  const res = await fetch(new URL('/countries?alpha2=ES', url))
+
+  t.is(res.status, 200)
+  const data = await res.json()
+
+  t.not(data.country.name === 'Spain', undefined)
+})
+
+test('/countries?alpha3=es', async t => {
+  const url = await runServer(t, handler)
+  const res = await fetch(new URL('/countries?alpha3=esp', url))
+
+  t.is(res.status, 200)
+  const data = await res.json()
+
+  t.not(data.country.name === 'Spain', undefined)
+})
+
+test('/ - returns html if it is supported', async t => {
   const url = await runServer(t, handler)
   const res = await fetch(url, {
     headers: {
@@ -64,7 +133,7 @@ test('returns html if it is supported', async t => {
   t.is(res.headers.get('content-type'), 'text/html;charset=utf-8')
 })
 
-test('Monterey/California/United States', async t => {
+test('/ - Monterey/California/United States', async t => {
   const url = await runServer(t, handler)
   const res = await fetch(url, {
     headers: {
@@ -122,7 +191,7 @@ test('Monterey/California/United States', async t => {
   t.snapshot(output)
 })
 
-test('Madrid/Spain', async t => {
+test('/ - Madrid/Spain', async t => {
   const url = await runServer(t, handler)
   const res = await fetch(url, {
     headers: {
