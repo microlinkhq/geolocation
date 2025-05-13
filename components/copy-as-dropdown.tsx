@@ -43,17 +43,17 @@ export function CopyAsDropdown ({ apiUrl }: { apiUrl: string }) {
       <DropdownMenuTrigger asChild>
         <Button
           variant='outline'
-          className='text-gray-600 dark:text-zinc-400 text-xs font-light border-gray-200 dark:border-zinc-800/50 hover:bg-gray-100 dark:hover:bg-zinc-900 hover:text-gray-900 dark:hover:text-white'
+          className='text-neutral-600 dark:text-neutral-400 text-xs font-light border-neutral-200 dark:border-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-900 hover:text-neutral-900 dark:hover:text-white'
         >
           Copy as <ChevronDown className='ml-1 h-4 w-4 opacity-70' />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align='end'
-        className='bg-white dark:bg-zinc-900/90 border-gray-200 dark:border-zinc-800/50'
+        className='bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-900'
       >
         <DropdownMenuItem
-          className='flex items-center gap-2 text-gray-600 dark:text-zinc-400 focus:text-gray-900 dark:focus:text-white focus:bg-gray-100 dark:focus:bg-zinc-800'
+          className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400 focus:text-neutral-900 dark:focus:text-white focus:bg-neutral-100 dark:focus:bg-neutral-800'
           onClick={async () => await copyToClipboard(generateCurl(), 'curl')}
         >
           <Terminal className='h-4 w-4 opacity-70' />
@@ -63,7 +63,7 @@ export function CopyAsDropdown ({ apiUrl }: { apiUrl: string }) {
           )}
         </DropdownMenuItem>
         <DropdownMenuItem
-          className='flex items-center gap-2 text-gray-600 dark:text-zinc-400 focus:text-gray-900 dark:focus:text-white focus:bg-gray-100 dark:focus:bg-zinc-800'
+          className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400 focus:text-neutral-900 dark:focus:text-white focus:bg-neutral-100 dark:focus:bg-neutral-800'
           onClick={async () => await copyToClipboard(generateFetch(), 'fetch')}
         >
           <ClipboardCopy className='h-4 w-4 opacity-70' />

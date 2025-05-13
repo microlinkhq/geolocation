@@ -40,10 +40,10 @@ export function ThemeToggle ({ size = 'default' }: ThemeToggleProps) {
       variant='ghost'
       size={size}
       onClick={toggleTheme}
-      className='h-7 w-7 p-0 rounded-full bg-transparent hover:bg-gray-100 dark:hover:bg-zinc-800'
+      className='h-7 w-7 p-0 rounded-full bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800'
     >
-      <Sun className='h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-gray-700' />
-      <Moon className='absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-zinc-400' />
+      <Sun className='h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-neutral-700' />
+      <Moon className='absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-neutral-400' />
       <span className='sr-only'>Toggle theme</span>
     </Button>
   )

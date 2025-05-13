@@ -88,7 +88,6 @@ export function Cobe ({
       glowColor: [1.1, 1.1, 1.1],
       markers: [],
       offset: [width, -width], // Use the actual width for offset
-      opacity: 0.7,
       onRender: (state: any) => {
         state.width = width * SIZE
         state.height = width * SIZE
@@ -96,12 +95,10 @@ export function Cobe ({
     })
 
     // Fade in the globe
-    setTimeout(() => {
-      if (canvasRef.current != null) {
-        canvasRef.current.style.opacity = '1'
-        setGlobeReady(true)
-      }
-    }, 500)
+    if (canvasRef.current != null) {
+      canvasRef.current.style.opacity = '0.95'
+      setGlobeReady(true)
+    }
 
     return () => {
       window.removeEventListener('resize', onResize)
@@ -113,13 +110,13 @@ export function Cobe ({
     <div className='flex flex-col items-center justify-center w-full'>
       {/* Location information above the globe */}
       <div className='text-center mb-4 sm:mb-8'>
-        <span className='block text-base sm:text-lg text-gray-500 dark:text-zinc-400'>
+        <span className='block text-base sm:text-lg text-neutral-500 dark:text-neutral-400'>
           {ipAddress}
         </span>
-        <h1 className='py-2 text-3xl sm:text-5xl tracking-tight font-light text-gray-900 dark:text-white'>
+        <h1 className='py-2 text-3xl sm:text-5xl tracking-tight font-light text-neutral-900 dark:text-white'>
           {city.name}
         </h1>
-        <span className='block text-base sm:text-lg text-gray-500 dark:text-zinc-400'>
+        <span className='block text-base sm:text-lg text-neutral-500 dark:text-neutral-400'>
           {country.flag} {country.name}
         </span>
       </div>

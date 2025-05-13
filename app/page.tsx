@@ -44,29 +44,29 @@ export default async function Home () {
             </div>
 
             {/* Feature highlights section */}
-            <div className='w-full border-t border-gray-200 dark:border-zinc-800/50 py-8 md:py-12 px-4 md:px-12'>
+            <div className='w-full border-t border-neutral-200 dark:border-neutral-900 py-8 md:py-12 px-4 md:px-12'>
               <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 max-w-4xl mx-auto'>
                 <div className='flex flex-col'>
-                  <h3 className='text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-2'>
+                  <h3 className='text-2xl md:text-3xl font-light text-neutral-900 dark:text-white mb-2'>
                     Simple
                   </h3>
-                  <p className='text-gray-500 dark:text-zinc-500 text-sm'>
+                  <p className='text-neutral-500 dark:text-neutral-500 text-sm'>
                     Just one HTTP request
                   </p>
                 </div>
                 <div className='flex flex-col'>
-                  <h3 className='text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-2'>
+                  <h3 className='text-2xl md:text-3xl font-light text-neutral-900 dark:text-white mb-2'>
                     Fast
                   </h3>
-                  <p className='text-gray-500 dark:text-zinc-500 text-sm'>
+                  <p className='text-neutral-500 dark:text-neutral-500 text-sm'>
                     Low latency responses
                   </p>
                 </div>
                 <div className='flex flex-col'>
-                  <h3 className='text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-2'>
+                  <h3 className='text-2xl md:text-3xl font-light text-neutral-900 dark:text-white mb-2'>
                     Free
                   </h3>
-                  <p className='text-gray-500 dark:text-zinc-500 text-sm'>
+                  <p className='text-neutral-500 dark:text-neutral-500 text-sm'>
                     No API key needed
                   </p>
                 </div>
@@ -75,13 +75,13 @@ export default async function Home () {
           </div>
 
           {/* Minimalist sidebar */}
-          <div className='fixed top-0 right-0 bottom-0 w-full md:w-[35%] bg-gray-50 dark:bg-black z-10 flex flex-col h-screen border-l border-gray-200 dark:border-zinc-800/50 transform translate-x-full md:translate-x-0 transition-transform'>
+          <div className='fixed top-0 right-0 bottom-0 w-full md:w-[35%] z-10 flex flex-col h-screen border-l border-neutral-200 dark:border-neutral-900 transform translate-x-full md:translate-x-0 transition-transform'>
             {/* Header section */}
-            <div className='p-6 border-b border-gray-200 dark:border-zinc-800/50'>
-              <h2 className='text-xl font-light text-gray-900 dark:text-white mb-2'>
+            <div className='p-6 border-b border-neutral-200 dark:border-neutral-900'>
+              <h2 className='text-xl font-light text-neutral-900 dark:text-white mb-2'>
                 IP-based location data, simplified
               </h2>
-              <p className='text-sm text-gray-500 dark:text-zinc-500 mb-6 font-light'>
+              <p className='text-sm text-neutral-500 dark:text-neutral-500 mb-6 font-light'>
                 Get detailed information about the incoming request based on the
                 IP address.
               </p>
@@ -95,7 +95,7 @@ export default async function Home () {
                     href='https://github.com/microlinkhq/geolocation'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='flex items-center gap-1.5 text-xs text-gray-500 dark:text-zinc-500 hover:text-gray-900 dark:hover:text-white transition-colors'
+                    className='flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors'
                   >
                     <GithubIcon className='h-4 w-4' />
                     View on GitHub
@@ -108,13 +108,13 @@ export default async function Home () {
 
             {/* Main content area */}
             <div className='flex-1 flex flex-col overflow-hidden p-6'>
-              <div className='text-xs text-gray-500 dark:text-zinc-500 mb-3 uppercase tracking-wider font-light'>
+              <div className='text-xs text-neutral-500 dark:text-neutral-500 mb-3 uppercase tracking-wider font-light'>
                 API Response
               </div>
 
               {/* Pre element with minimal styling */}
               <div className='flex-1 overflow-hidden flex flex-col relative'>
-                <pre className='bg-gray-100/80 dark:bg-zinc-900/30 p-4 rounded-md overflow-auto text-xs text-gray-700 dark:text-zinc-400 font-mono flex-1 border border-gray-200 dark:border-zinc-800/50'>
+                <pre className='p-4 rounded-md overflow-auto text-xs text-neutral-700 dark:text-neutral-400 font-mono flex-1 border border-neutral-200 dark:border-neutral-900'>
                   {jsonData}
                 </pre>
 
@@ -131,12 +131,12 @@ export default async function Home () {
   } catch (error) {
     // Fallback for when the API request fails
     return (
-      <div className='flex items-center justify-center min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white'>
+      <div className='flex items-center justify-center min-h-screen bg-white dark:bg-black text-neutral-900 dark:text-white'>
         <div className='text-center p-8'>
           <h1 className='text-2xl font-light mb-4'>
             Unable to load geolocation data
           </h1>
-          <p className='text-gray-500 dark:text-zinc-500'>
+          <p className='text-neutral-500 dark:text-neutral-500'>
             Please try again later.
           </p>
         </div>
