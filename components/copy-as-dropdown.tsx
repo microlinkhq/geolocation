@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Check, ChevronDown, ClipboardCopy, Terminal } from 'lucide-react'
+import { Check, ChevronDown, ClipboardCopy, Terminal, Copy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -9,9 +9,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
+import { useToast } from '@/hooks/use-toast'
 
-export function CopyAsDropdown ({ apiUrl }: { apiUrl: string }) {
+export function CopyAsDropdown ({
+  apiUrl,
+  jsonData
+}: {
+  apiUrl: string
+  jsonData: string
+}) {
   const [copied, setCopied] = useState<string | null>(null)
+  const { toast } = useToast()
 
   const generateCurl = () => {
     return `curl -X GET "${apiUrl}"`
@@ -29,12 +37,27 @@ export function CopyAsDropdown ({ apiUrl }: { apiUrl: string }) {
       await navigator.clipboard.writeText(text)
       setCopied(type)
 
+      // Show toast notification
+      toast({
+        title: `Copied as ${type}`,
+        description: `The ${type} command has been copied to your clipboard.`,
+        duration: 2000
+      })
+
       // Reset the copied state after 2 seconds
       setTimeout(() => {
         setCopied(null)
       }, 2000)
     } catch (err) {
       console.error('Failed to copy text: ', err)
+
+      // Show error toast
+      toast({
+        title: 'Copy failed',
+        description: 'Could not copy to clipboard. Please try again.',
+        variant: 'destructive',
+        duration: 3000
+      })
     }
   }
 
@@ -54,11 +77,21 @@ export function CopyAsDropdown ({ apiUrl }: { apiUrl: string }) {
       >
         <DropdownMenuItem
           className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400 focus:text-neutral-900 dark:focus:text-white focus:bg-neutral-100 dark:focus:bg-neutral-800'
-          onClick={async () => await copyToClipboard(generateCurl(), 'curl')}
+          onClick={async () => await copyToClipboard(jsonData, 'JSON')}
+        >
+          <Copy className='h-4 w-4 opacity-70' />
+          <span>as JSON</span>
+          {copied === 'JSON' && (
+            <Check className='h-4 w-4 ml-auto text-green-500' />
+          )}
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400 focus:text-neutral-900 dark:focus:text-white focus:bg-neutral-100 dark:focus:bg-neutral-800'
+          onClick={async () => await copyToClipboard(generateCurl(), 'cURL')}
         >
           <Terminal className='h-4 w-4 opacity-70' />
           <span>as cURL</span>
-          {copied === 'curl' && (
+          {copied === 'cURL' && (
             <Check className='h-4 w-4 ml-auto text-green-500' />
           )}
         </DropdownMenuItem>

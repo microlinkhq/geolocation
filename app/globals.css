@@ -23,7 +23,7 @@
   --input: 0 0% 89.8%;
   --ring: 0 0% 3.9%;
   --radius: 0.5rem;
-  --marker-color: rgb(234, 64, 123);
+  --marker-color: rgb(247, 102, 152);
 }
 
 .dark {
@@ -117,4 +117,25 @@ body {
     width: 2px;
     height: 2px;
   }
+}
+
+/* Select all text on click */
+.select-all {
+  user-select: all;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+}
+
+/* Clickable elements */
+.clickable-element {
+  position: relative;
+  z-index: 20; /* Ensure clickable elements are above the globe */
+  cursor: copy; /* Show copy cursor on hover */
+}
+
+.clickable-element:focus-visible {
+  outline: 2px solid var(--marker-color);
+  outline-offset: 2px;
+  border-radius: 2px;
 }

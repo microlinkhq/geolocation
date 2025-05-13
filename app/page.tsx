@@ -1,9 +1,10 @@
 import { Cobe } from '@/components/cobe-globe'
 import { ThemeProvider } from '@/components/theme-provider'
-import { CopyButton } from '@/components/copy-button'
 import { CopyAsDropdown } from '@/components/copy-as-dropdown'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { GithubIcon } from 'lucide-react'
+import { Toaster } from '@/components/ui/toaster'
+import { JsonDisplay } from '@/components/json-display'
 
 export default async function Home () {
   try {
@@ -25,10 +26,10 @@ export default async function Home () {
         enableSystem
         disableTransitionOnChange={false}
       >
-        <main className='relative min-h-screen overflow-hidden bg-white dark:bg-black flex flex-col md:flex-row'>
-          {/* Left content area with globe */}
-          <div className='w-full md:w-[65%] h-screen flex flex-col'>
-            <div className='flex-1 flex items-center justify-center w-full px-4 md:px-8'>
+        <main className='relative min-h-screen overflow-x-hidden bg-white dark:bg-black flex flex-col'>
+          {/* Globe section */}
+          <div className='w-full min-h-[70vh] md:min-h-0 md:h-screen md:w-[65%] flex flex-col'>
+            <div className='flex-1 flex items-center justify-center w-full px-4 py-8 md:py-0 md:px-8'>
               <Cobe
                 ipAddress={data.ip?.address || 'Unknown IP'}
                 country={{
@@ -44,7 +45,7 @@ export default async function Home () {
             </div>
 
             {/* Feature highlights section */}
-            <div className='w-full border-t border-neutral-200 dark:border-neutral-900 py-8 md:py-12 px-4 md:px-12'>
+            <div className='w-full border-t border-neutral-200 dark:border-neutral-900 py-8 md:py-12 px-4 md:px-12 hidden md:block'>
               <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 max-w-4xl mx-auto'>
                 <div className='flex flex-col'>
                   <h3 className='text-2xl md:text-3xl font-light text-neutral-900 dark:text-white mb-2'>
@@ -74,8 +75,8 @@ export default async function Home () {
             </div>
           </div>
 
-          {/* Minimalist sidebar */}
-          <div className='fixed top-0 right-0 bottom-0 w-full md:w-[35%] z-10 flex flex-col h-screen border-l border-neutral-200 dark:border-neutral-900 transform translate-x-full md:translate-x-0 transition-transform'>
+          {/* API response section - stacked on mobile, sidebar on desktop */}
+          <div className='w-full md:fixed md:top-0 md:right-0 md:bottom-0 md:w-[35%] z-10 flex flex-col md:h-screen border-t md:border-t-0 md:border-l border-neutral-200 dark:border-neutral-900 md:transform md:translate-x-0 transition-transform'>
             {/* Header section */}
             <div className='p-6 border-b border-neutral-200 dark:border-neutral-900'>
               <h2 className='text-xl font-light text-neutral-900 dark:text-white mb-2'>
@@ -88,7 +89,7 @@ export default async function Home () {
 
               {/* Dropdown and GitHub link row */}
               <div className='flex items-center justify-between'>
-                <CopyAsDropdown apiUrl={apiUrl} />
+                <CopyAsDropdown apiUrl={apiUrl} jsonData={jsonData} />
 
                 <div className='flex items-center gap-3'>
                   <a
@@ -98,7 +99,7 @@ export default async function Home () {
                     className='flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors'
                   >
                     <GithubIcon className='h-4 w-4' />
-                    View on GitHub
+                    <span className='hidden sm:inline'>View on GitHub</span>
                   </a>
 
                   <ThemeToggle size='sm' />
@@ -109,22 +110,21 @@ export default async function Home () {
             {/* Main content area */}
             <div className='flex-1 flex flex-col overflow-hidden p-6'>
               <div className='text-xs text-neutral-500 dark:text-neutral-500 mb-3 uppercase tracking-wider font-light'>
-                API Response
+                API Response{' '}
+                <span className='normal-case text-[10px] opacity-70'>
+                  (click to copy)
+                </span>
               </div>
 
-              {/* Pre element with minimal styling */}
+              {/* JSON display with click-to-copy functionality */}
               <div className='flex-1 overflow-hidden flex flex-col relative'>
-                <pre className='p-4 rounded-md overflow-auto text-xs text-neutral-700 dark:text-neutral-400 font-mono flex-1 border border-neutral-200 dark:border-neutral-900'>
-                  {jsonData}
-                </pre>
-
-                {/* Positioned copy button */}
-                <div className='absolute top-3 right-3 z-10'>
-                  <CopyButton textToCopy={jsonData} />
-                </div>
+                <JsonDisplay jsonData={jsonData} />
               </div>
             </div>
           </div>
+
+          {/* Toast notifications */}
+          <Toaster />
         </main>
       </ThemeProvider>
     )
