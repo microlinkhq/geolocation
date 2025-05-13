@@ -1,0 +1,146 @@
+import { Cobe } from '@/components/cobe-globe'
+import { ThemeProvider } from '@/components/theme-provider'
+import { CopyButton } from '@/components/copy-button'
+import { CopyAsDropdown } from '@/components/copy-as-dropdown'
+import { ThemeToggle } from '@/components/theme-toggle'
+import { GithubIcon } from 'lucide-react'
+
+export default async function Home () {
+  try {
+    const res = await fetch('https://geolocation.microlink.io/')
+    const data = await res.json()
+
+    // Ensure coordinates are properly parsed as numbers
+    const latitude = Number.parseFloat(data.coordinates?.latitude) || 0
+    const longitude = Number.parseFloat(data.coordinates?.longitude) || 0
+
+    // Format the JSON data for display and copying
+    const jsonData = JSON.stringify(data, null, 2)
+    const apiUrl = 'https://geolocation.microlink.io/'
+
+    return (
+      <ThemeProvider
+        attribute='class'
+        defaultTheme='light'
+        enableSystem
+        disableTransitionOnChange={false}
+      >
+        <main className='relative min-h-screen overflow-hidden bg-white dark:bg-black flex flex-col md:flex-row'>
+          {/* Left content area with globe */}
+          <div className='w-full md:w-[65%] h-screen flex flex-col'>
+            <div className='flex-1 flex items-center justify-center w-full px-4 md:px-8'>
+              <Cobe
+                ipAddress={data.ip?.address || 'Unknown IP'}
+                country={{
+                  flag: data.country?.flag || '🌍',
+                  name: data.country?.name || 'Unknown Country'
+                }}
+                city={{
+                  name: data.city?.name || 'Unknown City'
+                }}
+                latitude={latitude}
+                longitude={longitude}
+              />
+            </div>
+
+            {/* Feature highlights section */}
+            <div className='w-full border-t border-gray-200 dark:border-zinc-800/50 py-8 md:py-12 px-4 md:px-12'>
+              <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 max-w-4xl mx-auto'>
+                <div className='flex flex-col'>
+                  <h3 className='text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-2'>
+                    Simple
+                  </h3>
+                  <p className='text-gray-500 dark:text-zinc-500 text-sm'>
+                    Just one HTTP request
+                  </p>
+                </div>
+                <div className='flex flex-col'>
+                  <h3 className='text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-2'>
+                    Fast
+                  </h3>
+                  <p className='text-gray-500 dark:text-zinc-500 text-sm'>
+                    Low latency responses
+                  </p>
+                </div>
+                <div className='flex flex-col'>
+                  <h3 className='text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-2'>
+                    Free
+                  </h3>
+                  <p className='text-gray-500 dark:text-zinc-500 text-sm'>
+                    No API key needed
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Minimalist sidebar */}
+          <div className='fixed top-0 right-0 bottom-0 w-full md:w-[35%] bg-gray-50 dark:bg-black z-10 flex flex-col h-screen border-l border-gray-200 dark:border-zinc-800/50 transform translate-x-full md:translate-x-0 transition-transform'>
+            {/* Header section */}
+            <div className='p-6 border-b border-gray-200 dark:border-zinc-800/50'>
+              <h2 className='text-xl font-light text-gray-900 dark:text-white mb-2'>
+                IP-based location data, simplified
+              </h2>
+              <p className='text-sm text-gray-500 dark:text-zinc-500 mb-6 font-light'>
+                Get detailed information about the incoming request based on the
+                IP address.
+              </p>
+
+              {/* Dropdown and GitHub link row */}
+              <div className='flex items-center justify-between'>
+                <CopyAsDropdown apiUrl={apiUrl} />
+
+                <div className='flex items-center gap-3'>
+                  <a
+                    href='https://github.com/microlinkhq/geolocation'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex items-center gap-1.5 text-xs text-gray-500 dark:text-zinc-500 hover:text-gray-900 dark:hover:text-white transition-colors'
+                  >
+                    <GithubIcon className='h-4 w-4' />
+                    View on GitHub
+                  </a>
+
+                  <ThemeToggle size='sm' />
+                </div>
+              </div>
+            </div>
+
+            {/* Main content area */}
+            <div className='flex-1 flex flex-col overflow-hidden p-6'>
+              <div className='text-xs text-gray-500 dark:text-zinc-500 mb-3 uppercase tracking-wider font-light'>
+                API Response
+              </div>
+
+              {/* Pre element with minimal styling */}
+              <div className='flex-1 overflow-hidden flex flex-col relative'>
+                <pre className='bg-gray-100/80 dark:bg-zinc-900/30 p-4 rounded-md overflow-auto text-xs text-gray-700 dark:text-zinc-400 font-mono flex-1 border border-gray-200 dark:border-zinc-800/50'>
+                  {jsonData}
+                </pre>
+
+                {/* Positioned copy button */}
+                <div className='absolute top-3 right-3 z-10'>
+                  <CopyButton textToCopy={jsonData} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </ThemeProvider>
+    )
+  } catch (error) {
+    // Fallback for when the API request fails
+    return (
+      <div className='flex items-center justify-center min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white'>
+        <div className='text-center p-8'>
+          <h1 className='text-2xl font-light mb-4'>
+            Unable to load geolocation data
+          </h1>
+          <p className='text-gray-500 dark:text-zinc-500'>
+            Please try again later.
+          </p>
+        </div>
+      </div>
+    )
+  }
+}

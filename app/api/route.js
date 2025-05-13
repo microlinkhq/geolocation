@@ -1,13 +1,11 @@
-'use strict'
+import { airport } from '@/lib/airport'
+import { toIP } from '@/lib/network'
+import { toCity } from '@/lib/city'
 
-const send = require('send-http')
+import countries from '@/data/countries.json'
+import airports from '@/data/airports.json'
 
-const { airport } = require('../src/airport')
-const { toIP } = require('../src/network')
-const { toCity } = require('../src/city')
-
-const countries = require('../data/countries.json')
-const airports = require('../data/airports.json')
+import send from 'send-http'
 
 const cloudflare = path =>
   fetch(`https://api.cloudflare.com/client/v4/radar/entities/${path}`, {
@@ -21,7 +19,7 @@ const createSend = (res, headers) => data => {
   return send(res, 200, data)
 }
 
-const handler = async (req, res) => {
+export default async (req, res) => {
   const send = createSend(res, HEADERS)
 
   const { pathname, searchParams } = (() => {
@@ -129,13 +127,4 @@ const handler = async (req, res) => {
 
   res.setHeader('Content-Type', 'text/html;charset=utf-8')
   return send(require('../src/html.js')(payload))
-}
-
-module.exports = async (req, res) => {
-  try {
-    await handler(req, res)
-  } catch (error) {
-    console.log(req.headers)
-    throw error
-  }
 }
