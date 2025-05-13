@@ -22,7 +22,7 @@ function LocationInfo ({
 }: {
   ipAddress: string
   city: { name: string }
-  country: { flag: string; name: string }
+  country: { flag: string, name: string }
 }) {
   const [activeElement, setActiveElement] = useState<string | null>(null)
   const { toast } = useToast()
@@ -56,9 +56,10 @@ function LocationInfo ({
   }
 
   // Copy handlers for individual elements
-  const copyIpAddress = async () => copyToClipboard(ipAddress, 'IP address')
-  const copyCity = async () => copyToClipboard(city.name, 'City')
-  const copyCountry = async () => copyToClipboard(country.name, 'Country')
+  const copyIpAddress = async () =>
+    await copyToClipboard(ipAddress, 'IP address')
+  const copyCity = async () => await copyToClipboard(city.name, 'City')
+  const copyCountry = async () => await copyToClipboard(country.name, 'Country')
 
   return (
     <div className='text-center mb-4 sm:mb-8'>
@@ -69,7 +70,7 @@ function LocationInfo ({
             'text-neutral-800 dark:text-neutral-200'
         )}
         onClick={copyIpAddress}
-        onKeyDown={async e => e.key === 'Enter' && copyIpAddress()}
+        onKeyDown={async e => await (e.key === 'Enter' && copyIpAddress())}
         tabIndex={0}
         role='button'
         aria-label={`IP address: ${ipAddress}. Click to copy.`}
@@ -82,7 +83,7 @@ function LocationInfo ({
           activeElement === 'city' && 'text-black dark:text-white'
         )}
         onClick={copyCity}
-        onKeyDown={async e => e.key === 'Enter' && copyCity()}
+        onKeyDown={async e => await (e.key === 'Enter' && copyCity())}
         tabIndex={0}
         role='button'
         aria-label={`City: ${city.name}. Click to copy.`}
@@ -96,7 +97,7 @@ function LocationInfo ({
             'text-neutral-800 dark:text-neutral-200'
         )}
         onClick={copyCountry}
-        onKeyDown={async e => e.key === 'Enter' && copyCountry()}
+        onKeyDown={async e => await (e.key === 'Enter' && copyCountry())}
         tabIndex={0}
         role='button'
         aria-label={`Country: ${country.name}. Click to copy.`}
