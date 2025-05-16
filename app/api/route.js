@@ -5,6 +5,8 @@ import { toCity } from '@/lib/city'
 import countries from '@/data/countries.json'
 import airports from '@/data/airports.json'
 
+import { getQuery } from '@/lib/utils'
+
 export const dynamic = 'force-dynamic'
 
 const cloudflare = path =>
@@ -72,39 +74,14 @@ const sendJSON = (data, { headers, ...options } = {}) =>
     options
   })
 
-export const GET = async (req, res) => {
-  const { pathname, searchParams } = (() => {
-    const [pathname, search] = req.url.split('?')
-    return { pathname, searchParams: new URLSearchParams(search) }
-  })()
-
-  if (pathname === '/headers') return sendJSON(getHeaders(req))
-  if (pathname === '/airports') return sendJSON(airports)
-
-  if (pathname === '/countries') {
-    const filter = (() => {
-      let value = searchParams.get('alpha2')
-      if (value) return { key: 'alpha2', value: value.toUpperCase() }
-      value = searchParams.get('alpha3')
-      if (value) return { key: 'alpha3', value: value.toUpperCase() }
-      return { key: 'numeric', value: searchParams.get('numeric') }
-    })()
-
-    const result = filter.value
-      ? countries.find(item => item.country[filter.key] === filter.value)
-      : countries
-
-    return sendJSON(result)
-  }
+export const GET = async req => {
+  const { searchParams } = getQuery(req)
 
   const headers = getHeaders(req)
 
-  const countryAlpha2 =
-    headers['cf-ipcountry'] || headers['x-vercel-ip-country']
+  const countryAlpha2 = headers['cf-ipcountry'] || headers['x-vercel-ip-country']
 
-  const findCountry = countries.find(
-    ({ country }) => country.alpha2 === countryAlpha2
-  )
+  const findCountry = countries.find(({ country }) => country.alpha2 === countryAlpha2)
 
   const {
     country,
@@ -130,10 +107,7 @@ export const GET = async (req, res) => {
     city: toCity(
       {
         name: headers['cf-ipcity'] || headers['x-vercel-ip-city'] || null,
-        postalCode:
-          headers['cf-postal-code'] ||
-          headers['x-vercel-ip-postal-code'] ||
-          null,
+        postalCode: headers['cf-postal-code'] || headers['x-vercel-ip-postal-code'] || null,
         metroCode: headers['cf-metro-code'] ?? null
       },
       countryAlpha2
