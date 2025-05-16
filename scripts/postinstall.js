@@ -1,14 +1,18 @@
 'use strict'
 
-const { eeaMember, euMember } = require('is-european')
-const { writeFile, mkdir } = require('fs/promises')
-const { countries } = require('countries-list')
-const { resolve } = require('path')
+import { eeaMember, euMember } from 'is-european'
+import { writeFile, mkdir } from 'fs/promises'
+import { countries } from 'countries-list'
+import { resolve } from 'path'
 
-const { toCurrencies } = require('../src/currencies.js')
-const { toContinent } = require('../src/continents.js')
-const { toLanguages } = require('../src/languages.js')
-const { toCity } = require('../src/city.js')
+import { toCurrencies } from '../lib/currencies.js'
+import { toContinent } from '../lib/continents.js'
+import { toLanguages } from '../lib/languages.js'
+import { toCity } from '../lib/city.js'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = resolve(__filename, '..')
 
 const mapCountries = payload =>
   payload.map(item => {
