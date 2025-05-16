@@ -8,7 +8,7 @@ import { Toaster } from '@/components/ui/toaster'
 import { Cobe } from '@/components/cobe-globe'
 import { GithubIcon } from 'lucide-react'
 import { baseUrl } from '@/lib/utils'
-import { headers } from 'next/headers'
+import { headers as reqHeaders } from 'next/headers'
 import { JSX } from 'react'
 import { connection } from 'next/server'
 
@@ -20,8 +20,9 @@ export const fetchCache = 'force-no-store'
 
 export default async function Home (): Promise<JSX.Element> {
   await connection()
-  const url = baseUrl(await headers())
-  const data = await fetch(new URL('/api', url)).then(res => res.json())
+  const headers = await reqHeaders()
+  const url = baseUrl(headers)
+  const data = await fetch(new URL('/api', url), { headers }).then(res => res.json())
   console.log(data)
 
   // Ensure coordinates are properly parsed as numbers
