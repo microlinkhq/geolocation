@@ -20,6 +20,14 @@ const nextConfig = {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true
+  },
+  rewrites: () => {
+    return [
+      {
+        source: '/favicon.ico',
+        destination: 'https://cdn.microlink.io/logo/trim.png'
+      }
+    ]
   }
 }
 
