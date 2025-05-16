@@ -10,10 +10,10 @@ import { GithubIcon } from 'lucide-react'
 import { baseUrl } from '@/lib/utils'
 import { headers } from 'next/headers'
 import { JSX } from 'react'
-
-export const dynamic = 'force-dynamic'
+import { connection } from 'next/server'
 
 export default async function Home (): Promise<JSX.Element> {
+  await connection()
   const url = baseUrl(await headers())
   const data = await fetch(new URL('/api', url)).then(res => res.json())
   console.log(data)
