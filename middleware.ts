@@ -3,16 +3,17 @@
 import type { NextRequest } from 'next/server'
 
 import { NextResponse } from 'next/server'
-import { baseUrl } from '@/lib/utils'
+import { baseUrl, getHeaders } from '@/lib/utils'
 
 export function middleware (request: NextRequest): Promise<Response> | NextResponse {
-  const acceptHeader = request.headers.get('accept')
-  const acceptsHtml = typeof acceptHeader === 'string' && acceptHeader.includes('text/html')
+  const headers = getHeaders(request)
 
+  const acceptHeader = headers.accept
+  const acceptsHtml = typeof acceptHeader === 'string' && acceptHeader.includes('text/html')
   if (acceptsHtml) return NextResponse.next()
 
-  const url = baseUrl(request.headers)
-  return fetch(new URL('/api', url))
+  const url = baseUrl(headers)
+  return fetch(new URL('/api', url), { headers })
 }
 
 // Configure the middleware to run on specific paths

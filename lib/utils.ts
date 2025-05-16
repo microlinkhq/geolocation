@@ -7,8 +7,10 @@ export function cn (...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs))
 }
 
-export const baseUrl = (headers: Headers): string =>
-  `${String(headers.get('x-forwarded-proto'))}://${String(headers.get('x-forwarded-host'))}`
+export const baseUrl = (headers: Headers | Record<string, string>): string => {
+  const objHeaders = headers instanceof Headers ? getHeaders(headers) : headers
+  return `${objHeaders['x-forwarded-proto']}://${objHeaders['x-forwarded-host']}`
+}
 
 export const sendJSON = (
   data: unknown,
