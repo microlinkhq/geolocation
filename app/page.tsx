@@ -16,6 +16,7 @@ export const dynamic = 'force-dynamic'
 export default async function Home (): Promise<JSX.Element> {
   const url = baseUrl(await headers())
   const data = await fetch(new URL('/api', url)).then(res => res.json())
+  console.log(data)
 
   // Ensure coordinates are properly parsed as numbers
   const latitude = Number.parseFloat(data.coordinates?.latitude) || 0
