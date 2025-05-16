@@ -12,6 +12,8 @@ import { headers } from 'next/headers'
 import { JSX } from 'react'
 import { connection } from 'next/server'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home (): Promise<JSX.Element> {
   await connection()
   const url = baseUrl(await headers())
