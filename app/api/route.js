@@ -17,7 +17,7 @@ const cloudflare = path =>
 export const GET = async req => {
   const { searchParams } = getQuery(req)
 
-  const headers = getHeaders(req)
+  const headers = getHeaders(Object.fromEntries(req.headers))
 
   const countryAlpha2 = headers['cf-ipcountry'] || headers['x-vercel-ip-country']
 
