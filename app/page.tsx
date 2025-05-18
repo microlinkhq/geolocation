@@ -17,7 +17,9 @@ export const dynamic = 'force-dynamic'
 export default async function Home (): Promise<JSX.Element> {
   const headers = getHeaders(Object.fromEntries(await reqHeaders()))
   const url = baseUrl(headers)
-  const data = await fetch(new URL('/api', url), { headers }).then(res => res.json())
+  const data = await fetch(new URL('/api', url), { headers, cache: 'no-store' }).then(res =>
+    res.json()
+  )
 
   console.log(Date.now(), headers)
 
