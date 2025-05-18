@@ -5,8 +5,9 @@ export function cn (...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs))
 }
 
-export const baseUrl = (headers: Record<string, string>): string =>
-  `${headers['x-forwarded-proto']}://${headers['x-forwarded-host']}`
+const PROTOCOL = process.env.NODE_ENV === 'production' ? 'https' : 'http'
+
+export const baseUrl = (headers: Record<string, string>): string => `${PROTOCOL}://${headers.host}`
 
 export const sendJSON = (
   data: unknown,
