@@ -15,7 +15,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Microlink Geolocation',
-  description: 'Get detailed information about the incoming request based on the IP address.'
+  description: 'Get detailed information about the incoming request based on the IP address.',
+  icons: {
+    icon: [
+      {
+        url: 'https://cdn.microlink.io/logo/trim.png', // Using the favicon URL from vercel.json
+        sizes: 'any'
+      }
+    ]
+  }
 }
 
 export default function RootLayout ({
