@@ -19,6 +19,8 @@ export default async function Home (): Promise<JSX.Element> {
   const url = baseUrl(headers)
   const data = await fetch(new URL('/api', url), { headers }).then(res => res.json())
 
+  console.log(Date.now(), headers)
+
   // Ensure coordinates are properly parsed as numbers
   const latitude = Number.parseFloat(data.coordinates?.latitude) || 0
   const longitude = Number.parseFloat(data.coordinates?.longitude) || 0

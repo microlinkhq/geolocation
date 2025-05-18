@@ -5,7 +5,7 @@ import { toCity } from '@/lib/city'
 import countries from '@/data/countries.json'
 import airports from '@/data/airports.json'
 
-import { sendJSON, getHeaders, getQuery } from '@/lib/utils'
+import { corsHeaders, sendJSON, getHeaders, getQuery } from '@/lib/utils'
 
 export const dynamic = 'force-dynamic'
 
@@ -86,3 +86,11 @@ export const GET = async req => {
 
   return sendJSON(payload)
 }
+
+export async function OPTIONS () {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders()
+  })
+}
+
