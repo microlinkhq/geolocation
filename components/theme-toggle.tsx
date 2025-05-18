@@ -1,5 +1,3 @@
-'use client'
-
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import { Moon, Sun } from 'lucide-react'
@@ -20,11 +18,7 @@ export function ThemeToggle ({ size = 'default' }: ThemeToggleProps) {
 
   if (!mounted) {
     return (
-      <Button
-        variant='ghost'
-        size={size}
-        className='h-7 w-7 p-0 rounded-full bg-transparent'
-      >
+      <Button variant='ghost' size={size} className='h-7 w-7 p-0 rounded-full bg-transparent'>
         <span className='sr-only'>Toggle theme</span>
       </Button>
     )

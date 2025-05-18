@@ -1,5 +1,3 @@
-'use client'
-
 import type React from 'react'
 
 import { type JSX, useEffect, useRef, useState } from 'react'
@@ -8,10 +6,7 @@ import { cn } from '@/lib/utils'
 import { useToast } from '@/hooks/use-toast'
 
 const locationToAngles = (lat: number, long: number): [number, number] => {
-  return [
-    Math.PI - ((long * Math.PI) / 180 - Math.PI / 2),
-    (lat * Math.PI) / 180
-  ]
+  return [Math.PI - ((long * Math.PI) / 180 - Math.PI / 2), (lat * Math.PI) / 180]
 }
 
 // Separate component for clickable location info
@@ -22,7 +17,7 @@ function LocationInfo ({
 }: {
   ipAddress: string
   city: { name: string }
-  country: { flag: string, name: string }
+  country: { flag: string; name: string }
 }) {
   const [activeElement, setActiveElement] = useState<string | null>(null)
   const { toast } = useToast()
@@ -56,8 +51,7 @@ function LocationInfo ({
   }
 
   // Copy handlers for individual elements
-  const copyIpAddress = async () =>
-    await copyToClipboard(ipAddress, 'IP address')
+  const copyIpAddress = async () => await copyToClipboard(ipAddress, 'IP address')
   const copyCity = async () => await copyToClipboard(city.name, 'City')
   const copyCountry = async () => await copyToClipboard(country.name, 'Country')
 
@@ -66,8 +60,7 @@ function LocationInfo ({
       <span
         className={cn(
           'block text-base sm:text-lg text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors clickable-element',
-          activeElement === 'ip address' &&
-            'text-neutral-800 dark:text-neutral-200'
+          activeElement === 'ip address' && 'text-neutral-800 dark:text-neutral-200'
         )}
         onClick={copyIpAddress}
         onKeyDown={async e => await (e.key === 'Enter' && copyIpAddress())}
@@ -93,8 +86,7 @@ function LocationInfo ({
       <span
         className={cn(
           'block text-base sm:text-lg text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors clickable-element',
-          activeElement === 'country' &&
-            'text-neutral-800 dark:text-neutral-200'
+          activeElement === 'country' && 'text-neutral-800 dark:text-neutral-200'
         )}
         onClick={copyCountry}
         onKeyDown={async e => await (e.key === 'Enter' && copyCountry())}
@@ -205,8 +197,7 @@ export function Cobe ({
 
     // Dynamically set cursor style based on whether mouse is over the globe
     if (containerRef.current) {
-      containerRef.current.style.cursor =
-        distanceFromCenter <= radius ? 'copy' : 'default'
+      containerRef.current.style.cursor = distanceFromCenter <= radius ? 'copy' : 'default'
     }
   }
 
@@ -342,10 +333,7 @@ export function Cobe ({
         }}
       >
         {/* Canvas element */}
-        <canvas
-          ref={canvasRef}
-          className='opacity-0 transition-opacity duration-1000'
-        />
+        <canvas ref={canvasRef} className='opacity-0 transition-opacity duration-1000' />
 
         {/* Click hint overlay - only visible when hovering over the circular area */}
         {isHovering && (

@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/promise-function-async */
-
 'use client'
+
+/* eslint-disable @typescript-eslint/promise-function-async */
 
 import { CopyAsDropdown } from '@/components/copy-as-dropdown'
 import { JsonDisplay } from '@/components/json-display'
