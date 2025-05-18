@@ -14,6 +14,7 @@ export const sendJSON = (
 ): Response =>
   Response.json(data, {
     headers: {
+      'Cache-Control': 'no-store',
       ...corsHeaders(),
       ...headers
     },
