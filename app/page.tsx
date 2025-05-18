@@ -1,37 +1,56 @@
 /* eslint-disable @typescript-eslint/promise-function-async */
 
+'use client'
+
 import { CopyAsDropdown } from '@/components/copy-as-dropdown'
 import { ThemeProvider } from '@/components/theme-provider'
 import { JsonDisplay } from '@/components/json-display'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { Toaster } from '@/components/ui/toaster'
+import { JSX, useEffect, useState } from 'react'
 import { Cobe } from '@/components/cobe-globe'
 import { GithubIcon } from 'lucide-react'
-import { baseUrl, getHeaders } from '@/lib/utils'
-import { headers as reqHeaders } from 'next/headers'
-import { connection } from 'next/server'
-
-import { JSX } from 'react'
 
 export const dynamic = 'force-dynamic'
 
-export default async function Home (): Promise<JSX.Element> {
-  await connection()
-  const headers = getHeaders(Object.fromEntries(await reqHeaders()))
-  const url = baseUrl(headers)
-  const data = await fetch(new URL('/api', url), { headers, cache: 'no-store' }).then(res =>
-    res.json()
-  )
+export default function Home (): JSX.Element | null {
+  const [data, setData] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [jsonData, setJsonData] = useState('')
 
-  console.log(Date.now(), headers)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true)
+        const endpoint = `${window.location.origin}/api`
+        const res = await fetch(endpoint)
+
+        if (!res.ok) {
+          throw new Error(`API request failed with status ${res.status}`)
+        }
+
+        const responseData = await res.json()
+        setData(responseData)
+
+        // Format the JSON data for display and copying
+        setJsonData(JSON.stringify(responseData, null, 2))
+      } catch (err) {
+        console.error('Error fetching geolocation data:', err)
+        setError(err instanceof Error ? err.message : 'Failed to fetch data')
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [])
+
+  if (loading) return null
 
   // Ensure coordinates are properly parsed as numbers
   const latitude = Number.parseFloat(data.coordinates?.latitude) || 0
   const longitude = Number.parseFloat(data.coordinates?.longitude) || 0
-
-  // Format the JSON data for display and copying
-  const jsonData = JSON.stringify(data, null, 2)
-  const apiUrl = 'https://geolocation.microlink.io/'
 
   return (
     <ThemeProvider
@@ -100,7 +119,7 @@ export default async function Home (): Promise<JSX.Element> {
 
             {/* Dropdown and GitHub link row */}
             <div className='flex items-center justify-between'>
-              <CopyAsDropdown apiUrl={apiUrl} jsonData={jsonData} />
+              <CopyAsDropdown jsonData={jsonData} />
 
               <div className='flex items-center gap-3'>
                 <a
