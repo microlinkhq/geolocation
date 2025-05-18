@@ -80,3 +80,49 @@ export const getQuery = (req: Request): { pathname: string, searchParams: URLSea
   const [pathname, search] = req.url.split('?')
   return { pathname, searchParams: new URLSearchParams(search) }
 }
+
+// Function to generate error report email with headers
+export function generateErrorReport (error: string): string {
+  // Collect browser and environment information
+  const browserInfo = {
+    userAgent: window.navigator.userAgent,
+    language: window.navigator.language,
+    platform: window.navigator.platform,
+    vendor: window.navigator.vendor,
+    screenSize: `${window.screen.width}x${window.screen.height}`,
+    windowSize: `${window.innerWidth}x${window.innerHeight}`,
+    pixelRatio: window.devicePixelRatio,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    timestamp: new Date().toISOString(),
+    url: window.location.href,
+    referrer: document.referrer ?? 'N/A'
+  }
+
+  // Format the email body
+  const emailBody = `Hello, Microlink team
+
+I encountered an error while using the geolocation service:
+
+Error: ${error}
+
+Browser Information:
+
+- User Agent: ${browserInfo.userAgent}
+- Language: ${browserInfo.language}
+- Platform: ${browserInfo.platform}
+- Vendor: ${browserInfo.vendor}
+- Screen Size: ${browserInfo.screenSize}
+- Window Size: ${browserInfo.windowSize}
+- Pixel Ratio: ${browserInfo.pixelRatio}
+- Timezone: ${browserInfo.timezone}
+- URL: ${browserInfo.url}
+- Referrer: ${browserInfo.referrer}
+- Timestamp: ${browserInfo.timestamp}
+
+Please let me know if you need any additional information.
+
+Thank you.`
+
+  // Encode the email body for mailto link
+  return encodeURIComponent(emailBody)
+}

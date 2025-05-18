@@ -3,12 +3,12 @@
 'use client'
 
 import { CopyAsDropdown } from '@/components/copy-as-dropdown'
-import { ThemeProvider } from '@/components/theme-provider'
 import { JsonDisplay } from '@/components/json-display'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { JSX, useEffect, useState } from 'react'
+import { generateErrorReport } from '@/lib/utils'
+import { GithubIcon, Mail } from 'lucide-react'
 import { Cobe } from '@/components/cobe-globe'
-import { GithubIcon } from 'lucide-react'
 
 export const dynamic = 'force-dynamic'
 
@@ -24,15 +24,9 @@ export default function Home (): JSX.Element | null {
         setLoading(true)
         const endpoint = `${window.location.origin}/api`
         const res = await fetch(endpoint)
-
-        if (!res.ok) {
-          throw new Error(`API request failed with status ${res.status}`)
-        }
-
+        if (!res.ok) throw new Error(`API request failed with status ${res.status}`)
         const responseData = await res.json()
         setData(responseData)
-
-        // Format the JSON data for display and copying
         setJsonData(JSON.stringify(responseData, null, 2))
       } catch (err) {
         console.error('Error fetching geolocation data:', err)
@@ -46,6 +40,31 @@ export default function Home (): JSX.Element | null {
   }, [])
 
   if (loading) return null
+
+  if (error || !data) {
+    const errorReport = error
+      ? generateErrorReport(error)
+      : generateErrorReport('Unknown error occurred')
+
+    return (
+      <div className='flex items-center justify-center min-h-screen bg-white dark:bg-black text-neutral-900 dark:text-white'>
+        <div className='text-center p-8 max-w-md'>
+          <h1 className='text-2xl font-light mb-4'>Unable to load geolocation data</h1>
+          <p className='text-neutral-500 dark:text-neutral-500 mb-6'>
+            {error || 'Please try again later.'}
+          </p>
+
+          <a
+            href={`mailto:hello@microlink.io?subject=Geolocation%20API%20Error%20Report&body=${errorReport}`}
+            className='inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 mb-6'
+          >
+            <Mail className='h-4 w-4' />
+            Report Issue
+          </a>
+        </div>
+      </div>
+    )
+  }
 
   // Ensure coordinates are properly parsed as numbers
   const latitude = Number.parseFloat(data.coordinates?.latitude) || 0
