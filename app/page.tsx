@@ -9,12 +9,14 @@ import { Cobe } from '@/components/cobe-globe'
 import { GithubIcon } from 'lucide-react'
 import { baseUrl, getHeaders } from '@/lib/utils'
 import { headers as reqHeaders } from 'next/headers'
+import { connection } from 'next/server'
 
 import { JSX } from 'react'
 
 export const dynamic = 'force-dynamic'
 
 export default async function Home (): Promise<JSX.Element> {
+  await connection()
   const headers = getHeaders(Object.fromEntries(await reqHeaders()))
   const url = baseUrl(headers)
   const data = await fetch(new URL('/api', url), { headers, cache: 'no-store' }).then(res =>
