@@ -361,9 +361,9 @@ export function Cobe ({
           <div className='absolute inset-0 pointer-events-none z-10 flex items-center justify-center'>
             <div className='marker-container relative'>
               {/* Pulsing ring */}
-              <div className='absolute inset-0 rounded-full opacity-75 marker-pulse bg-[var(--marker-color)]' />
+              <div className='absolute inset-0 rounded-full opacity-75 marker-pulse bg-(--marker-color)' />
               {/* Solid center */}
-              <div className='relative w-2.5 h-2.5 rounded-full bg-[var(--marker-color)]' />
+              <div className='relative w-2.5 h-2.5 rounded-full bg-(--marker-color)' />
             </div>
           </div>
         )}
