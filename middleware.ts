@@ -9,7 +9,7 @@ export function middleware (req: NextRequest): Promise<Response> | NextResponse 
   const { accept } = headers
   if (accept.includes('text/html') || accept.includes('*/*')) return NextResponse.next()
   const url = baseUrl(headers)
-  return fetch(new URL('/api', url), { headers, cache: 'no-store' })
+  return fetch(new URL('/api', url), { headers })
 }
 
 // Configure the middleware to run on specific paths
