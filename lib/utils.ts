@@ -1,8 +1,6 @@
 import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-const HEADERS = { 'access-control-allow-origin': '*' }
-
 export function cn (...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs))
 }
@@ -16,11 +14,20 @@ export const sendJSON = (
 ): Response =>
   Response.json(data, {
     headers: {
-      ...HEADERS,
+      ...corsHeaders(),
       ...headers
     },
     ...options
   })
+
+export const corsHeaders = (): Record<string, string> => {
+  return {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Access-Control-Allow-Credentials': 'true'
+  }
+}
 
 export const getHeaders = (payload: Record<string, string>): Record<string, string> => {
   if (process.env.NODE_ENV !== 'development') return payload
