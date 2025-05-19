@@ -7,7 +7,7 @@ import { NextResponse } from 'next/server'
 export function middleware (req: NextRequest): Promise<Response> | NextResponse {
   const headers = getHeaders(Object.fromEntries(req.headers))
   const { accept } = headers
-  if (accept.includes('text/html') || accept.includes('*/*')) return NextResponse.next()
+  if (accept.includes('text/html')) return NextResponse.next()
   const url = baseUrl(headers)
   return fetch(new URL('/api', url), { headers })
 }

@@ -35,7 +35,7 @@ export const getHeaders = (payload: Record<string, string>): Record<string, stri
   return {
     'cf-region-code': 'MC',
     'x-vercel-proxy-signature-ts': '1747589156',
-    'accept-encoding': 'gzip, br',
+    'accept-encoding': 'gzip, deflate, br, zstd',
     'x-real-ip': '162.158.120.173',
     'x-vercel-proxied-for': '162.158.120.173',
     'x-vercel-id': 'cdg1::2bdmd-1747588856435-0cbce85b46b7',
@@ -60,7 +60,8 @@ export const getHeaders = (payload: Record<string, string>): Record<string, stri
     'x-vercel-ip-continent': 'EU',
     'x-vercel-ip-country-region': 'MD',
     'x-vercel-ip-longitude': '-3.694',
-    accept: '*/*',
+    accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'x-vercel-internal-bot-check': 'skip',
     'cf-ipcity': 'Murcia',
     'x-vercel-internal-ingress-bucket': 'bucket0',
