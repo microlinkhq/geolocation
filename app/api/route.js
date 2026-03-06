@@ -42,8 +42,18 @@ export const GET = async req => {
     longitude: headers['cf-iplongitude'] || headers['x-vercel-ip-longitude']
   }
 
+  // Fix encoding issue: Cloudflare sends UTF-8 bytes interpreted as Latin-1
+  const fixEncoding = (str) => {
+    if (!str) return str
+    try {
+      return Buffer.from(str, 'latin1').toString('utf8')
+    } catch (e) {
+      return str
+    }
+  }
+
   const cityNameRaw = headers['cf-ipcity'] || headers['x-vercel-ip-city'] || null
-  const cityName = cityNameRaw ? decodeURIComponent(cityNameRaw) : null
+  const cityName = fixEncoding(cityNameRaw)
 
   const payload = {
     ip: toIP(address),
