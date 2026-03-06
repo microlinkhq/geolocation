@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: 'https://cdn.microlink.io/logo/trim.png', // Using the favicon URL from vercel.json
+        url: 'https://cdn.microlink.io/logo/logo.png', // Using the favicon URL from vercel.json
         sizes: 'any'
       }
     ]

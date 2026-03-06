@@ -42,11 +42,14 @@ export const GET = async req => {
     longitude: headers['cf-iplongitude'] || headers['x-vercel-ip-longitude']
   }
 
+  const cityNameRaw = headers['cf-ipcity'] || headers['x-vercel-ip-city'] || null
+  const cityName = cityNameRaw ? decodeURIComponent(cityNameRaw) : null
+
   const payload = {
     ip: toIP(address),
     city: toCity(
       {
-        name: headers['cf-ipcity'] || headers['x-vercel-ip-city'] || null,
+        name: cityName,
         postalCode: headers['cf-postal-code'] || headers['x-vercel-ip-postal-code'] || null,
         metroCode: headers['cf-metro-code'] ?? null
       },
