@@ -29,7 +29,7 @@
     "cobe": "latest",
     "countries-list": "~3.3.0",
     "currency-codes": "github:osdiab/currency-codes",
-    "geokdbush": "~2.0.1",
+    "geokdbush": "~2.1.0",
     "is-european": "~1.0.9",
     "is-ip": "~5.0.1",
     "iso-3166": "~4.3.0",
