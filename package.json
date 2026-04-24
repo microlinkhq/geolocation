@@ -58,7 +58,7 @@
     "simple-git-hooks": "latest",
     "tailwindcss": "3",
     "ts-standard": "latest",
-    "typescript": "^5"
+    "typescript": "^6"
   },
   "engines": {
     "node": ">=22"
