@@ -46,7 +46,7 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@types/geokdbush": "~1.1.5",
-    "@types/node": "^22",
+    "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "async-listen": "latest",
