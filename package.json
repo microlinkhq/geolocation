@@ -56,7 +56,7 @@
     "nano-staged": "latest",
     "postcss": "^8",
     "simple-git-hooks": "latest",
-    "tailwindcss": "3",
+    "tailwindcss": "4",
     "ts-standard": "latest",
     "typescript": "^5"
   },
