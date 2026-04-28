@@ -1,13 +1,13 @@
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import { Moon, Sun } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { type JSX, useEffect, useState } from 'react'
 
 interface ThemeToggleProps {
   size?: 'default' | 'sm' | 'lg' | 'icon'
 }
 
-export function ThemeToggle ({ size = 'default' }: ThemeToggleProps) {
+export function ThemeToggle ({ size = 'default' }: ThemeToggleProps): JSX.Element {
   const { setTheme, theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -24,8 +24,8 @@ export function ThemeToggle ({ size = 'default' }: ThemeToggleProps) {
     )
   }
 
-  const toggleTheme = () => {
-    const currentTheme = resolvedTheme || theme
+  const toggleTheme = (): void => {
+    const currentTheme = resolvedTheme ?? theme ?? 'light'
     setTheme(currentTheme === 'dark' ? 'light' : 'dark')
   }
 

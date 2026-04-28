@@ -16,10 +16,8 @@ export const GET = (req: Request): Response => {
     return { key: 'numeric', value: searchParams.get('numeric') }
   })()
 
-  const result = filter.value
-    ? // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expression o...
-      countries.find(item => item.country[filter.key] === filter.value)
-    : countries
+  // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expression o...
+  const result = filter.value != null ? countries.find(item => item.country[filter.key] === filter.value) : countries
 
   return sendJSON(result)
 }
