@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { JSX, useState } from 'react'
 import { Check, ChevronDown, ClipboardCopy, Terminal, Copy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -11,22 +11,22 @@ import { useToast } from '@/hooks/use-toast'
 
 const API_URL = 'https://geolocation.microlink.io/'
 
-export function CopyAsDropdown ({ jsonData }: { jsonData: string }) {
+export function CopyAsDropdown ({ jsonData }: { jsonData: string }): JSX.Element {
   const [copied, setCopied] = useState<string | null>(null)
   const { toast } = useToast()
 
-  const generateCurl = () => {
+  const generateCurl = (): string => {
     return `curl -X GET "${API_URL}"`
   }
 
-  const generateFetch = () => {
+  const generateFetch = (): string => {
     return `fetch("${API_URL}")
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));`
   }
 
-  const copyToClipboard = async (text: string, type: string) => {
+  const copyToClipboard = async (text: string, type: string): Promise<void> => {
     try {
       await navigator.clipboard.writeText(text)
       setCopied(type)
@@ -71,7 +71,7 @@ export function CopyAsDropdown ({ jsonData }: { jsonData: string }) {
       >
         <DropdownMenuItem
           className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400 focus:text-neutral-900 dark:focus:text-white focus:bg-neutral-100 dark:focus:bg-neutral-800'
-          onClick={async () => await copyToClipboard(jsonData, 'JSON')}
+          onClick={() => { void copyToClipboard(jsonData, 'JSON') }}
         >
           <Copy className='h-4 w-4 opacity-70' />
           <span>as JSON</span>
@@ -79,7 +79,7 @@ export function CopyAsDropdown ({ jsonData }: { jsonData: string }) {
         </DropdownMenuItem>
         <DropdownMenuItem
           className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400 focus:text-neutral-900 dark:focus:text-white focus:bg-neutral-100 dark:focus:bg-neutral-800'
-          onClick={async () => await copyToClipboard(generateCurl(), 'cURL')}
+          onClick={() => { void copyToClipboard(generateCurl(), 'cURL') }}
         >
           <Terminal className='h-4 w-4 opacity-70' />
           <span>as cURL</span>
@@ -87,7 +87,7 @@ export function CopyAsDropdown ({ jsonData }: { jsonData: string }) {
         </DropdownMenuItem>
         <DropdownMenuItem
           className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400 focus:text-neutral-900 dark:focus:text-white focus:bg-neutral-100 dark:focus:bg-neutral-800'
-          onClick={async () => await copyToClipboard(generateFetch(), 'fetch')}
+          onClick={() => { void copyToClipboard(generateFetch(), 'fetch') }}
         >
           <ClipboardCopy className='h-4 w-4 opacity-70' />
           <span>as fetch</span>

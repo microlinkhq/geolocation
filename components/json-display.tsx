@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import { type JSX, useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
 
 interface JsonDisplayProps {
   jsonData: string
 }
 
-export function JsonDisplay ({ jsonData }: JsonDisplayProps) {
+export function JsonDisplay ({ jsonData }: JsonDisplayProps): JSX.Element {
   const { toast } = useToast()
   const [isActive, setIsActive] = useState(false)
 
-  const handleClick = async () => {
+  const handleClick = async (): Promise<void> => {
     try {
       await navigator.clipboard.writeText(jsonData)
 
@@ -38,7 +38,7 @@ export function JsonDisplay ({ jsonData }: JsonDisplayProps) {
 
   return (
     <pre
-      onClick={handleClick}
+      onClick={() => { void handleClick() }}
       className={`p-4 rounded-md overflow-auto text-xs text-neutral-700 dark:text-neutral-400 font-mono flex-1 border border-neutral-200 dark:border-neutral-900 min-h-[200px] md:min-h-0 cursor-pointer transition-colors duration-150 select-all hover:bg-neutral-50 dark:hover:bg-neutral-900 ${
         isActive ? 'bg-neutral-100 dark:bg-neutral-800' : ''
       }`}
@@ -47,7 +47,7 @@ export function JsonDisplay ({ jsonData }: JsonDisplayProps) {
       tabIndex={0}
       onKeyDown={e => {
         if (e.key === 'Enter' || e.key === ' ') {
-          handleClick()
+          void handleClick()
         }
       }}
     >

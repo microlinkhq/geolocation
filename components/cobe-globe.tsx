@@ -17,13 +17,13 @@ function LocationInfo ({
 }: {
   ipAddress: string
   city: { name: string }
-  country: { flag: string; name: string }
-}) {
+  country: { flag: string, name: string }
+}): JSX.Element {
   const [activeElement, setActiveElement] = useState<string | null>(null)
   const { toast } = useToast()
 
   // Generic copy function
-  const copyToClipboard = async (text: string, description: string) => {
+  const copyToClipboard = async (text: string, description: string): Promise<void> => {
     try {
       await navigator.clipboard.writeText(text)
 
@@ -51,9 +51,9 @@ function LocationInfo ({
   }
 
   // Copy handlers for individual elements
-  const copyIpAddress = async () => await copyToClipboard(ipAddress, 'IP address')
-  const copyCity = async () => await copyToClipboard(city.name, 'City')
-  const copyCountry = async () => await copyToClipboard(country.name, 'Country')
+  const copyIpAddress = async (): Promise<void> => await copyToClipboard(ipAddress, 'IP address')
+  const copyCity = async (): Promise<void> => await copyToClipboard(city.name, 'City')
+  const copyCountry = async (): Promise<void> => await copyToClipboard(country.name, 'Country')
 
   return (
     <div className='text-center mb-4 sm:mb-8'>
@@ -62,8 +62,12 @@ function LocationInfo ({
           'block text-base sm:text-lg text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors clickable-element',
           activeElement === 'ip address' && 'text-neutral-800 dark:text-neutral-200'
         )}
-        onClick={copyIpAddress}
-        onKeyDown={async e => await (e.key === 'Enter' && copyIpAddress())}
+        onClick={() => { void copyIpAddress() }}
+        onKeyDown={e => {
+          if (e.key === 'Enter') {
+            void copyIpAddress()
+          }
+        }}
         tabIndex={0}
         role='button'
         aria-label={`IP address: ${ipAddress}. Click to copy.`}
@@ -75,8 +79,12 @@ function LocationInfo ({
           'py-2 text-3xl sm:text-5xl tracking-tight font-light text-neutral-900 dark:text-white hover:text-black dark:hover:text-neutral-100 transition-colors clickable-element',
           activeElement === 'city' && 'text-black dark:text-white'
         )}
-        onClick={copyCity}
-        onKeyDown={async e => await (e.key === 'Enter' && copyCity())}
+        onClick={() => { void copyCity() }}
+        onKeyDown={e => {
+          if (e.key === 'Enter') {
+            void copyCity()
+          }
+        }}
         tabIndex={0}
         role='button'
         aria-label={`City: ${city.name}. Click to copy.`}
@@ -88,8 +96,12 @@ function LocationInfo ({
           'block text-base sm:text-lg text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors clickable-element',
           activeElement === 'country' && 'text-neutral-800 dark:text-neutral-200'
         )}
-        onClick={copyCountry}
-        onKeyDown={async e => await (e.key === 'Enter' && copyCountry())}
+        onClick={() => { void copyCountry() }}
+        onKeyDown={e => {
+          if (e.key === 'Enter') {
+            void copyCountry()
+          }
+        }}
         tabIndex={0}
         role='button'
         aria-label={`Country: ${country.name}. Click to copy.`}
@@ -132,7 +144,7 @@ export function Cobe ({
   const [phi, theta] = locationToAngles(latitude, longitude)
 
   // Function to copy full location data to clipboard
-  const copyLocationData = async () => {
+  const copyLocationData = async (): Promise<void> => {
     const locationData = {
       ip: ipAddress,
       city: city.name,
@@ -172,7 +184,7 @@ export function Cobe ({
   }
 
   // Function to check if mouse is within the circular globe area
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
     if (containerRef.current == null) return
 
     // Get container dimensions and position
@@ -196,13 +208,11 @@ export function Cobe ({
     setIsHovering(distanceFromCenter <= radius)
 
     // Dynamically set cursor style based on whether mouse is over the globe
-    if (containerRef.current) {
-      containerRef.current.style.cursor = distanceFromCenter <= radius ? 'copy' : 'default'
-    }
+    containerRef.current.style.cursor = distanceFromCenter <= radius ? 'copy' : 'default'
   }
 
   // Handle mouse leave to ensure hover state is reset
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (): void => {
     setIsHovering(false)
     // Reset cursor when leaving the container
     if (containerRef.current != null) {
@@ -210,7 +220,7 @@ export function Cobe ({
     }
   }
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
     if (containerRef.current == null) return
 
     // Get container dimensions and position
@@ -232,16 +242,16 @@ export function Cobe ({
     // Check if click is within the circular area (radius is half the width)
     const radius = rect.width / 2
     if (distanceFromCenter <= radius) {
-      copyLocationData()
+      void copyLocationData()
     }
   }
 
   useEffect(() => {
     let width = 0
-    let globe: any
+    let globe: ReturnType<typeof createGlobe> | null = null
 
     // Function to calculate appropriate container width based on viewport
-    const calculateContainerWidth = () => {
+    const calculateContainerWidth = (): number => {
       const viewportWidth = window.innerWidth
       // For mobile, use a larger percentage of viewport width
       const percentage = viewportWidth < 768 ? 0.8 : 0.33
@@ -250,7 +260,7 @@ export function Cobe ({
       return Math.max(280, Math.min(400, calculatedWidth))
     }
 
-    const onResize = () => {
+    const onResize = (): void => {
       if (containerRef.current != null && canvasRef.current != null) {
         // Calculate the appropriate container width
         const newContainerWidth = calculateContainerWidth()
@@ -268,9 +278,16 @@ export function Cobe ({
     window.addEventListener('resize', onResize)
     onResize()
 
+    const canvas = canvasRef.current
+    if (canvas == null) {
+      return () => {
+        window.removeEventListener('resize', onResize)
+      }
+    }
+
     const SIZE = 1
 
-    globe = createGlobe(canvasRef.current!, {
+    globe = createGlobe(canvas, {
       devicePixelRatio: 2,
       width: width * SIZE,
       height: width * SIZE,
@@ -286,21 +303,19 @@ export function Cobe ({
       glowColor: [1.1, 1.1, 1.1],
       markers: [],
       offset: [width, -width], // Use the actual width for offset
-      onRender: (state: any) => {
+      onRender: (state: any): void => {
         state.width = width * SIZE
         state.height = width * SIZE
       }
     })
 
     // Fade in the globe
-    if (canvasRef.current != null) {
-      canvasRef.current.style.opacity = '0.95'
-      setGlobeReady(true)
-    }
+    canvas.style.opacity = '0.95'
+    setGlobeReady(true)
 
     return () => {
       window.removeEventListener('resize', onResize)
-      if (globe) globe.destroy()
+      if (globe != null) globe.destroy()
     }
   }, [phi, theta, latitude, longitude])
 
@@ -328,7 +343,7 @@ export function Cobe ({
         aria-label='Globe showing location. Click to copy location data.'
         onKeyDown={e => {
           if (e.key === 'Enter' || e.key === ' ') {
-            copyLocationData()
+            void copyLocationData()
           }
         }}
       >

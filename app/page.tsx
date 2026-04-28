@@ -7,19 +7,41 @@ import { JsonDisplay } from '@/components/json-display'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { JSX, useEffect, useState } from 'react'
 import { generateErrorReport } from '@/lib/utils'
-import { GithubIcon, Mail } from 'lucide-react'
+import { GitBranch, Mail } from 'lucide-react'
 import { Cobe } from '@/components/cobe-globe'
 
 export const dynamic = 'force-dynamic'
 
+interface GeolocationResponse {
+  ip?: {
+    address?: string
+  }
+  country?: {
+    flag?: string
+    name?: string
+  }
+  city?: {
+    name?: string
+  }
+  coordinates?: {
+    latitude?: string | number
+    longitude?: string | number
+  }
+}
+
+const parseCoordinate = (value: string | number | undefined): number => {
+  const parsedValue = typeof value === 'number' ? value : Number.parseFloat(value ?? '')
+  return Number.isFinite(parsedValue) ? parsedValue : 0
+}
+
 export default function Home (): JSX.Element | null {
-  const [data, setData] = useState<any>(null)
+  const [data, setData] = useState<GeolocationResponse | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [jsonData, setJsonData] = useState('')
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (): Promise<void> => {
       try {
         setLoading(true)
         const endpoint = `${window.location.origin}/api`
@@ -36,22 +58,20 @@ export default function Home (): JSX.Element | null {
       }
     }
 
-    fetchData()
+    void fetchData()
   }, [])
 
   if (loading) return null
 
-  if (error || !data) {
-    const errorReport = error
-      ? generateErrorReport(error)
-      : generateErrorReport('Unknown error occurred')
+  if (error != null || data == null) {
+    const errorReport = generateErrorReport(error ?? 'Unknown error occurred')
 
     return (
       <div className='flex items-center justify-center min-h-screen bg-white dark:bg-black text-neutral-900 dark:text-white'>
         <div className='text-center p-8 max-w-md'>
           <h1 className='text-2xl font-light mb-4'>Unable to load geolocation data</h1>
           <p className='text-neutral-500 dark:text-neutral-500 mb-6'>
-            {error || 'Please try again later.'}
+            {error ?? 'Please try again later.'}
           </p>
 
           <a
@@ -67,8 +87,8 @@ export default function Home (): JSX.Element | null {
   }
 
   // Ensure coordinates are properly parsed as numbers
-  const latitude = Number.parseFloat(data.coordinates?.latitude) || 0
-  const longitude = Number.parseFloat(data.coordinates?.longitude) || 0
+  const latitude = parseCoordinate(data.coordinates?.latitude)
+  const longitude = parseCoordinate(data.coordinates?.longitude)
 
   return (
     <main className='relative min-h-screen overflow-x-hidden bg-white dark:bg-black flex flex-col'>
@@ -76,13 +96,13 @@ export default function Home (): JSX.Element | null {
       <div className='w-full min-h-[70vh] md:min-h-0 md:h-screen md:w-[65%] flex flex-col'>
         <div className='flex-1 flex items-center justify-center w-full px-4 py-8 md:py-0 md:px-8'>
           <Cobe
-            ipAddress={data.ip?.address || 'Unknown IP'}
+            ipAddress={data.ip?.address ?? 'Unknown IP'}
             country={{
-              flag: data.country?.flag || '🌍',
-              name: data.country?.name || 'Unknown Country'
+              flag: data.country?.flag ?? '🌍',
+              name: data.country?.name ?? 'Unknown Country'
             }}
             city={{
-              name: data.city?.name || 'Unknown City'
+              name: data.city?.name ?? 'Unknown City'
             }}
             latitude={latitude}
             longitude={longitude}
@@ -140,7 +160,7 @@ export default function Home (): JSX.Element | null {
                 rel='noopener noreferrer'
                 className='flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors'
               >
-                <GithubIcon className='h-4 w-4' />
+                <GitBranch className='h-4 w-4' />
                 <span className='hidden sm:inline'>View on GitHub</span>
               </a>
 
