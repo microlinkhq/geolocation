@@ -302,7 +302,7 @@ export function Cobe ({
       markerColor: [251 / 255, 100 / 255, 21 / 255], // it does not matter
       glowColor: [1.1, 1.1, 1.1],
       markers: [],
-      offset: [width, -width], // Use the actual width for offset
+      offset: [width, -width],
       onRender: (state: any): void => {
         state.width = width * SIZE
         state.height = width * SIZE
