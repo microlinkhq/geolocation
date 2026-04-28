@@ -26,7 +26,7 @@
     "cities.json": "~1.1.50",
     "class-variance-authority": "~0.7.1",
     "clsx": "~2.1.1",
-    "cobe": "~0.6.5",
+    "cobe": "~2.0.1",
     "countries-list": "~3.3.0",
     "currency-codes": "github:osdiab/currency-codes",
     "geokdbush": "~2.1.0",
