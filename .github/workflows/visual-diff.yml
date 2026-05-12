@@ -1,0 +1,22 @@
+name: Visual diff
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  pull-requests: write
+  deployments: read
+
+jobs:
+  visual-diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: microlinkhq/difftool@master
+        with:
+          base: https://geolocation.microlink.io
+          head: vercel
+          routes: |
+            - '/'
+          microlink-api-key: ${{ secrets.MICROLINK_API_KEY }}
+          s3-config: ${{ secrets.S3_CONFIG }}
