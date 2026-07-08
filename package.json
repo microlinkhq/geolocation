@@ -27,7 +27,7 @@
     "class-variance-authority": "~0.7.1",
     "clsx": "~2.1.1",
     "cobe": "~0.6.5",
-    "countries-list": "~3.3.0",
+    "countries-list": "~3.4.0",
     "currency-codes": "github:osdiab/currency-codes",
     "geokdbush": "~2.1.0",
     "is-european": "~1.0.10",
