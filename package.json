@@ -59,7 +59,7 @@
     "simple-git-hooks": "latest",
     "tailwindcss": "4",
     "ts-standard": "latest",
-    "typescript": "~6"
+    "typescript": "~7"
   },
   "engines": {
     "node": ">=22"
