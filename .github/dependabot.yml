@@ -4,6 +4,13 @@ updates:
     directory: "/"
     schedule:
       interval: daily
+    ignore:
+      # TypeScript 7 is the native (Go) compiler: `require('typescript')`
+      # only exposes { version, versionMajorMinor }, not the JS compiler API
+      # that Next.js and typescript-eslint (ts-standard) rely on. Stay on 6.x
+      # until the toolchain supports the native compiler.
+      - dependency-name: typescript
+        versions: [">=7"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
