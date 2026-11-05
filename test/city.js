@@ -54,3 +54,25 @@ test('resolve empty city when name and coordinates are missing', t => {
   t.deepEqual(toCity({ name: null }, 'US'), empty)
   t.deepEqual(toCity({ name: null }, 'US', { latitude: undefined, longitude: undefined }), empty)
 })
+
+test('resolve empty city when only one coordinate is present', t => {
+  const empty = { name: null, alpha2: null, alpha3: null, numeric: null }
+  t.deepEqual(toCity({ name: null }, 'US', { latitude: '34.05440' }), empty)
+  t.deepEqual(toCity({ name: null }, 'US', { longitude: '-118.24400' }), empty)
+})
+
+test('resolve city at zero latitude and longitude', t => {
+  t.deepEqual(toCity({ name: null }, 'GH', { latitude: 0, longitude: 0 }), {
+    name: 'Dixcove',
+    alpha2: 'GH',
+    alpha3: 'GHA',
+    numeric: '288'
+  })
+})
+
+test('resolve empty city when coordinates are not numbers', t => {
+  const empty = { name: null, alpha2: null, alpha3: null, numeric: null }
+  t.deepEqual(toCity({ name: null }, 'US', { latitude: 'nope', longitude: 'nope' }), empty)
+  t.deepEqual(toCity({ name: null }, 'US', { latitude: '', longitude: '' }), empty)
+  t.deepEqual(toCity({ name: null }, 'US', { latitude: '  ', longitude: '   ' }), empty)
+})
