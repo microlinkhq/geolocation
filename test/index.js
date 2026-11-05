@@ -1,6 +1,6 @@
 'use strict'
 
-const test = require('ava')
+const test = require('ava').default
 const { runServer } = require('./helpers')
 const handler = require('../api')
 
