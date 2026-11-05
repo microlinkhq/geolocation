@@ -1,8 +1,6 @@
-'use strict'
+import test from 'ava'
 
-const test = require('ava').default
-
-const { toIP } = require('../src/network')
+import { toIP } from '../lib/network.js'
 
 test('resolve ip address', t => {
   const address = '88.20.18.116'

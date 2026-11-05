@@ -49,7 +49,6 @@
     "@types/node": "~26",
     "@types/react": "~19",
     "@types/react-dom": "~19",
-    "async-listen": "latest",
     "ava": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
@@ -58,6 +57,7 @@
     "simple-git-hooks": "latest",
     "tailwindcss": "4",
     "ts-standard": "latest",
+    "tsx": "latest",
     "typescript": "~6"
   },
   "engines": {
@@ -78,8 +78,10 @@
   "license": "MIT",
   "ava": {
     "files": [
-      "test/**/*.js",
-      "!test/helpers.js"
+      "test/**/*.js"
+    ],
+    "nodeArguments": [
+      "--import=tsx"
     ]
   },
   "commitlint": {

@@ -1,8 +1,6 @@
-'use strict'
+import test from 'ava'
 
-const test = require('ava').default
-
-const { toLanguages } = require('../src/languages')
+import { toLanguages } from '../lib/languages.js'
 
 test('resolve language', t => {
   t.deepEqual(toLanguages({ spa: 'Spanish' }), [
