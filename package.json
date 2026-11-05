@@ -72,7 +72,8 @@
     "postinstall": "npm run build:data",
     "prerelease": "npm run update:check && npm run contributors",
     "start": "next start",
-    "test": "ava"
+    "test": "ava",
+    "typecheck": "tsc --noEmit"
   },
   "private": true,
   "license": "MIT",
