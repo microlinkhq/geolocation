@@ -17,4 +17,5 @@ jobs:
         with:
           node-version: 24
       - run: npm install --no-package-lock
+      - run: npm run typecheck
       - run: npm test
