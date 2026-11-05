@@ -63,7 +63,8 @@ export const GET = async req => {
         postalCode: headers['cf-postal-code'] || headers['x-vercel-ip-postal-code'] || null,
         metroCode: headers['cf-metro-code'] ?? null
       },
-      countryAlpha2
+      countryAlpha2,
+      coordinates
     ),
     country,
     continent,
