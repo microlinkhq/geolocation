@@ -70,6 +70,25 @@ test('resolve city at zero latitude and longitude', t => {
   })
 })
 
+test('resolve empty city when coordinates are out of range', t => {
+  const empty = { name: null, alpha2: null, alpha3: null, numeric: null }
+  t.deepEqual(toCity({ name: null }, 'US', { latitude: 91, longitude: 0 }), empty)
+  t.deepEqual(toCity({ name: null }, 'US', { latitude: -91, longitude: 0 }), empty)
+  t.deepEqual(toCity({ name: null }, 'US', { latitude: 0, longitude: 181 }), empty)
+  t.deepEqual(toCity({ name: null }, 'US', { latitude: 0, longitude: -181 }), empty)
+})
+
+test('resolve city at the geographic bounds', t => {
+  for (const coordinates of [
+    { latitude: 90, longitude: 0 },
+    { latitude: -90, longitude: 0 },
+    { latitude: 0, longitude: 180 },
+    { latitude: 0, longitude: -180 }
+  ]) {
+    t.not(toCity({ name: null }, 'US', coordinates).name, null)
+  }
+})
+
 test('resolve empty city when coordinates are not numbers', t => {
   const empty = { name: null, alpha2: null, alpha3: null, numeric: null }
   t.deepEqual(toCity({ name: null }, 'US', { latitude: 'nope', longitude: 'nope' }), empty)
