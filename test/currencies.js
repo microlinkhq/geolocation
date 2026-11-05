@@ -1,8 +1,6 @@
-'use strict'
+import test from 'ava'
 
-const test = require('ava').default
-
-const { toCurrencies } = require('../src/currencies')
+import { toCurrencies } from '../lib/currencies.js'
 
 test('resolve all the currencies', t => {
   const country = 'Palestine'
@@ -42,15 +40,13 @@ test('resolve country with "The" variations', t => {
     CKD: { name: 'Cook Islands dollar', symbol: '$' }
   })
 
-  t.deepEqual(
-    currencies[
-      {
-        code: 'CKD',
-        digits: 2,
-        numeric: '554',
-        name: 'Cook Islands dollar',
-        symbol: '$'
-      }
-    ]
-  )
+  t.deepEqual(currencies, [
+    {
+      code: 'CKD',
+      digits: 2,
+      numeric: '554',
+      name: 'Cook Islands dollar',
+      symbol: '$'
+    }
+  ])
 })
